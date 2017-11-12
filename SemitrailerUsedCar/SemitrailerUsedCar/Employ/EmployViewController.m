@@ -7,8 +7,10 @@
 //
 
 #import "EmployViewController.h"
+#import "EmployTableViewCell.h"
 
-@interface EmployViewController ()
+@interface EmployViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
 
 @end
 
@@ -16,23 +18,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"司机招聘";
-    // Do any additional setup after loading the view from its nib.
+    self.title = @"招聘";
+    [self setupViews];
+}
+
+- (void)setupViews
+{
+    [self.tableview registerNib:[UINib nibWithNibName:@"EmployTableViewCell" bundle:nil] forCellReuseIdentifier:@"EmployTableViewCell"];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
+    [button setImage:[UIImage imageNamed:@"employ_release"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(onclickReleaseButton:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark actions
+- (void)onclickReleaseButton:(UIButton *)sender {
+    
 }
-*/
+
+#pragma mark UITableViewDelegate && UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    EmployTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EmployTableViewCell"];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
 
 @end

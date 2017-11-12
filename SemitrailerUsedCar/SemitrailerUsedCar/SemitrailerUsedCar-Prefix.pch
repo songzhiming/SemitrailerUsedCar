@@ -1,0 +1,25 @@
+//
+//  DoctorPlat-Prefix.pch
+//  DoctorPlatForm
+//
+//  Created by weiyi on 15/4/15.
+//  Copyright (c) 2015年 songzm. All rights reserved.
+//
+
+#ifndef DoctorPlatForm_DoctorPlatForm_Prefix_pch
+#define DoctorPlatForm_DoctorPlatForm_Prefix_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#define kScreenW  [UIScreen mainScreen].bounds.size.width
+#define kScreenH [UIScreen mainScreen].bounds.size.height
+#define MainWindow      [[[UIApplication sharedApplication] delegate] window]
+#endif
+#endif
+
+
+
+
+
+

@@ -7,8 +7,12 @@
 //
 
 #import "UserCenterViewController.h"
+#import "UserCenterTableViewCell.h"
 
 @interface UserCenterViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (nonatomic,strong) NSArray *datasource;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 
 @end
 
@@ -16,23 +20,113 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的";
-    // Do any additional setup after loading the view from its nib.
+    self.navigationController.navigationBarHidden = YES;
+    [self setupViews];
+}
+
+- (void)setupViews
+{
+    self.avatarImageView.image = [UIImage imageNamed:@"defaultUserIcon"];
+    [self.tableview registerNib:[UINib nibWithNibName:@"UserCenterTableViewCell" bundle:nil] forCellReuseIdentifier:@"UserCenterTableViewCell"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark UITableViewDelegate && UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.datasource.count;
 }
-*/
+
+- (CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return 0.0001;
+    }
+    return 11;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.0001;
+}
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc]init];
+    view.backgroundColor = [UIColor clearColor];
+    return view;
+}
+- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc]init];
+    view.backgroundColor = [UIColor clearColor];
+    return view;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSArray *items = (NSArray *)self.datasource[section];
+    return items.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UserCenterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCenterTableViewCell"];
+    NSArray *items = (NSArray *)self.datasource[indexPath.section];
+    NSDictionary *dic = items[indexPath.row];
+    cell.iconImageView.image = [UIImage imageNamed:dic[@"icon"]];
+    cell.nameLabel.text = dic[@"name"];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 47;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+#pragma mark actions
+- (IBAction)onclickSettingButton:(UIButton *)sender {
+    
+}
+
+#pragma mark setter && getter
+- (NSArray *)datasource
+{
+    if (!_datasource) {
+        _datasource = @[@[@{@"icon":@"mine_integral",
+                            @"name":@"积分",
+                            @"vc":@"",
+                            },
+                          @{@"icon":@"mine_recharge",
+                            @"name":@"充值记录",
+                            @"vc":@"",
+                            },
+                          @{@"icon":@"mine_connect",
+                            @"name":@"已联系车主",
+                            @"vc":@"",
+                            }],
+                        @[@{@"icon":@"mine_releaseOffer",
+                              @"name":@"我发表的职位",
+                              @"vc":@"",
+                              },
+                            @{@"icon":@"mine_connectOffer",
+                              @"name":@"我联系的职位",
+                              @"vc":@"",
+                              }],
+                        @[@{@"icon":@"mine_invite",
+                            @"name":@"邀请好友",
+                            @"vc":@"",
+                            }],
+                        
+        ];
+    }
+    return _datasource;
+}
 
 @end

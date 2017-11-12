@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BuyCarViewController : UIViewController
+#import "BasicViewController.h"
+@interface BuyCarViewController : BasicViewController
 
 @end

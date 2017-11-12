@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuyCarViewController">
             <connections>
+                <outlet property="searchView" destination="lNp-OE-WFx" id="nvN-Ga-ong"/>
+                <outlet property="tableView" destination="gPP-ME-PCp" id="3Nj-Cb-8Bc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +21,175 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zer-NL-ybT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLN-tx-e9O">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="品牌" image="buycar_downArrow">
+                                <color key="titleColor" red="0.45490196078431372" green="0.45882352941176469" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1q-TD-8Ky">
+                            <rect key="frame" x="75" y="0.0" width="75" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="车龄" image="buycar_downArrow">
+                                <color key="titleColor" red="0.45490196078431372" green="0.45882352941176469" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX9-tq-11Q">
+                            <rect key="frame" x="150" y="0.0" width="75" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="价格" image="buycar_downArrow">
+                                <color key="titleColor" red="0.45490196078431372" green="0.45882352941176469" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kV-CE-lq2">
+                            <rect key="frame" x="225" y="0.0" width="75" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="里程" image="buycar_downArrow">
+                                <color key="titleColor" red="0.45490196078431372" green="0.45882352941176469" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i64-oQ-Hy1">
+                            <rect key="frame" x="300" y="0.0" width="75" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="马力" image="buycar_downArrow">
+                                <color key="titleColor" red="0.45490196078431372" green="0.45882352941176469" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPh-27-Er7">
+                            <rect key="frame" x="0.0" y="39.5" width="375" height="0.5"/>
+                            <color key="backgroundColor" red="0.84313725490196079" green="0.83921568627450982" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="MMw-Jp-XpM"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Y1q-TD-8Ky" secondAttribute="bottom" id="41t-zj-c43"/>
+                        <constraint firstAttribute="bottom" secondItem="tX9-tq-11Q" secondAttribute="bottom" id="53P-Q9-SIT"/>
+                        <constraint firstAttribute="bottom" secondItem="DPh-27-Er7" secondAttribute="bottom" id="5r9-AU-27H"/>
+                        <constraint firstItem="2kV-CE-lq2" firstAttribute="trailing" secondItem="i64-oQ-Hy1" secondAttribute="leading" id="6Zh-cZ-rGr"/>
+                        <constraint firstItem="Y1q-TD-8Ky" firstAttribute="trailing" secondItem="tX9-tq-11Q" secondAttribute="leading" id="8Mw-HY-oHZ"/>
+                        <constraint firstAttribute="bottom" secondItem="i64-oQ-Hy1" secondAttribute="bottom" id="IvQ-B8-RWc"/>
+                        <constraint firstItem="2kV-CE-lq2" firstAttribute="width" secondItem="tX9-tq-11Q" secondAttribute="width" id="Ny2-iH-0BI"/>
+                        <constraint firstAttribute="trailing" secondItem="DPh-27-Er7" secondAttribute="trailing" id="Ora-Vv-aHL"/>
+                        <constraint firstAttribute="height" constant="40" id="RmO-Ts-ZZy"/>
+                        <constraint firstItem="GLN-tx-e9O" firstAttribute="leading" secondItem="Zer-NL-ybT" secondAttribute="leading" id="SeU-94-7rv"/>
+                        <constraint firstAttribute="bottom" secondItem="2kV-CE-lq2" secondAttribute="bottom" id="UVC-fg-Ssd"/>
+                        <constraint firstItem="tX9-tq-11Q" firstAttribute="width" secondItem="Zer-NL-ybT" secondAttribute="width" multiplier="1:5" id="X3D-EU-GxZ"/>
+                        <constraint firstItem="i64-oQ-Hy1" firstAttribute="width" secondItem="2kV-CE-lq2" secondAttribute="width" id="Yo6-yM-ZLH"/>
+                        <constraint firstItem="DPh-27-Er7" firstAttribute="leading" secondItem="Zer-NL-ybT" secondAttribute="leading" id="c6O-OV-MCd"/>
+                        <constraint firstItem="tX9-tq-11Q" firstAttribute="top" secondItem="Zer-NL-ybT" secondAttribute="top" id="h1Z-D2-lPB"/>
+                        <constraint firstItem="Y1q-TD-8Ky" firstAttribute="width" secondItem="tX9-tq-11Q" secondAttribute="width" id="jGe-hh-k5j"/>
+                        <constraint firstItem="tX9-tq-11Q" firstAttribute="centerX" secondItem="Zer-NL-ybT" secondAttribute="centerX" id="m3o-l4-YpL"/>
+                        <constraint firstItem="Y1q-TD-8Ky" firstAttribute="top" secondItem="Zer-NL-ybT" secondAttribute="top" id="nuM-iI-R49"/>
+                        <constraint firstItem="i64-oQ-Hy1" firstAttribute="top" secondItem="Zer-NL-ybT" secondAttribute="top" id="oml-G6-UUF"/>
+                        <constraint firstItem="GLN-tx-e9O" firstAttribute="width" secondItem="Y1q-TD-8Ky" secondAttribute="width" id="sqY-x8-PAH"/>
+                        <constraint firstItem="GLN-tx-e9O" firstAttribute="top" secondItem="Zer-NL-ybT" secondAttribute="top" id="v3H-ok-3ei"/>
+                        <constraint firstAttribute="bottom" secondItem="GLN-tx-e9O" secondAttribute="bottom" id="xs7-9a-8Rm"/>
+                        <constraint firstItem="2kV-CE-lq2" firstAttribute="leading" secondItem="tX9-tq-11Q" secondAttribute="trailing" id="yqR-iF-h5d"/>
+                        <constraint firstItem="2kV-CE-lq2" firstAttribute="top" secondItem="Zer-NL-ybT" secondAttribute="top" id="yy9-1B-ch8"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gPP-ME-PCp">
+                    <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5dw-1H-b1U"/>
+                        <outlet property="delegate" destination="-1" id="fJq-GV-8LN"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gPP-ME-PCp" secondAttribute="trailing" id="3h6-1H-Ul3"/>
+                <constraint firstItem="Zer-NL-ybT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7fw-5C-qgJ"/>
+                <constraint firstAttribute="bottom" secondItem="gPP-ME-PCp" secondAttribute="bottom" id="Ado-86-gbX"/>
+                <constraint firstItem="gPP-ME-PCp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cgi-fc-guz"/>
+                <constraint firstItem="gPP-ME-PCp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="YUh-wD-E6S"/>
+                <constraint firstItem="Zer-NL-ybT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vOu-MQ-jnr"/>
+                <constraint firstAttribute="trailing" secondItem="Zer-NL-ybT" secondAttribute="trailing" id="wgs-Cl-szJ"/>
+            </constraints>
+        </view>
+        <view contentMode="scaleToFill" id="lNp-OE-WFx">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buycar_usericon" translatesAutoresizingMaskIntoConstraints="NO" id="QkM-Ie-sY4">
+                    <rect key="frame" x="18" y="12.5" width="17" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="17" id="Gjd-Yq-m7D"/>
+                        <constraint firstAttribute="height" constant="19" id="hPU-CN-aMd"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="过户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBk-bJ-Cr4">
+                    <rect key="frame" x="42" y="13.5" width="29" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.5490196078431373" green="0.55294117647058827" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3r-zs-tay">
+                    <rect key="frame" x="81" y="5.5" width="278" height="33"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="ij1-yu-DZb"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="6"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buycar_fresh" translatesAutoresizingMaskIntoConstraints="NO" id="55K-dy-gPm">
+                    <rect key="frame" x="338" y="16" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="12" id="QR1-zu-NfK"/>
+                        <constraint firstAttribute="height" constant="12" id="vJj-TP-kUo"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ey-sb-NLZ">
+                    <rect key="frame" x="0.0" y="43.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="COH-tb-Qda"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="55K-dy-gPm" firstAttribute="trailing" secondItem="k3r-zs-tay" secondAttribute="trailing" constant="-9" id="15q-zi-IcA"/>
+                <constraint firstAttribute="trailing" secondItem="5ey-sb-NLZ" secondAttribute="trailing" id="8bw-Co-1VY"/>
+                <constraint firstAttribute="trailing" secondItem="k3r-zs-tay" secondAttribute="trailing" constant="16" id="JTV-fJ-r4F"/>
+                <constraint firstItem="GBk-bJ-Cr4" firstAttribute="centerY" secondItem="lNp-OE-WFx" secondAttribute="centerY" id="a5l-fQ-HpQ"/>
+                <constraint firstItem="GBk-bJ-Cr4" firstAttribute="leading" secondItem="QkM-Ie-sY4" secondAttribute="trailing" constant="7" id="ccY-Vv-vwH"/>
+                <constraint firstItem="QkM-Ie-sY4" firstAttribute="leading" secondItem="lNp-OE-WFx" secondAttribute="leading" constant="18" id="ef9-Z4-zmr"/>
+                <constraint firstItem="QkM-Ie-sY4" firstAttribute="centerY" secondItem="lNp-OE-WFx" secondAttribute="centerY" id="gh8-qr-bo7"/>
+                <constraint firstAttribute="bottom" secondItem="5ey-sb-NLZ" secondAttribute="bottom" id="jCH-hQ-Zbb"/>
+                <constraint firstItem="5ey-sb-NLZ" firstAttribute="leading" secondItem="lNp-OE-WFx" secondAttribute="leading" id="pAO-pL-Cbc"/>
+                <constraint firstItem="k3r-zs-tay" firstAttribute="centerY" secondItem="lNp-OE-WFx" secondAttribute="centerY" id="pwu-av-BHJ"/>
+                <constraint firstItem="k3r-zs-tay" firstAttribute="leading" secondItem="GBk-bJ-Cr4" secondAttribute="trailing" constant="10" id="saZ-ho-3sr"/>
+                <constraint firstItem="55K-dy-gPm" firstAttribute="centerY" secondItem="lNp-OE-WFx" secondAttribute="centerY" id="zfP-HX-smg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="buycar_downArrow" width="8" height="4"/>
+        <image name="buycar_fresh" width="11" height="12"/>
+        <image name="buycar_usericon" width="17" height="19"/>
+    </resources>
 </document>

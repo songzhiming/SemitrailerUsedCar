@@ -7,6 +7,7 @@
 //
 
 #import "BasicNavigationViewController.h"
+#import "UIColor+Extension.h"
 
 @interface BasicNavigationViewController ()
 
@@ -30,7 +31,7 @@
     // 1.3.设置文字颜色`
     NSMutableDictionary *md = [NSMutableDictionary dictionary];
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    md[UITextAttributeTextColor] = [UIColor blackColor];
+    md[UITextAttributeTextColor] = [UIColor colorWithHexString:@"#0fa945"];
     // 取出阴影  UIOffset
     md[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetZero];
     // 设置字体大小
