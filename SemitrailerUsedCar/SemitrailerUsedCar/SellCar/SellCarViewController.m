@@ -26,6 +26,7 @@
 
 - (void)setupViews
 {
+    self.navigationItem.leftBarButtonItem = nil;
     [self.tableview registerNib:[UINib nibWithNibName:@"SellCarTableViewCell" bundle:nil] forCellReuseIdentifier:@"SellCarTableViewCell"];
     self.footerView.frame = CGRectMake(0, 0, kScreenW, 83);
     self.tableview.tableFooterView = self.footerView;

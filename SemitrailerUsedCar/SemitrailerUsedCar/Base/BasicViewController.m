@@ -20,7 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithHexString:@"#F7FAF9"];
-//    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithNorImage:@"back_normal" hightImage:@"back_highlight" customBundleName:@"YMImageResources" target:self action:@selector(comeBack)];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
+    [btn setImage:[UIImage imageNamed:@"backIcon"] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(comeBack) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
+}
+
+- (void)comeBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

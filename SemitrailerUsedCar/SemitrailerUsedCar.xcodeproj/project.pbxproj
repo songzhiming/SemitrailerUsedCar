@@ -30,6 +30,14 @@
 		34288B311FA76884004C98E9 /* BasicNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B301FA76884004C98E9 /* BasicNavigationViewController.m */; };
 		34288B341FA7693E004C98E9 /* BasicTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B331FA7693E004C98E9 /* BasicTabbarViewController.m */; };
 		34288B421FA77147004C98E9 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B3B1FA77049004C98E9 /* UIColor+Extension.m */; };
+		344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E81B91FB9DA5C0061DAB1 /* LoginViewController.m */; };
+		344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344E81BA1FB9DA5C0061DAB1 /* LoginViewController.xib */; };
+		344E81C01FB9DAEF0061DAB1 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E81BE1FB9DAEF0061DAB1 /* RegisterViewController.m */; };
+		344E81C11FB9DAEF0061DAB1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344E81BF1FB9DAEF0061DAB1 /* RegisterViewController.xib */; };
+		344E81C51FB9DB090061DAB1 /* ForgetPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E81C31FB9DB090061DAB1 /* ForgetPwViewController.m */; };
+		344E81C61FB9DB090061DAB1 /* ForgetPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344E81C41FB9DB090061DAB1 /* ForgetPwViewController.xib */; };
+		344E81CA1FB9DB280061DAB1 /* ConfirmPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E81C81FB9DB280061DAB1 /* ConfirmPwViewController.m */; };
+		344E81CB1FB9DB280061DAB1 /* ConfirmPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344E81C91FB9DB280061DAB1 /* ConfirmPwViewController.xib */; };
 		345354CB1FA986B7005AC3E3 /* EmployTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345354C91FA986B7005AC3E3 /* EmployTableViewCell.m */; };
 		345354CC1FA986B7005AC3E3 /* EmployTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345354CA1FA986B7005AC3E3 /* EmployTableViewCell.xib */; };
 		345822271FB0BAAF00A00E8F /* SellCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345822251FB0BAAF00A00E8F /* SellCarTableViewCell.m */; };
@@ -100,6 +108,18 @@
 		34288B331FA7693E004C98E9 /* BasicTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicTabbarViewController.m; sourceTree = "<group>"; };
 		34288B3A1FA77049004C98E9 /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		34288B3B1FA77049004C98E9 /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		344E81B81FB9DA5C0061DAB1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		344E81B91FB9DA5C0061DAB1 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		344E81BA1FB9DA5C0061DAB1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		344E81BD1FB9DAEF0061DAB1 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		344E81BE1FB9DAEF0061DAB1 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		344E81BF1FB9DAEF0061DAB1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		344E81C21FB9DB090061DAB1 /* ForgetPwViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPwViewController.h; sourceTree = "<group>"; };
+		344E81C31FB9DB090061DAB1 /* ForgetPwViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPwViewController.m; sourceTree = "<group>"; };
+		344E81C41FB9DB090061DAB1 /* ForgetPwViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPwViewController.xib; sourceTree = "<group>"; };
+		344E81C71FB9DB280061DAB1 /* ConfirmPwViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmPwViewController.h; sourceTree = "<group>"; };
+		344E81C81FB9DB280061DAB1 /* ConfirmPwViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmPwViewController.m; sourceTree = "<group>"; };
+		344E81C91FB9DB280061DAB1 /* ConfirmPwViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmPwViewController.xib; sourceTree = "<group>"; };
 		345354C81FA986B7005AC3E3 /* EmployTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployTableViewCell.h; sourceTree = "<group>"; };
 		345354C91FA986B7005AC3E3 /* EmployTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployTableViewCell.m; sourceTree = "<group>"; };
 		345354CA1FA986B7005AC3E3 /* EmployTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployTableViewCell.xib; sourceTree = "<group>"; };
@@ -166,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				34288B351FA77049004C98E9 /* Category */,
+				344E81B41FB9D8CE0061DAB1 /* Login */,
 				34288B291FA76768004C98E9 /* UserCenter */,
 				34288B231FA765BB004C98E9 /* Employ */,
 				34288B1C1FA76580004C98E9 /* BuyCar */,
@@ -280,6 +301,49 @@
 				34288B3B1FA77049004C98E9 /* UIColor+Extension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		344E81B41FB9D8CE0061DAB1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				344E81B71FB9D8EE0061DAB1 /* Controller */,
+				344E81B61FB9D8E60061DAB1 /* Model */,
+				344E81B51FB9D8DF0061DAB1 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		344E81B51FB9D8DF0061DAB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		344E81B61FB9D8E60061DAB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		344E81B71FB9D8EE0061DAB1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				344E81B81FB9DA5C0061DAB1 /* LoginViewController.h */,
+				344E81B91FB9DA5C0061DAB1 /* LoginViewController.m */,
+				344E81BA1FB9DA5C0061DAB1 /* LoginViewController.xib */,
+				344E81BD1FB9DAEF0061DAB1 /* RegisterViewController.h */,
+				344E81BE1FB9DAEF0061DAB1 /* RegisterViewController.m */,
+				344E81BF1FB9DAEF0061DAB1 /* RegisterViewController.xib */,
+				344E81C21FB9DB090061DAB1 /* ForgetPwViewController.h */,
+				344E81C31FB9DB090061DAB1 /* ForgetPwViewController.m */,
+				344E81C41FB9DB090061DAB1 /* ForgetPwViewController.xib */,
+				344E81C71FB9DB280061DAB1 /* ConfirmPwViewController.h */,
+				344E81C81FB9DB280061DAB1 /* ConfirmPwViewController.m */,
+				344E81C91FB9DB280061DAB1 /* ConfirmPwViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		345354C71FA98693005AC3E3 /* View */ = {
@@ -439,13 +503,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				340210411FA6E13300193AF8 /* LaunchScreen.storyboard in Resources */,
+				344E81C11FB9DAEF0061DAB1 /* RegisterViewController.xib in Resources */,
 				345354CC1FA986B7005AC3E3 /* EmployTableViewCell.xib in Resources */,
 				3402103E1FA6E13300193AF8 /* Assets.xcassets in Resources */,
 				340B80941FB84410009421F0 /* UserCenterTableViewCell.xib in Resources */,
 				3402103C1FA6E13300193AF8 /* Main.storyboard in Resources */,
 				34288B211FA7659C004C98E9 /* BuyCarViewController.xib in Resources */,
 				34288B2E1FA767D3004C98E9 /* UserCenterViewController.xib in Resources */,
+				344E81CB1FB9DB280061DAB1 /* ConfirmPwViewController.xib in Resources */,
+				344E81C61FB9DB090061DAB1 /* ForgetPwViewController.xib in Resources */,
 				345822281FB0BAAF00A00E8F /* SellCarTableViewCell.xib in Resources */,
+				344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */,
 				34DD20BA1FB40D800080E9C0 /* BuyCarTableViewCell.xib in Resources */,
 				34288B281FA76741004C98E9 /* EmployViewController.xib in Resources */,
 				34288B141FA76529004C98E9 /* SellCarViewController.xib in Resources */,
@@ -531,11 +599,15 @@
 				34288B271FA76741004C98E9 /* EmployViewController.m in Sources */,
 				340210391FA6E13300193AF8 /* ViewController.m in Sources */,
 				34DD20B91FB40D800080E9C0 /* BuyCarTableViewCell.m in Sources */,
+				344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */,
+				344E81CA1FB9DB280061DAB1 /* ConfirmPwViewController.m in Sources */,
+				344E81C51FB9DB090061DAB1 /* ForgetPwViewController.m in Sources */,
 				340210441FA6E13300193AF8 /* main.m in Sources */,
 				34288B421FA77147004C98E9 /* UIColor+Extension.m in Sources */,
 				34288B2D1FA767D3004C98E9 /* UserCenterViewController.m in Sources */,
 				340B80931FB84410009421F0 /* UserCenterTableViewCell.m in Sources */,
 				340B80991FB84D7B009421F0 /* AllocDeallocViewController.m in Sources */,
+				344E81C01FB9DAEF0061DAB1 /* RegisterViewController.m in Sources */,
 				345354CB1FA986B7005AC3E3 /* EmployTableViewCell.m in Sources */,
 				34288B131FA76529004C98E9 /* SellCarViewController.m in Sources */,
 				340210361FA6E13300193AF8 /* AppDelegate.m in Sources */,

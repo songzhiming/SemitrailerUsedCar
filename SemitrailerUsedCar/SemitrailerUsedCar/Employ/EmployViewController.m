@@ -8,6 +8,8 @@
 
 #import "EmployViewController.h"
 #import "EmployTableViewCell.h"
+#import "LoginViewController.h"
+#import "BasicNavigationViewController.h"
 
 @interface EmployViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -24,6 +26,7 @@
 
 - (void)setupViews
 {
+    self.navigationItem.leftBarButtonItem = nil;
     [self.tableview registerNib:[UINib nibWithNibName:@"EmployTableViewCell" bundle:nil] forCellReuseIdentifier:@"EmployTableViewCell"];
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
     [button setImage:[UIImage imageNamed:@"employ_release"] forState:UIControlStateNormal];
@@ -37,7 +40,9 @@
 
 #pragma mark actions
 - (void)onclickReleaseButton:(UIButton *)sender {
-    
+    LoginViewController *vc = [[LoginViewController alloc]init];
+    BasicNavigationViewController *nav = [[BasicNavigationViewController alloc]initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 #pragma mark UITableViewDelegate && UITableViewDataSource

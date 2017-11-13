@@ -26,6 +26,7 @@
 
 - (void)setupViews
 {
+    self.navigationItem.leftBarButtonItem = nil;
     self.searchView.frame = CGRectMake(0, 0, kScreenW, 44);
     [self.navigationController.navigationBar addSubview:self.searchView];
     [self.tableView registerNib:[UINib nibWithNibName:@"BuyCarTableViewCell" bundle:nil] forCellReuseIdentifier:@"BuyCarTableViewCell"];
