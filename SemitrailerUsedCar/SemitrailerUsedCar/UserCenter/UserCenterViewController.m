@@ -8,6 +8,7 @@
 
 #import "UserCenterViewController.h"
 #import "UserCenterTableViewCell.h"
+#import "SettingViewController.h"
 
 @interface UserCenterViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -24,6 +25,17 @@
     [self setupViews];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
 - (void)setupViews
 {
     self.avatarImageView.image = [UIImage imageNamed:@"defaultUserIcon"];
@@ -89,10 +101,15 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSDictionary *dic = self.datasource[indexPath.section][indexPath.row];
+    NSString *vcName = dic[@"vc"];
+    UIViewController *vc = (UIViewController *)[[NSClassFromString(vcName) alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark actions
 - (IBAction)onclickSettingButton:(UIButton *)sender {
-    
+    SettingViewController *vc = [[SettingViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark setter && getter
@@ -101,15 +118,15 @@
     if (!_datasource) {
         _datasource = @[@[@{@"icon":@"mine_integral",
                             @"name":@"积分",
-                            @"vc":@"",
+                            @"vc":@"BasicWebViewController",
                             },
                           @{@"icon":@"mine_recharge",
                             @"name":@"充值记录",
-                            @"vc":@"",
+                            @"vc":@"RechargeRecordListViewController",
                             },
                           @{@"icon":@"mine_connect",
                             @"name":@"已联系车主",
-                            @"vc":@"",
+                            @"vc":@"MyConnectViewController",
                             }],
                         @[@{@"icon":@"mine_releaseOffer",
                               @"name":@"我发表的职位",

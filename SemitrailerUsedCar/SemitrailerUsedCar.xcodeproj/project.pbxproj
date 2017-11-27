@@ -44,6 +44,16 @@
 		345822281FB0BAAF00A00E8F /* SellCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345822261FB0BAAF00A00E8F /* SellCarTableViewCell.xib */; };
 		34DD20B91FB40D800080E9C0 /* BuyCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DD20B71FB40D800080E9C0 /* BuyCarTableViewCell.m */; };
 		34DD20BA1FB40D800080E9C0 /* BuyCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34DD20B81FB40D800080E9C0 /* BuyCarTableViewCell.xib */; };
+		34E435A61FCAA3C800E46160 /* BasicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E435A41FCAA3C800E46160 /* BasicWebViewController.m */; };
+		34E435A71FCAA3C800E46160 /* BasicWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E435A51FCAA3C800E46160 /* BasicWebViewController.xib */; };
+		34E435AB1FCAA62200E46160 /* RechargeRecordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E435A91FCAA62200E46160 /* RechargeRecordListViewController.m */; };
+		34E435AC1FCAA62200E46160 /* RechargeRecordListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E435AA1FCAA62200E46160 /* RechargeRecordListViewController.xib */; };
+		34E435B01FCAA83900E46160 /* RechargeRecordListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E435AE1FCAA83900E46160 /* RechargeRecordListTableViewCell.m */; };
+		34E435B11FCAA83900E46160 /* RechargeRecordListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E435AF1FCAA83900E46160 /* RechargeRecordListTableViewCell.xib */; };
+		34E435B51FCAADD200E46160 /* MyConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E435B31FCAADD200E46160 /* MyConnectViewController.m */; };
+		34E435B61FCAADD200E46160 /* MyConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E435B41FCAADD200E46160 /* MyConnectViewController.xib */; };
+		34E435BB1FCAAFD200E46160 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E435B91FCAAFD200E46160 /* SettingViewController.xib */; };
+		34E435BD1FCAB2AD00E46160 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E435BC1FCAB2AC00E46160 /* SettingViewController.m */; };
 		6AC84DFBAD82EE6AE29DDC48 /* libPods-SemitrailerUsedCar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD237B74EE25B014D2E9E9CB /* libPods-SemitrailerUsedCar.a */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +139,21 @@
 		34DD20B61FB40D800080E9C0 /* BuyCarTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuyCarTableViewCell.h; sourceTree = "<group>"; };
 		34DD20B71FB40D800080E9C0 /* BuyCarTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyCarTableViewCell.m; sourceTree = "<group>"; };
 		34DD20B81FB40D800080E9C0 /* BuyCarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyCarTableViewCell.xib; sourceTree = "<group>"; };
+		34E435A31FCAA3C800E46160 /* BasicWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicWebViewController.h; sourceTree = "<group>"; };
+		34E435A41FCAA3C800E46160 /* BasicWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicWebViewController.m; sourceTree = "<group>"; };
+		34E435A51FCAA3C800E46160 /* BasicWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicWebViewController.xib; sourceTree = "<group>"; };
+		34E435A81FCAA62200E46160 /* RechargeRecordListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeRecordListViewController.h; sourceTree = "<group>"; };
+		34E435A91FCAA62200E46160 /* RechargeRecordListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeRecordListViewController.m; sourceTree = "<group>"; };
+		34E435AA1FCAA62200E46160 /* RechargeRecordListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RechargeRecordListViewController.xib; sourceTree = "<group>"; };
+		34E435AD1FCAA83900E46160 /* RechargeRecordListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeRecordListTableViewCell.h; sourceTree = "<group>"; };
+		34E435AE1FCAA83900E46160 /* RechargeRecordListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeRecordListTableViewCell.m; sourceTree = "<group>"; };
+		34E435AF1FCAA83900E46160 /* RechargeRecordListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RechargeRecordListTableViewCell.xib; sourceTree = "<group>"; };
+		34E435B21FCAADD200E46160 /* MyConnectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyConnectViewController.h; sourceTree = "<group>"; };
+		34E435B31FCAADD200E46160 /* MyConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyConnectViewController.m; sourceTree = "<group>"; };
+		34E435B41FCAADD200E46160 /* MyConnectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyConnectViewController.xib; sourceTree = "<group>"; };
+		34E435B71FCAAFD200E46160 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		34E435B91FCAAFD200E46160 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		34E435BC1FCAB2AC00E46160 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		8A0FFD972ED05AABE3E9C3E5 /* Pods-SemitrailerUsedCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemitrailerUsedCar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SemitrailerUsedCar/Pods-SemitrailerUsedCar.debug.xcconfig"; sourceTree = "<group>"; };
 		BD237B74EE25B014D2E9E9CB /* libPods-SemitrailerUsedCar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SemitrailerUsedCar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264DC12C1C9608CCF435EDC /* Pods-SemitrailerUsedCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemitrailerUsedCar.release.xcconfig"; path = "Pods/Target Support Files/Pods-SemitrailerUsedCar/Pods-SemitrailerUsedCar.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +255,9 @@
 				340B80901FB84410009421F0 /* UserCenterTableViewCell.h */,
 				340B80911FB84410009421F0 /* UserCenterTableViewCell.m */,
 				340B80921FB84410009421F0 /* UserCenterTableViewCell.xib */,
+				34E435AD1FCAA83900E46160 /* RechargeRecordListTableViewCell.h */,
+				34E435AE1FCAA83900E46160 /* RechargeRecordListTableViewCell.m */,
+				34E435AF1FCAA83900E46160 /* RechargeRecordListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,6 +274,9 @@
 				34288B301FA76884004C98E9 /* BasicNavigationViewController.m */,
 				34288B321FA7693E004C98E9 /* BasicTabbarViewController.h */,
 				34288B331FA7693E004C98E9 /* BasicTabbarViewController.m */,
+				34E435A31FCAA3C800E46160 /* BasicWebViewController.h */,
+				34E435A41FCAA3C800E46160 /* BasicWebViewController.m */,
+				34E435A51FCAA3C800E46160 /* BasicWebViewController.xib */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -290,6 +321,15 @@
 				34288B2A1FA767D3004C98E9 /* UserCenterViewController.h */,
 				34288B2B1FA767D3004C98E9 /* UserCenterViewController.m */,
 				34288B2C1FA767D3004C98E9 /* UserCenterViewController.xib */,
+				34E435A81FCAA62200E46160 /* RechargeRecordListViewController.h */,
+				34E435A91FCAA62200E46160 /* RechargeRecordListViewController.m */,
+				34E435AA1FCAA62200E46160 /* RechargeRecordListViewController.xib */,
+				34E435B21FCAADD200E46160 /* MyConnectViewController.h */,
+				34E435B31FCAADD200E46160 /* MyConnectViewController.m */,
+				34E435B41FCAADD200E46160 /* MyConnectViewController.xib */,
+				34E435B71FCAAFD200E46160 /* SettingViewController.h */,
+				34E435BC1FCAB2AC00E46160 /* SettingViewController.m */,
+				34E435B91FCAAFD200E46160 /* SettingViewController.xib */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -502,6 +542,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E435AC1FCAA62200E46160 /* RechargeRecordListViewController.xib in Resources */,
 				340210411FA6E13300193AF8 /* LaunchScreen.storyboard in Resources */,
 				344E81C11FB9DAEF0061DAB1 /* RegisterViewController.xib in Resources */,
 				345354CC1FA986B7005AC3E3 /* EmployTableViewCell.xib in Resources */,
@@ -511,8 +552,12 @@
 				34288B211FA7659C004C98E9 /* BuyCarViewController.xib in Resources */,
 				34288B2E1FA767D3004C98E9 /* UserCenterViewController.xib in Resources */,
 				344E81CB1FB9DB280061DAB1 /* ConfirmPwViewController.xib in Resources */,
+				34E435B61FCAADD200E46160 /* MyConnectViewController.xib in Resources */,
+				34E435BB1FCAAFD200E46160 /* SettingViewController.xib in Resources */,
 				344E81C61FB9DB090061DAB1 /* ForgetPwViewController.xib in Resources */,
+				34E435A71FCAA3C800E46160 /* BasicWebViewController.xib in Resources */,
 				345822281FB0BAAF00A00E8F /* SellCarTableViewCell.xib in Resources */,
+				34E435B11FCAA83900E46160 /* RechargeRecordListTableViewCell.xib in Resources */,
 				344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */,
 				34DD20BA1FB40D800080E9C0 /* BuyCarTableViewCell.xib in Resources */,
 				34288B281FA76741004C98E9 /* EmployViewController.xib in Resources */,
@@ -592,17 +637,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E435B01FCAA83900E46160 /* RechargeRecordListTableViewCell.m in Sources */,
 				34288B341FA7693E004C98E9 /* BasicTabbarViewController.m in Sources */,
 				340B809A1FB84D7B009421F0 /* BasicViewController.m in Sources */,
+				34E435B51FCAADD200E46160 /* MyConnectViewController.m in Sources */,
 				34288B201FA7659C004C98E9 /* BuyCarViewController.m in Sources */,
 				345822271FB0BAAF00A00E8F /* SellCarTableViewCell.m in Sources */,
 				34288B271FA76741004C98E9 /* EmployViewController.m in Sources */,
 				340210391FA6E13300193AF8 /* ViewController.m in Sources */,
 				34DD20B91FB40D800080E9C0 /* BuyCarTableViewCell.m in Sources */,
 				344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */,
+				34E435A61FCAA3C800E46160 /* BasicWebViewController.m in Sources */,
 				344E81CA1FB9DB280061DAB1 /* ConfirmPwViewController.m in Sources */,
 				344E81C51FB9DB090061DAB1 /* ForgetPwViewController.m in Sources */,
 				340210441FA6E13300193AF8 /* main.m in Sources */,
+				34E435BD1FCAB2AD00E46160 /* SettingViewController.m in Sources */,
 				34288B421FA77147004C98E9 /* UIColor+Extension.m in Sources */,
 				34288B2D1FA767D3004C98E9 /* UserCenterViewController.m in Sources */,
 				340B80931FB84410009421F0 /* UserCenterTableViewCell.m in Sources */,
@@ -611,6 +660,7 @@
 				345354CB1FA986B7005AC3E3 /* EmployTableViewCell.m in Sources */,
 				34288B131FA76529004C98E9 /* SellCarViewController.m in Sources */,
 				340210361FA6E13300193AF8 /* AppDelegate.m in Sources */,
+				34E435AB1FCAA62200E46160 /* RechargeRecordListViewController.m in Sources */,
 				34288B311FA76884004C98E9 /* BasicNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
