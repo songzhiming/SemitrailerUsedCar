@@ -18,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //网络配置
+    YMNetWorkConfig *config = [YMNetWorkConfig sharedInstance];
+    config.baseUrl = kAppUrlDomain;
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     BasicTabbarViewController *tab = [[BasicTabbarViewController alloc]init];
     self.window.rootViewController = tab;

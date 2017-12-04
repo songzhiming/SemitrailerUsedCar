@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InviteUserViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FeQ-WU-8jI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="282"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="FeQ-WU-8jI" secondAttribute="height" multiplier="375:282" id="3kM-Ss-MFm"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请好友注册送5积分啦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNp-EG-Xnl">
+                    <rect key="frame" x="58.5" y="219" width="258" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="0.058823529411764705" green="0.66274509803921566" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享链接给好友&gt;好友" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcc-x1-v3f">
+                    <rect key="frame" x="114" y="282" width="147.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAk-4V-9NA">
+                    <rect key="frame" x="168.5" y="310" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.98039215686274506" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rNp-EG-Xnl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1AL-CY-slt"/>
+                <constraint firstItem="Vcc-x1-v3f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3bW-8P-phQ"/>
+                <constraint firstAttribute="trailing" secondItem="FeQ-WU-8jI" secondAttribute="trailing" id="Ien-Ls-72u"/>
+                <constraint firstItem="aAk-4V-9NA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="api-0I-GsL"/>
+                <constraint firstItem="Vcc-x1-v3f" firstAttribute="top" secondItem="FeQ-WU-8jI" secondAttribute="bottom" id="cIc-Sb-OCE"/>
+                <constraint firstItem="rNp-EG-Xnl" firstAttribute="top" secondItem="FeQ-WU-8jI" secondAttribute="bottom" constant="-63" id="jLH-iH-Fp9"/>
+                <constraint firstItem="aAk-4V-9NA" firstAttribute="top" secondItem="Vcc-x1-v3f" secondAttribute="bottom" constant="10" id="jxr-Xu-suz"/>
+                <constraint firstItem="FeQ-WU-8jI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="q3x-Y9-aRy"/>
+                <constraint firstItem="FeQ-WU-8jI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zyb-uQ-U0j"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

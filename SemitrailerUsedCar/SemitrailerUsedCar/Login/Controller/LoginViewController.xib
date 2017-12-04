@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="passwordTextField" destination="zZW-MR-hNa" id="Ojm-7n-4sJ"/>
+                <outlet property="phoneTextField" destination="J3Q-rN-iSe" id="Kog-y3-Jcz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -62,7 +64,7 @@
                     <rect key="frame" x="111" y="293.5" width="240" height="21"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxZ-E1-UCY">
                     <rect key="frame" x="24" y="329.5" width="327" height="0.5"/>

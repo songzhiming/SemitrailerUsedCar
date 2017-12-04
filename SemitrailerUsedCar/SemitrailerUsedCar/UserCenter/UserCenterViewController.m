@@ -9,6 +9,7 @@
 #import "UserCenterViewController.h"
 #import "UserCenterTableViewCell.h"
 #import "SettingViewController.h"
+#import "RechargeViewController.h"
 
 @interface UserCenterViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -109,6 +110,10 @@
 #pragma mark actions
 - (IBAction)onclickSettingButton:(UIButton *)sender {
     SettingViewController *vc = [[SettingViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)onclickGotoChargeButton:(UIButton *)sender {
+    RechargeViewController *vc = [[RechargeViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

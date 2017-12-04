@@ -30,6 +30,7 @@
 		34288B311FA76884004C98E9 /* BasicNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B301FA76884004C98E9 /* BasicNavigationViewController.m */; };
 		34288B341FA7693E004C98E9 /* BasicTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B331FA7693E004C98E9 /* BasicTabbarViewController.m */; };
 		34288B421FA77147004C98E9 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B3B1FA77049004C98E9 /* UIColor+Extension.m */; };
+		343BB0001FD5A6D000C744B7 /* EmployNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */; };
 		344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E81B91FB9DA5C0061DAB1 /* LoginViewController.m */; };
 		344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344E81BA1FB9DA5C0061DAB1 /* LoginViewController.xib */; };
 		344E81C01FB9DAEF0061DAB1 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E81BE1FB9DAEF0061DAB1 /* RegisterViewController.m */; };
@@ -42,6 +43,14 @@
 		345354CC1FA986B7005AC3E3 /* EmployTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345354CA1FA986B7005AC3E3 /* EmployTableViewCell.xib */; };
 		345822271FB0BAAF00A00E8F /* SellCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345822251FB0BAAF00A00E8F /* SellCarTableViewCell.m */; };
 		345822281FB0BAAF00A00E8F /* SellCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345822261FB0BAAF00A00E8F /* SellCarTableViewCell.xib */; };
+		3462317A1FD251310020D44D /* URLDefine.h in Sources */ = {isa = PBXBuildFile; fileRef = 346231791FD250830020D44D /* URLDefine.h */; };
+		3462317D1FD25D690020D44D /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 3462317C1FD25D690020D44D /* MBProgressHUD+Add.m */; };
+		346231811FD25E710020D44D /* LoginNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 346231801FD25E710020D44D /* LoginNetWork.m */; };
+		346231841FD28EA60020D44D /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 346231821FD28EA50020D44D /* UserInfo.m */; };
+		34C12FCC1FCC5C540022A668 /* RechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C12FCA1FCC5C540022A668 /* RechargeViewController.m */; };
+		34C12FCD1FCC5C540022A668 /* RechargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C12FCB1FCC5C540022A668 /* RechargeViewController.xib */; };
+		34C12FD11FCC69990022A668 /* InviteUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C12FCF1FCC69990022A668 /* InviteUserViewController.m */; };
+		34C12FD21FCC69990022A668 /* InviteUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C12FD01FCC69990022A668 /* InviteUserViewController.xib */; };
 		34DD20B91FB40D800080E9C0 /* BuyCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DD20B71FB40D800080E9C0 /* BuyCarTableViewCell.m */; };
 		34DD20BA1FB40D800080E9C0 /* BuyCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34DD20B81FB40D800080E9C0 /* BuyCarTableViewCell.xib */; };
 		34E435A61FCAA3C800E46160 /* BasicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E435A41FCAA3C800E46160 /* BasicWebViewController.m */; };
@@ -118,6 +127,8 @@
 		34288B331FA7693E004C98E9 /* BasicTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicTabbarViewController.m; sourceTree = "<group>"; };
 		34288B3A1FA77049004C98E9 /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		34288B3B1FA77049004C98E9 /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		343BAFFE1FD5A6D000C744B7 /* EmployNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployNetWork.h; sourceTree = "<group>"; };
+		343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployNetWork.m; sourceTree = "<group>"; };
 		344E81B81FB9DA5C0061DAB1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		344E81B91FB9DA5C0061DAB1 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		344E81BA1FB9DA5C0061DAB1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +147,19 @@
 		345822241FB0BAAF00A00E8F /* SellCarTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SellCarTableViewCell.h; sourceTree = "<group>"; };
 		345822251FB0BAAF00A00E8F /* SellCarTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SellCarTableViewCell.m; sourceTree = "<group>"; };
 		345822261FB0BAAF00A00E8F /* SellCarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SellCarTableViewCell.xib; sourceTree = "<group>"; };
+		346231791FD250830020D44D /* URLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLDefine.h; sourceTree = "<group>"; };
+		3462317B1FD25D690020D44D /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		3462317C1FD25D690020D44D /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		3462317F1FD25E710020D44D /* LoginNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginNetWork.h; sourceTree = "<group>"; };
+		346231801FD25E710020D44D /* LoginNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginNetWork.m; sourceTree = "<group>"; };
+		346231821FD28EA50020D44D /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		346231831FD28EA60020D44D /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		34C12FC91FCC5C540022A668 /* RechargeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeViewController.h; sourceTree = "<group>"; };
+		34C12FCA1FCC5C540022A668 /* RechargeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeViewController.m; sourceTree = "<group>"; };
+		34C12FCB1FCC5C540022A668 /* RechargeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RechargeViewController.xib; sourceTree = "<group>"; };
+		34C12FCE1FCC69990022A668 /* InviteUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteUserViewController.h; sourceTree = "<group>"; };
+		34C12FCF1FCC69990022A668 /* InviteUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteUserViewController.m; sourceTree = "<group>"; };
+		34C12FD01FCC69990022A668 /* InviteUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InviteUserViewController.xib; sourceTree = "<group>"; };
 		34DD20B61FB40D800080E9C0 /* BuyCarTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuyCarTableViewCell.h; sourceTree = "<group>"; };
 		34DD20B71FB40D800080E9C0 /* BuyCarTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyCarTableViewCell.m; sourceTree = "<group>"; };
 		34DD20B81FB40D800080E9C0 /* BuyCarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyCarTableViewCell.xib; sourceTree = "<group>"; };
@@ -210,6 +234,7 @@
 		340210331FA6E13300193AF8 /* SemitrailerUsedCar */ = {
 			isa = PBXGroup;
 			children = (
+				346231781FD250160020D44D /* Config */,
 				34288B351FA77049004C98E9 /* Category */,
 				344E81B41FB9D8CE0061DAB1 /* Login */,
 				34288B291FA76768004C98E9 /* UserCenter */,
@@ -306,6 +331,7 @@
 		34288B231FA765BB004C98E9 /* Employ */ = {
 			isa = PBXGroup;
 			children = (
+				343BAFFA1FD5A67D00C744B7 /* NetWork */,
 				345354C71FA98693005AC3E3 /* View */,
 				34288B241FA76741004C98E9 /* EmployViewController.h */,
 				34288B251FA76741004C98E9 /* EmployViewController.m */,
@@ -330,6 +356,12 @@
 				34E435B71FCAAFD200E46160 /* SettingViewController.h */,
 				34E435BC1FCAB2AC00E46160 /* SettingViewController.m */,
 				34E435B91FCAAFD200E46160 /* SettingViewController.xib */,
+				34C12FC91FCC5C540022A668 /* RechargeViewController.h */,
+				34C12FCA1FCC5C540022A668 /* RechargeViewController.m */,
+				34C12FCB1FCC5C540022A668 /* RechargeViewController.xib */,
+				34C12FCE1FCC69990022A668 /* InviteUserViewController.h */,
+				34C12FCF1FCC69990022A668 /* InviteUserViewController.m */,
+				34C12FD01FCC69990022A668 /* InviteUserViewController.xib */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -337,15 +369,27 @@
 		34288B351FA77049004C98E9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3462317B1FD25D690020D44D /* MBProgressHUD+Add.h */,
+				3462317C1FD25D690020D44D /* MBProgressHUD+Add.m */,
 				34288B3A1FA77049004C98E9 /* UIColor+Extension.h */,
 				34288B3B1FA77049004C98E9 /* UIColor+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
 		};
+		343BAFFA1FD5A67D00C744B7 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				343BAFFE1FD5A6D000C744B7 /* EmployNetWork.h */,
+				343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 		344E81B41FB9D8CE0061DAB1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				3462317E1FD25E5B0020D44D /* NetWork */,
 				344E81B71FB9D8EE0061DAB1 /* Controller */,
 				344E81B61FB9D8E60061DAB1 /* Model */,
 				344E81B51FB9D8DF0061DAB1 /* View */,
@@ -363,6 +407,8 @@
 		344E81B61FB9D8E60061DAB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				346231831FD28EA60020D44D /* UserInfo.h */,
+				346231821FD28EA50020D44D /* UserInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -414,6 +460,23 @@
 				345822261FB0BAAF00A00E8F /* SellCarTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		346231781FD250160020D44D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				346231791FD250830020D44D /* URLDefine.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		3462317E1FD25E5B0020D44D /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				3462317F1FD25E710020D44D /* LoginNetWork.h */,
+				346231801FD25E710020D44D /* LoginNetWork.m */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		39BF0E16F428DBEF1FDF7030 /* Pods */ = {
@@ -545,8 +608,10 @@
 				34E435AC1FCAA62200E46160 /* RechargeRecordListViewController.xib in Resources */,
 				340210411FA6E13300193AF8 /* LaunchScreen.storyboard in Resources */,
 				344E81C11FB9DAEF0061DAB1 /* RegisterViewController.xib in Resources */,
+				34C12FCD1FCC5C540022A668 /* RechargeViewController.xib in Resources */,
 				345354CC1FA986B7005AC3E3 /* EmployTableViewCell.xib in Resources */,
 				3402103E1FA6E13300193AF8 /* Assets.xcassets in Resources */,
+				34C12FD21FCC69990022A668 /* InviteUserViewController.xib in Resources */,
 				340B80941FB84410009421F0 /* UserCenterTableViewCell.xib in Resources */,
 				3402103C1FA6E13300193AF8 /* Main.storyboard in Resources */,
 				34288B211FA7659C004C98E9 /* BuyCarViewController.xib in Resources */,
@@ -637,11 +702,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346231811FD25E710020D44D /* LoginNetWork.m in Sources */,
+				3462317A1FD251310020D44D /* URLDefine.h in Sources */,
+				346231841FD28EA60020D44D /* UserInfo.m in Sources */,
 				34E435B01FCAA83900E46160 /* RechargeRecordListTableViewCell.m in Sources */,
+				34C12FD11FCC69990022A668 /* InviteUserViewController.m in Sources */,
 				34288B341FA7693E004C98E9 /* BasicTabbarViewController.m in Sources */,
 				340B809A1FB84D7B009421F0 /* BasicViewController.m in Sources */,
 				34E435B51FCAADD200E46160 /* MyConnectViewController.m in Sources */,
 				34288B201FA7659C004C98E9 /* BuyCarViewController.m in Sources */,
+				3462317D1FD25D690020D44D /* MBProgressHUD+Add.m in Sources */,
+				343BB0001FD5A6D000C744B7 /* EmployNetWork.m in Sources */,
 				345822271FB0BAAF00A00E8F /* SellCarTableViewCell.m in Sources */,
 				34288B271FA76741004C98E9 /* EmployViewController.m in Sources */,
 				340210391FA6E13300193AF8 /* ViewController.m in Sources */,
@@ -652,6 +723,7 @@
 				344E81C51FB9DB090061DAB1 /* ForgetPwViewController.m in Sources */,
 				340210441FA6E13300193AF8 /* main.m in Sources */,
 				34E435BD1FCAB2AD00E46160 /* SettingViewController.m in Sources */,
+				34C12FCC1FCC5C540022A668 /* RechargeViewController.m in Sources */,
 				34288B421FA77147004C98E9 /* UIColor+Extension.m in Sources */,
 				34288B2D1FA767D3004C98E9 /* UserCenterViewController.m in Sources */,
 				340B80931FB84410009421F0 /* UserCenterTableViewCell.m in Sources */,

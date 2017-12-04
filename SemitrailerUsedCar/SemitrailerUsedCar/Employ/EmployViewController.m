@@ -10,6 +10,7 @@
 #import "EmployTableViewCell.h"
 #import "LoginViewController.h"
 #import "BasicNavigationViewController.h"
+#import "EmployNetWork.h"
 
 @interface EmployViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -32,6 +33,16 @@
     [button setImage:[UIImage imageNamed:@"employ_release"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(onclickReleaseButton:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
+    [self getEmployList];
+}
+
+- (void)getEmployList
+{
+    [EmployNetWork getEmployList:nil success:^(YMBaseRequest *request) {
+        
+    } failure:^(YMBaseRequest *request, NSError *error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

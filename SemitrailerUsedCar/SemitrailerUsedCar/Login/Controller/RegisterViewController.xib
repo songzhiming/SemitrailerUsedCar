@@ -11,6 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
             <connections>
+                <outlet property="authCodeButton" destination="8BY-QM-PWm" id="yj4-W5-0Yo"/>
+                <outlet property="authCodeTextField" destination="3XB-jA-yRb" id="XJy-uy-mly"/>
+                <outlet property="inviteCodeTextField" destination="fCh-kZ-F4V" id="iCt-vz-OYK"/>
+                <outlet property="passWordTextField" destination="jCW-7v-Wyf" id="PyX-vU-gXd"/>
+                <outlet property="phoneTextField" destination="sEv-vN-Lcq" id="Ike-77-1Cp"/>
+                <outlet property="surePassWordTextField" destination="eTc-p5-YNY" id="NNe-DG-rTy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,7 +38,7 @@
                             <rect key="frame" x="115" y="29" width="235" height="21"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsJ-Zu-DXR">
                             <rect key="frame" x="25" y="59.5" width="325" height="0.5"/>
@@ -68,7 +74,7 @@
                             <rect key="frame" x="115" y="29" width="235" height="21"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEM-go-3Ad">
                             <rect key="frame" x="25" y="59.5" width="325" height="0.5"/>
@@ -104,7 +110,7 @@
                             <rect key="frame" x="115" y="29" width="235" height="21"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ri0-dk-rjn">
                             <rect key="frame" x="25" y="59.5" width="325" height="0.5"/>
@@ -137,11 +143,24 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3XB-jA-yRb">
-                            <rect key="frame" x="115" y="29" width="235" height="21"/>
+                            <rect key="frame" x="115" y="29" width="108" height="21"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BY-QM-PWm">
+                            <rect key="frame" x="278" y="25" width="72" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="72" id="Q4I-0c-ArV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="获取验证码">
+                                <color key="titleColor" red="0.058823529411764705" green="0.66274509803921566" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onclickGetAuthCodeButton:" destination="-1" eventType="touchUpInside" id="dUr-Rf-KnI"/>
+                            </connections>
+                        </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3U8-aD-nvx">
                             <rect key="frame" x="25" y="59.5" width="325" height="0.5"/>
                             <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,8 +171,8 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="3XB-jA-yRb" firstAttribute="trailing" secondItem="3U8-aD-nvx" secondAttribute="trailing" id="3Ki-ZU-tZb"/>
                         <constraint firstAttribute="height" constant="60" id="8r0-HX-n23"/>
+                        <constraint firstItem="8BY-QM-PWm" firstAttribute="centerY" secondItem="3XB-jA-yRb" secondAttribute="centerY" id="H38-NP-Sug"/>
                         <constraint firstAttribute="trailing" secondItem="3U8-aD-nvx" secondAttribute="trailing" constant="25" id="S7X-UQ-x0y"/>
                         <constraint firstAttribute="bottom" secondItem="3U8-aD-nvx" secondAttribute="bottom" id="T5F-6M-ikz"/>
                         <constraint firstItem="3XB-jA-yRb" firstAttribute="centerY" secondItem="AR9-JW-jec" secondAttribute="centerY" id="ZZi-Ts-ivX"/>
@@ -161,6 +180,8 @@
                         <constraint firstItem="AR9-JW-jec" firstAttribute="leading" secondItem="lRo-Rj-S7c" secondAttribute="leading" constant="24" id="gWf-CO-96Q"/>
                         <constraint firstItem="3U8-aD-nvx" firstAttribute="leading" secondItem="lRo-Rj-S7c" secondAttribute="leading" constant="25" id="hid-bP-jBj"/>
                         <constraint firstItem="AR9-JW-jec" firstAttribute="top" secondItem="lRo-Rj-S7c" secondAttribute="top" constant="29" id="hr5-Bx-WIY"/>
+                        <constraint firstAttribute="trailing" secondItem="8BY-QM-PWm" secondAttribute="trailing" constant="25" id="ndg-jJ-Dll"/>
+                        <constraint firstItem="8BY-QM-PWm" firstAttribute="leading" secondItem="3XB-jA-yRb" secondAttribute="trailing" constant="55" id="wB2-fL-8JV"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlf-bd-X0O">
@@ -214,6 +235,9 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onclickRigisterButton:" destination="-1" eventType="touchUpInside" id="cze-0N-LS0"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

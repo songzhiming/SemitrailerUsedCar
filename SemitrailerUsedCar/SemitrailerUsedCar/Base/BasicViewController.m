@@ -7,7 +7,8 @@
 //
 
 #import "BasicViewController.h"
-//#import "MBProgressHUD+Add.h"
+#import <MBProgressHUD.h>
+#import "MBProgressHUD+Add.h"
 #import "UIColor+Extension.h"
 
 @interface BasicViewController ()
@@ -36,6 +37,11 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
+#pragma mark public method
+- (void)showMessage:(NSString *)string
+{
+    [MBProgressHUD showError:string];
+}
 
 
 @end

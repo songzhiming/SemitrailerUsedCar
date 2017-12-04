@@ -9,8 +9,6 @@
 
 @interface BasicViewController : AllocDeallocViewController
 
-
-
-
+- (void)showMessage:(NSString *)string;
 
 @end
