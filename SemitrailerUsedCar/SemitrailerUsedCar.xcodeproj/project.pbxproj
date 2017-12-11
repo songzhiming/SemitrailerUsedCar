@@ -63,6 +63,9 @@
 		34E435B61FCAADD200E46160 /* MyConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E435B41FCAADD200E46160 /* MyConnectViewController.xib */; };
 		34E435BB1FCAAFD200E46160 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E435B91FCAAFD200E46160 /* SettingViewController.xib */; };
 		34E435BD1FCAB2AD00E46160 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E435BC1FCAB2AC00E46160 /* SettingViewController.m */; };
+		34EEB0A01FDED9E500BB4AE7 /* PublishEmployViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEB09E1FDED9E500BB4AE7 /* PublishEmployViewController.m */; };
+		34EEB0A11FDED9E500BB4AE7 /* PublishEmployViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34EEB09F1FDED9E500BB4AE7 /* PublishEmployViewController.xib */; };
+		34EEB0A81FDEDA8F00BB4AE7 /* UserCenterNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEB0A71FDEDA8F00BB4AE7 /* UserCenterNetWork.m */; };
 		6AC84DFBAD82EE6AE29DDC48 /* libPods-SemitrailerUsedCar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD237B74EE25B014D2E9E9CB /* libPods-SemitrailerUsedCar.a */; };
 /* End PBXBuildFile section */
 
@@ -178,6 +181,11 @@
 		34E435B71FCAAFD200E46160 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		34E435B91FCAAFD200E46160 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		34E435BC1FCAB2AC00E46160 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		34EEB09D1FDED9E500BB4AE7 /* PublishEmployViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishEmployViewController.h; sourceTree = "<group>"; };
+		34EEB09E1FDED9E500BB4AE7 /* PublishEmployViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishEmployViewController.m; sourceTree = "<group>"; };
+		34EEB09F1FDED9E500BB4AE7 /* PublishEmployViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublishEmployViewController.xib; sourceTree = "<group>"; };
+		34EEB0A61FDEDA8F00BB4AE7 /* UserCenterNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCenterNetWork.h; sourceTree = "<group>"; };
+		34EEB0A71FDEDA8F00BB4AE7 /* UserCenterNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCenterNetWork.m; sourceTree = "<group>"; };
 		8A0FFD972ED05AABE3E9C3E5 /* Pods-SemitrailerUsedCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemitrailerUsedCar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SemitrailerUsedCar/Pods-SemitrailerUsedCar.debug.xcconfig"; sourceTree = "<group>"; };
 		BD237B74EE25B014D2E9E9CB /* libPods-SemitrailerUsedCar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SemitrailerUsedCar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264DC12C1C9608CCF435EDC /* Pods-SemitrailerUsedCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemitrailerUsedCar.release.xcconfig"; path = "Pods/Target Support Files/Pods-SemitrailerUsedCar/Pods-SemitrailerUsedCar.release.xcconfig"; sourceTree = "<group>"; };
@@ -336,6 +344,9 @@
 				34288B241FA76741004C98E9 /* EmployViewController.h */,
 				34288B251FA76741004C98E9 /* EmployViewController.m */,
 				34288B261FA76741004C98E9 /* EmployViewController.xib */,
+				34EEB09D1FDED9E500BB4AE7 /* PublishEmployViewController.h */,
+				34EEB09E1FDED9E500BB4AE7 /* PublishEmployViewController.m */,
+				34EEB09F1FDED9E500BB4AE7 /* PublishEmployViewController.xib */,
 			);
 			path = Employ;
 			sourceTree = "<group>";
@@ -343,6 +354,7 @@
 		34288B291FA76768004C98E9 /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
+				34EEB0A21FDEDA5500BB4AE7 /* NetWork */,
 				340B808F1FB843F9009421F0 /* View */,
 				34288B2A1FA767D3004C98E9 /* UserCenterViewController.h */,
 				34288B2B1FA767D3004C98E9 /* UserCenterViewController.m */,
@@ -475,6 +487,15 @@
 			children = (
 				3462317F1FD25E710020D44D /* LoginNetWork.h */,
 				346231801FD25E710020D44D /* LoginNetWork.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		34EEB0A21FDEDA5500BB4AE7 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				34EEB0A61FDEDA8F00BB4AE7 /* UserCenterNetWork.h */,
+				34EEB0A71FDEDA8F00BB4AE7 /* UserCenterNetWork.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -621,6 +642,7 @@
 				34E435BB1FCAAFD200E46160 /* SettingViewController.xib in Resources */,
 				344E81C61FB9DB090061DAB1 /* ForgetPwViewController.xib in Resources */,
 				34E435A71FCAA3C800E46160 /* BasicWebViewController.xib in Resources */,
+				34EEB0A11FDED9E500BB4AE7 /* PublishEmployViewController.xib in Resources */,
 				345822281FB0BAAF00A00E8F /* SellCarTableViewCell.xib in Resources */,
 				34E435B11FCAA83900E46160 /* RechargeRecordListTableViewCell.xib in Resources */,
 				344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */,
@@ -726,7 +748,9 @@
 				34C12FCC1FCC5C540022A668 /* RechargeViewController.m in Sources */,
 				34288B421FA77147004C98E9 /* UIColor+Extension.m in Sources */,
 				34288B2D1FA767D3004C98E9 /* UserCenterViewController.m in Sources */,
+				34EEB0A01FDED9E500BB4AE7 /* PublishEmployViewController.m in Sources */,
 				340B80931FB84410009421F0 /* UserCenterTableViewCell.m in Sources */,
+				34EEB0A81FDEDA8F00BB4AE7 /* UserCenterNetWork.m in Sources */,
 				340B80991FB84D7B009421F0 /* AllocDeallocViewController.m in Sources */,
 				344E81C01FB9DAEF0061DAB1 /* RegisterViewController.m in Sources */,
 				345354CB1FA986B7005AC3E3 /* EmployTableViewCell.m in Sources */,

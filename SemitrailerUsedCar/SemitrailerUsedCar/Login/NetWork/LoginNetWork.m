@@ -10,20 +10,6 @@
 
 @implementation LoginNetWork
 
-+ (void)updatePassword:(NSDictionary *)params
-               success:(void (^)(YMBaseRequest *request))success
-               failure:(void (^)(YMBaseRequest *request, NSError *error))failure
-{
-    YMBaseRequest *request = [[YMBaseRequest alloc]init];
-    request.requestUrl = @"http://api.app.wedoctors.com.cn/1.5/index.interface.php?a=user&m=xupass";
-    request.requestArgument = params;
-    request.requestMethod = YMRequestMethodPOST;
-    [request startWithCompletionBlockWithSuccess:^(__kindof YMBaseRequest * _Nonnull request) {
-        // todo   responseObject model
-    } failure:^(__kindof YMBaseRequest * _Nonnull request) {
-        failure(request,request.error);
-    }];
-}
 
 // 获取验证码
 + (void)getAuthCode:(NSDictionary *)params
@@ -48,6 +34,7 @@
     }];
 }
 
+// 注册
 + (void)registerUser:(NSDictionary *)params
              success:(void (^)(YMBaseRequest *request))success
              failure:(void (^)(YMBaseRequest *request, NSError *error))failure
@@ -69,6 +56,7 @@
     }];
 }
 
+// 登录
 + (void)loginUser:(NSDictionary *)params
           success:(void (^)(YMBaseRequest *request))success
           failure:(void (^)(YMBaseRequest *request, NSError *error))failure
@@ -88,6 +76,14 @@
     } failure:^(__kindof YMBaseRequest * _Nonnull request) {
         failure(request,request.error);
     }];
+}
+
+//忘记密码
++ (void)forgetPassword:(NSDictionary *)params
+               success:(void (^)(YMBaseRequest *request))success
+               failure:(void (^)(YMBaseRequest *request, NSError *error))failure
+{
+    
 }
 
 @end

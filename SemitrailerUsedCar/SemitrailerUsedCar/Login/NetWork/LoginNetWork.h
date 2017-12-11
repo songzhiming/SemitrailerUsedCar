@@ -10,9 +10,7 @@
 
 @interface LoginNetWork : NSObject
 
-+ (void)updatePassword:(NSDictionary *)params
-               success:(void (^)(YMBaseRequest *request))success
-               failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
 
 // 获取验证码
 + (void)getAuthCode:(NSDictionary *)params
@@ -27,6 +25,11 @@
 + (void)loginUser:(NSDictionary *)params
           success:(void (^)(YMBaseRequest *request))success
           failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
+//忘记密码
++ (void)forgetPassword:(NSDictionary *)params
+               success:(void (^)(YMBaseRequest *request))success
+               failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 
 
 

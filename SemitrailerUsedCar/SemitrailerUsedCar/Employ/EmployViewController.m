@@ -51,9 +51,13 @@
 
 #pragma mark actions
 - (void)onclickReleaseButton:(UIButton *)sender {
-    LoginViewController *vc = [[LoginViewController alloc]init];
-    BasicNavigationViewController *nav = [[BasicNavigationViewController alloc]initWithRootViewController:vc];
-    [self presentViewController:nav animated:YES completion:nil];
+    if ([UserInfo isLogin]) {//
+        
+    }else{
+        LoginViewController *vc = [[LoginViewController alloc]init];
+        BasicNavigationViewController *nav = [[BasicNavigationViewController alloc]initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
 }
 
 #pragma mark UITableViewDelegate && UITableViewDataSource

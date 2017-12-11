@@ -16,8 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.layer.cornerRadius = 25;
-    self.view.layer.masksToBounds = YES;
     // Do any additional setup after loading the view from its nib.
 }
 

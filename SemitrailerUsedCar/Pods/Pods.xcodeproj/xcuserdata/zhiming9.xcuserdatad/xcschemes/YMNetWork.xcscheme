@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E4A547667AC8FB3CAB8585FCA67200F6'
+               BlueprintIdentifier = '5F60C2359240C3B30574AFE2FE159F53'
                BlueprintName = 'YMNetWork'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libYMNetWork.a'>

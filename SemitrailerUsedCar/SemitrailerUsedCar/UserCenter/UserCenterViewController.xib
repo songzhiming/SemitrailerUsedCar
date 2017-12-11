@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserCenterViewController">
             <connections>
                 <outlet property="avatarImageView" destination="4Il-DM-9ct" id="w4o-5d-5g1"/>
+                <outlet property="nameLabel" destination="5YH-yq-UQz" id="NKB-G9-fIz"/>
                 <outlet property="tableview" destination="U4D-0i-VZx" id="4b1-HK-p0S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

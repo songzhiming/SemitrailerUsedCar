@@ -18,6 +18,13 @@
     [encoder encodeObject:self.id forKey:@"id"];
     [encoder encodeObject:self.invite_code forKey:@"invite_code"];
     [encoder encodeObject:self.mobile forKey:@"mobile"];
+    [encoder encodeObject:@(self.amount) forKey:@"amount"];
+    [encoder encodeObject:self.avatar forKey:@"avatar"];
+    [encoder encodeObject:@(self.order_car) forKey:@"order_car"];
+    [encoder encodeObject:@(self.order_job) forKey:@"order_job"];
+    [encoder encodeObject:@(self.publish_car) forKey:@"publish_car"];
+    [encoder encodeObject:@(self.publish_job) forKey:@"publish_job"];
+    [encoder encodeObject:@(self.invite_count) forKey:@"invite_count"];
 }
 
 //解档
@@ -26,6 +33,13 @@
         self.id = [Decoder decodeObjectForKey:@"id"];
         self.invite_code = [Decoder decodeObjectForKey:@"invite_code"];
         self.mobile = [Decoder decodeObjectForKey:@"mobile"];
+        self.amount = ((NSNumber *)[Decoder decodeObjectForKey:@"amount"]).integerValue;
+        self.avatar = [Decoder decodeObjectForKey:@"avatar"];
+        self.order_car = ((NSNumber *)[Decoder decodeObjectForKey:@"order_car"]).integerValue;
+        self.order_job = ((NSNumber *)[Decoder decodeObjectForKey:@"order_job"]).integerValue;
+        self.publish_car = ((NSNumber *)[Decoder decodeObjectForKey:@"publish_car"]).integerValue;
+        self.publish_job = ((NSNumber *)[Decoder decodeObjectForKey:@"publish_job"]).integerValue;
+        self.invite_count = ((NSNumber *)[Decoder decodeObjectForKey:@"invite_count"]).integerValue;
     }
     return self;
 }
@@ -57,5 +71,12 @@
     [manager removeItemAtPath:UserInfoFilePath error:nil];
 }
 
++ (BOOL)isLogin
+{
+    if ([UserInfo userinfo].id) {
+        return YES;
+    }
+    return NO;
+}
 
 @end

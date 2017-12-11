@@ -10,11 +10,13 @@
 #import "UserCenterTableViewCell.h"
 #import "SettingViewController.h"
 #import "RechargeViewController.h"
+#import "UserCenterNetWork.h"
 
 @interface UserCenterViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong) NSArray *datasource;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end
 
@@ -24,6 +26,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
     [self setupViews];
+    [self getUserInfo];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -46,6 +49,23 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+#pragma mark network
+- (void)getUserInfo
+{
+    if (![UserInfo isLogin]) {
+        return;
+    }
+    [UserCenterNetWork getUserInfo:@{@"uid":[UserInfo userinfo].id} success:^(YMBaseRequest *request) {
+        [[UserInfo userinfo]saveUserInfoWithDict:request.responseObject[@"data"]];
+//        [self.avatarImageView yy_setImageWithURL:[NSURL URLWithString:[UserInfo userinfo].avatar]] placeholder:nil];
+        self.nameLabel.text = [UserInfo userinfo].mobile;
+        [self.avatarImageView yy_setImageWithURL:[NSURL URLWithString:[UserInfo userinfo].avatar] placeholder:nil options:YYWebImageOptionSetImageWithFadeAnimation completion:nil];
+        [self.tableview reloadData];
+    } failure:^(YMBaseRequest *request, NSError *error) {
+        
+    }];
+}
+
 
 #pragma mark UITableViewDelegate && UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -92,6 +112,21 @@
     NSDictionary *dic = items[indexPath.row];
     cell.iconImageView.image = [UIImage imageNamed:dic[@"icon"]];
     cell.nameLabel.text = dic[@"name"];
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {//积分
+            cell.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)[UserInfo userinfo].amount];
+        }else if (indexPath.row == 2){
+            cell.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)[UserInfo userinfo].order_car];
+        }
+    }else if (indexPath.section == 1){
+        if (indexPath.row == 0) {
+            cell.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)[UserInfo userinfo].publish_job];
+        }else{
+            cell.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)[UserInfo userinfo].order_job];
+        }
+    }else{
+        cell.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)[UserInfo userinfo].invite_count];
+    }
     return cell;
 }
 
