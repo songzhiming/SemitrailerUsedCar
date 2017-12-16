@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SellCarTableViewCell : UITableViewCell
+@interface SellCarTableViewCell : UITableViewCell<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *desLabel;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+//
+
+
 
 @end

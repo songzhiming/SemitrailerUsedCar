@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FeQ-WU-8jI">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inviteBg" translatesAutoresizingMaskIntoConstraints="NO" id="FeQ-WU-8jI">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="282"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="FeQ-WU-8jI" secondAttribute="height" multiplier="375:282" id="3kM-Ss-MFm"/>
@@ -38,25 +38,60 @@
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAk-4V-9NA">
-                    <rect key="frame" x="168.5" y="310" width="37.5" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下载 &gt; 注册并填写邀请码 &gt; 赠送双方各5积分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAk-4V-9NA">
+                    <rect key="frame" x="35.5" y="310" width="304.5" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pky-s4-pfk">
+                    <rect key="frame" x="166.5" y="426" width="42" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="YnO-fQ-edT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nL-S4-ymy">
+                    <rect key="frame" x="25" y="498" width="325" height="50"/>
+                    <color key="backgroundColor" red="0.058823529411764705" green="0.6705882352941176" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2C6-Oc-hJk"/>
+                    </constraints>
+                    <state key="normal" title="邀请好友">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.96862745098039216" green="0.98039215686274506" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="rNp-EG-Xnl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1AL-CY-slt"/>
                 <constraint firstItem="Vcc-x1-v3f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3bW-8P-phQ"/>
+                <constraint firstAttribute="trailing" secondItem="8nL-S4-ymy" secondAttribute="trailing" constant="25" id="EXV-0J-N4j"/>
+                <constraint firstItem="8nL-S4-ymy" firstAttribute="top" secondItem="pky-s4-pfk" secondAttribute="bottom" constant="22" id="FeK-cm-eNY"/>
                 <constraint firstAttribute="trailing" secondItem="FeQ-WU-8jI" secondAttribute="trailing" id="Ien-Ls-72u"/>
+                <constraint firstItem="pky-s4-pfk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Muu-3l-v5a"/>
                 <constraint firstItem="aAk-4V-9NA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="api-0I-GsL"/>
                 <constraint firstItem="Vcc-x1-v3f" firstAttribute="top" secondItem="FeQ-WU-8jI" secondAttribute="bottom" id="cIc-Sb-OCE"/>
                 <constraint firstItem="rNp-EG-Xnl" firstAttribute="top" secondItem="FeQ-WU-8jI" secondAttribute="bottom" constant="-63" id="jLH-iH-Fp9"/>
                 <constraint firstItem="aAk-4V-9NA" firstAttribute="top" secondItem="Vcc-x1-v3f" secondAttribute="bottom" constant="10" id="jxr-Xu-suz"/>
                 <constraint firstItem="FeQ-WU-8jI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="q3x-Y9-aRy"/>
+                <constraint firstAttribute="bottom" secondItem="8nL-S4-ymy" secondAttribute="bottom" constant="119" id="qbk-dj-sJV"/>
+                <constraint firstItem="8nL-S4-ymy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="r7y-JO-98a"/>
                 <constraint firstItem="FeQ-WU-8jI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zyb-uQ-U0j"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="inviteBg" width="375" height="282"/>
+    </resources>
 </document>

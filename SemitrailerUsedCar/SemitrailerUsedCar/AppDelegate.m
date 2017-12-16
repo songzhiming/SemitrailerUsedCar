@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "BasicTabbarViewController.h"
+#import "CarConfigureManager.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //自动处理键盘事件
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.enableAutoToolbar = NO;
+    [CarConfigureManager sharedInstance];
     //网络配置
     YMNetWorkConfig *config = [YMNetWorkConfig sharedInstance];
     config.baseUrl = kAppUrlDomain;

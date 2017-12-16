@@ -21,12 +21,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"招聘";
     [self setupViews];
 }
 
 - (void)setupViews
 {
+    UILabel *label = [[UILabel alloc]init];
+    label.text = @"司机招聘";
+    label.textColor = [UIColor colorWithHexString:@"#0fa945"];
+    label.font = [UIFont systemFontOfSize:19];
+    [label sizeToFit];
+    self.navigationItem.titleView = label;
     self.navigationItem.leftBarButtonItem = nil;
     [self.tableview registerNib:[UINib nibWithNibName:@"EmployTableViewCell" bundle:nil] forCellReuseIdentifier:@"EmployTableViewCell"];
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];

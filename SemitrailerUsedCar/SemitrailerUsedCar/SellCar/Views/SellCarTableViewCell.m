@@ -8,10 +8,13 @@
 
 #import "SellCarTableViewCell.h"
 
+
+
 @implementation SellCarTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.textField.delegate = self;
     // Initialization code
 }
 
@@ -19,6 +22,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self.textField resignFirstResponder];
 }
 
 @end

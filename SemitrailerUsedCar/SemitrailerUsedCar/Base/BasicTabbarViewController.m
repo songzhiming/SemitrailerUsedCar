@@ -13,8 +13,9 @@
 #import "EmployViewController.h"
 #import "UserCenterViewController.h"
 #import "UIColor+Extension.h"
+#import "LoginViewController.h"
 
-@interface BasicTabbarViewController ()
+@interface BasicTabbarViewController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.delegate = self;
     BuyCarViewController *buyCarVc = [[BuyCarViewController alloc]init];
     [self addOneChildController:buyCarVc title:@"买车" norImage:@"tabbar_buy_normal" selectedImage:@"tabbar_buy_selected"];
     SellCarViewController *sellCarVc = [[SellCarViewController alloc]init];
@@ -45,6 +47,36 @@
     BasicNavigationViewController  *nav = [[BasicNavigationViewController alloc] initWithRootViewController:childVc];
     [self addChildViewController:nav];
 }
+
+
+#pragma mark UITabBarControllerDelegate
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController NS_AVAILABLE_IOS(3_0)
+{
+    BasicNavigationViewController *nav = (BasicNavigationViewController *)viewController;
+    if([nav.childViewControllers.lastObject isKindOfClass:[SellCarViewController class]] ||
+       [nav.childViewControllers.lastObject isKindOfClass:[UserCenterViewController class]]){
+        if(![UserInfo isLogin]){
+            if (![UserInfo isLogin]) {
+                LoginViewController *vc = [[LoginViewController alloc]init];
+                BasicNavigationViewController *nav = [[BasicNavigationViewController alloc]initWithRootViewController:vc];
+                [self presentViewController:nav animated:YES completion:nil];
+            }
+            return NO;
+        }
+    }
+    return YES;
+}
+
+//- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+//{
+//    if (self.selectedIndex == 1 || self.selectedIndex == 3) {
+//        if (![UserInfo isLogin]) {
+//            LoginViewController *vc = [[LoginViewController alloc]init];
+//            BasicNavigationViewController *nav = [[BasicNavigationViewController alloc]initWithRootViewController:vc];
+//            [self presentViewController:nav animated:YES completion:nil];
+//        }
+//    }
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

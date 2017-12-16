@@ -56,8 +56,9 @@
         return;
     }
     [UserCenterNetWork getUserInfo:@{@"uid":[UserInfo userinfo].id} success:^(YMBaseRequest *request) {
-        [[UserInfo userinfo]saveUserInfoWithDict:request.responseObject[@"data"]];
-//        [self.avatarImageView yy_setImageWithURL:[NSURL URLWithString:[UserInfo userinfo].avatar]] placeholder:nil];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithDictionary:request.responseObject[@"data"]];
+        dic[@"invite_code"] = [UserInfo userinfo].invite_code;
+        [[UserInfo userinfo]saveUserInfoWithDict:dic];
         self.nameLabel.text = [UserInfo userinfo].mobile;
         [self.avatarImageView yy_setImageWithURL:[NSURL URLWithString:[UserInfo userinfo].avatar] placeholder:nil options:YYWebImageOptionSetImageWithFadeAnimation completion:nil];
         [self.tableview reloadData];
@@ -178,7 +179,7 @@
                               }],
                         @[@{@"icon":@"mine_invite",
                             @"name":@"邀请好友",
-                            @"vc":@"",
+                            @"vc":@"InviteUserViewController",
                             }],
                         
         ];
