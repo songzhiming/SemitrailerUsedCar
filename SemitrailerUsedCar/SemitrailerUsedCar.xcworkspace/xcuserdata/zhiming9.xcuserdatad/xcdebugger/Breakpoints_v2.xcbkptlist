@@ -20,7 +20,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/BuyCar/BuyCarViewController.m"
-            timestampString = "535187137.599737"
+            timestampString = "535187588.765473"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
@@ -36,7 +36,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/BuyCar/BuyCarViewController.m"
-            timestampString = "535187137.600037"
+            timestampString = "535187588.765862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
@@ -52,7 +52,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/BuyCar/NetWork/BuyCarNetWork.m"
-            timestampString = "535187137.600118"
+            timestampString = "535187588.765937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -68,7 +68,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/BuyCar/NetWork/BuyCarNetWork.m"
-            timestampString = "535187137.600356"
+            timestampString = "535187588.766423"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -84,7 +84,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/Employ/PublishEmployViewController.m"
-            timestampString = "535187137.60043"
+            timestampString = "535187588.766537"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -100,12 +100,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/SellCar/Views/SellCarTableViewCell.m"
-            timestampString = "535187369.813611"
+            timestampString = "535187588.766797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "-textFieldDidEndEditing:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SemitrailerUsedCar/UserCenter/MyPublishCarListViewController.m"
+            timestampString = "535187687.199055"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-getCarList"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
