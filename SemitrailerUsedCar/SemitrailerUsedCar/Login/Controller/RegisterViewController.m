@@ -11,6 +11,11 @@
 
 
 @interface RegisterViewController ()
+{
+    NSTimer *timer;
+    NSInteger sec;
+    bool countstate;     //倒计时状态
+}
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *surePassWordTextField;
@@ -34,6 +39,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [timer invalidate];
+    timer = nil;
+}
+
+- (void)dealloc
+{
+    [timer invalidate];
+    timer = nil;
+}
+
+
+//倒计时
+-(void)onTimer{
+    sec = sec - 1;
+    if (sec == 0) {
+        [  timer invalidate];
+        [self.authCodeButton setEnabled:YES];
+        countstate=NO;
+        [self.authCodeButton setTitle:[NSString stringWithFormat:@""] forState:UIControlStateDisabled];
+    }else{
+        [self.authCodeButton  setTitle:[NSString stringWithFormat:@"%@%ld)",@"重新发送(",(long)sec] forState:UIControlStateDisabled];
+    }
+}
 
 
 #pragma mark actions
@@ -45,9 +76,13 @@
     NSDictionary *dic = @{@"mobile":self.phoneTextField.text,
                           @"type":@"1"
                           };
+    self.authCodeButton.enabled = NO;
     [LoginNetWork getAuthCode:dic success:^(YMBaseRequest *request) {
-        self.authCodeTextField.text = request.responseObject[@"data"][@"hash"];
+        timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(onTimer) userInfo:nil repeats: YES];
+        sec=60;
+        [self.authCodeButton setTitle:[NSString stringWithFormat:@"%@%ld)",@"重新发送(",(long)sec] forState:UIControlStateDisabled];
     } failure:^(YMBaseRequest *request, NSError *error) {
+        self.authCodeButton.enabled = YES;
         [self showMessage:error.localizedDescription];
     }];
 }

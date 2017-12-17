@@ -10,4 +10,7 @@
 
 @interface ConfirmPwViewController : BasicViewController
 
+@property (nonatomic,copy) NSString *phone;
+@property (nonatomic,copy) NSString *authCode;
+
 @end

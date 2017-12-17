@@ -143,15 +143,15 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3XB-jA-yRb">
-                            <rect key="frame" x="115" y="29" width="108" height="21"/>
+                            <rect key="frame" x="115" y="29" width="80" height="21"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BY-QM-PWm">
-                            <rect key="frame" x="278" y="25" width="72" height="29"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BY-QM-PWm">
+                            <rect key="frame" x="250" y="25" width="100" height="29"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="72" id="Q4I-0c-ArV"/>
+                                <constraint firstAttribute="width" constant="100" id="Q4I-0c-ArV"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="获取验证码">
