@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RechargeModel.h"
 
 @interface RechargeRecordListTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *payWayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+
+@property (nonatomic,strong) RechargeModel *model;
 
 @end

@@ -31,6 +31,11 @@
 + (void)myPublishJobList:(void (^)(YMBaseRequest *request))success
                  failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 
+// 充值列表
++ (void)getRechargeList:(NSDictionary *)params
+                success:(void (^)(YMBaseRequest *request))success
+                failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
 
 
 @end

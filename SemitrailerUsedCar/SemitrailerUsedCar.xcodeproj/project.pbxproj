@@ -16,6 +16,7 @@
 		340B80941FB84410009421F0 /* UserCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340B80921FB84410009421F0 /* UserCenterTableViewCell.xib */; };
 		340B80991FB84D7B009421F0 /* AllocDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340B80951FB84D7A009421F0 /* AllocDeallocViewController.m */; };
 		340B809A1FB84D7B009421F0 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340B80981FB84D7B009421F0 /* BasicViewController.m */; };
+		340D821C1FE6A16B00DD3D48 /* RechargeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D821B1FE6A16B00DD3D48 /* RechargeModel.m */; };
 		34288B131FA76529004C98E9 /* SellCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B111FA76529004C98E9 /* SellCarViewController.m */; };
 		34288B141FA76529004C98E9 /* SellCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34288B121FA76529004C98E9 /* SellCarViewController.xib */; };
 		34288B201FA7659C004C98E9 /* BuyCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B1E1FA7659C004C98E9 /* BuyCarViewController.m */; };
@@ -162,6 +163,8 @@
 		340B80981FB84D7B009421F0 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
 		340B809B1FB84E35009421F0 /* LogTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTool.h; sourceTree = "<group>"; };
 		340B809C1FB8533E009421F0 /* SemitrailerUsedCar-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SemitrailerUsedCar-Prefix.pch"; sourceTree = "<group>"; };
+		340D821A1FE6A16B00DD3D48 /* RechargeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeModel.h; sourceTree = "<group>"; };
+		340D821B1FE6A16B00DD3D48 /* RechargeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeModel.m; sourceTree = "<group>"; };
 		34288B101FA76529004C98E9 /* SellCarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SellCarViewController.h; sourceTree = "<group>"; };
 		34288B111FA76529004C98E9 /* SellCarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SellCarViewController.m; sourceTree = "<group>"; };
 		34288B121FA76529004C98E9 /* SellCarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SellCarViewController.xib; sourceTree = "<group>"; };
@@ -451,6 +454,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		340D82191FE6A14A00DD3D48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				340D821A1FE6A16B00DD3D48 /* RechargeModel.h */,
+				340D821B1FE6A16B00DD3D48 /* RechargeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		34288B091FA763FA004C98E9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +545,7 @@
 		34288B291FA76768004C98E9 /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
+				340D82191FE6A14A00DD3D48 /* Model */,
 				34EEB0A21FDEDA5500BB4AE7 /* NetWork */,
 				340B808F1FB843F9009421F0 /* View */,
 				34288B2A1FA767D3004C98E9 /* UserCenterViewController.h */,
@@ -1146,6 +1159,7 @@
 				345354CB1FA986B7005AC3E3 /* EmployTableViewCell.m in Sources */,
 				34288B131FA76529004C98E9 /* SellCarViewController.m in Sources */,
 				340210361FA6E13300193AF8 /* AppDelegate.m in Sources */,
+				340D821C1FE6A16B00DD3D48 /* RechargeModel.m in Sources */,
 				34E435AB1FCAA62200E46160 /* RechargeRecordListViewController.m in Sources */,
 				34288B311FA76884004C98E9 /* BasicNavigationViewController.m in Sources */,
 				34E6EBFF1FE51E2E001D014C /* CarConfigureModel.m in Sources */,

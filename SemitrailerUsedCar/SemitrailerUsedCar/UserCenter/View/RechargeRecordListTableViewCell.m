@@ -21,4 +21,18 @@
     // Configure the view for the selected state
 }
 
+//@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *payWayLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+
+- (void)setModel:(RechargeModel *)model
+{
+    _model = model;
+    self.titleLabel.text = @"付款成功";
+    self.timeLabel.text = model.created_at;
+    self.payWayLabel.text = model.way;
+    self.moneyLabel.text = model.amount;
+}
+
 @end

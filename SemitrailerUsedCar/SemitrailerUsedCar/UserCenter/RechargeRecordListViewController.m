@@ -8,6 +8,9 @@
 
 #import "RechargeRecordListViewController.h"
 #import "RechargeRecordListTableViewCell.h"
+#import "MJRefresh.h"
+#import "UserCenterNetWork.h"
+#import "RechargeModel.h"
 
 @interface RechargeRecordListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -24,9 +27,29 @@
 
 - (void)setupViews
 {
+    self.datasource = [NSMutableArray array];
     [self.tableview registerNib:[UINib nibWithNibName:@"RechargeRecordListTableViewCell" bundle:nil] forCellReuseIdentifier:@"RechargeRecordListTableViewCell"];
+    __weak typeof(self) weakself = self;
+    [self.tableview addHeaderWithCallback:^{
+        [weakself getRechargeList];
+    }];
+    UIView *footerView = [[UIView alloc]init];
+    self.tableview.tableFooterView = footerView;
+    [self.tableview headerBeginRefreshing];
 }
 
+- (void)getRechargeList
+{
+    [UserCenterNetWork getRechargeList:nil success:^(YMBaseRequest *request) {
+        NSArray *data = [NSArray yy_modelArrayWithClass:[RechargeModel class] json:request.responseObject[@"data"]];
+        [self.datasource addObjectsFromArray:data];
+        [self.tableview reloadData];
+        [self.tableview headerEndRefreshing];
+    } failure:^(YMBaseRequest *request, NSError *error) {
+        [self.tableview headerEndRefreshing];
+        [self showMessage:error.localizedDescription];
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -36,13 +59,13 @@
 #pragma mark UITableViewDelegate && UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
     return self.datasource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RechargeRecordListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RechargeRecordListTableViewCell"];
+    cell.model = self.datasource[indexPath.row];
     return cell;
 }
 
