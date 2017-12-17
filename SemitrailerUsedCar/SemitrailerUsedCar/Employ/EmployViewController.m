@@ -11,9 +11,11 @@
 #import "LoginViewController.h"
 #import "BasicNavigationViewController.h"
 #import "EmployNetWork.h"
+#import "EmployModel.h"
 
 @interface EmployViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (nonatomic,strong) NSArray *datasource;
 
 @end
 
@@ -21,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.datasource = [NSArray array];
     [self setupViews];
 }
 
@@ -34,6 +37,8 @@
     self.navigationItem.titleView = label;
     self.navigationItem.leftBarButtonItem = nil;
     [self.tableview registerNib:[UINib nibWithNibName:@"EmployTableViewCell" bundle:nil] forCellReuseIdentifier:@"EmployTableViewCell"];
+    UIView *footerView = [[UIView alloc]init];
+    self.tableview.tableFooterView = footerView;
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
     [button setImage:[UIImage imageNamed:@"employ_release"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(onclickReleaseButton:) forControlEvents:UIControlEventTouchUpInside];
@@ -44,9 +49,10 @@
 - (void)getEmployList
 {
     [EmployNetWork getEmployList:nil success:^(YMBaseRequest *request) {
-        
+        self.datasource = [NSArray yy_modelArrayWithClass:[EmployModel class] json:request.responseObject[@"data"]];
+        [self.tableview reloadData];
     } failure:^(YMBaseRequest *request, NSError *error) {
-        
+        [self showMessage:error.localizedDescription];
     }];
 }
 
@@ -68,7 +74,7 @@
 #pragma mark UITableViewDelegate && UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.datasource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

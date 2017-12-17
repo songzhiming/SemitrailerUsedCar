@@ -29,4 +29,13 @@
     // Configure the view for the selected state
 }
 
+- (void)setModel:(CarModel *)model
+{
+    _model = model;
+    [self.iconImageView yy_setImageWithURL:[NSURL URLWithString:model.cover] placeholder:nil];
+    self.nameLabel.text = [NSString stringWithFormat:@"%@   %@",model.name,model.horsepower];
+    self.describeLabel.text = [NSString stringWithFormat:@"%@    %@   %@",model.brand,model.age,model.mileage];
+    self.moneyLabel.text = model.price;
+}
+
 @end

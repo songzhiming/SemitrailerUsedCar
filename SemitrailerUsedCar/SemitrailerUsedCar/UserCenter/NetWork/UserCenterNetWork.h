@@ -15,4 +15,10 @@
             success:(void (^)(YMBaseRequest *request))success
             failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 
+// 我发布的车辆
++ (void)myPublishCarList:(void (^)(YMBaseRequest *request))success
+                 failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
+
+
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CarModel.h"
 
 @interface BuyCarTableViewCell : UITableViewCell
+
+@property (nonatomic,strong) CarModel *model;
 
 @end

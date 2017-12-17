@@ -42,7 +42,6 @@
 }
 - (void)setupViews
 {
-    self.avatarImageView.image = [UIImage imageNamed:@"defaultUserIcon"];
     [self.tableview registerNib:[UINib nibWithNibName:@"UserCenterTableViewCell" bundle:nil] forCellReuseIdentifier:@"UserCenterTableViewCell"];
 }
 
@@ -52,15 +51,12 @@
 #pragma mark network
 - (void)getUserInfo
 {
-    if (![UserInfo isLogin]) {
-        return;
-    }
     [UserCenterNetWork getUserInfo:@{@"uid":[UserInfo userinfo].id} success:^(YMBaseRequest *request) {
         NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithDictionary:request.responseObject[@"data"]];
         dic[@"invite_code"] = [UserInfo userinfo].invite_code;
         [[UserInfo userinfo]saveUserInfoWithDict:dic];
         self.nameLabel.text = [UserInfo userinfo].mobile;
-        [self.avatarImageView yy_setImageWithURL:[NSURL URLWithString:[UserInfo userinfo].avatar] placeholder:nil options:YYWebImageOptionSetImageWithFadeAnimation completion:nil];
+        [self.avatarImageView yy_setImageWithURL:[NSURL URLWithString:[UserInfo userinfo].avatar] placeholder:[UIImage imageNamed:@"defaultUserIcon"] options:YYWebImageOptionSetImageWithFadeAnimation completion:nil];
         [self.tableview reloadData];
     } failure:^(YMBaseRequest *request, NSError *error) {
         
@@ -168,6 +164,10 @@
                           @{@"icon":@"mine_connect",
                             @"name":@"已联系车主",
                             @"vc":@"MyConnectViewController",
+                            },
+                          @{@"icon":@"mine_connect",
+                            @"name":@"我发布的车辆",
+                            @"vc":@"MyPublishCarListViewController",
                             }],
                         @[@{@"icon":@"mine_releaseOffer",
                               @"name":@"我发表的职位",

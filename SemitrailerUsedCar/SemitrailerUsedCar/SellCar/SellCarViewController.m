@@ -109,9 +109,14 @@
                           @"pictures":imageUrl
                           };
     [SellCarNetWork publishCar:dic success:^(YMBaseRequest *request) {
-        
+        [self showMessage:@"发布成功"];
+        [self.contentArray removeAllObjects];
+        for (int i = 0; i < self.datasource.count; i++) {
+            [_contentArray addObject:@""];
+        }
+        [self.tableview reloadData];
     } failure:^(YMBaseRequest *request, NSError *error) {
-        
+        [self showMessage:error.localizedDescription];
     }];
 }
 
