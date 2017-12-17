@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EmployModel.h"
 
 @interface EmployTableViewCell : UITableViewCell
+
+@property (nonatomic,strong) EmployModel *model;
 
 @end

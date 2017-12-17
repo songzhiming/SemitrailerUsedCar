@@ -23,4 +23,10 @@
     [super setSelected:selected animated:animated];
 }
 
+- (void)setModel:(EmployModel *)model
+{
+    _model = model;
+    self.titleLabel.text = model.title;
+}
+
 @end

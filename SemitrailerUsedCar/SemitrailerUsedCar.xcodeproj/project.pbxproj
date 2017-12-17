@@ -113,6 +113,10 @@
 		34E6EC441FE644A9001D014C /* MyPublishCarListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E6EC421FE644A9001D014C /* MyPublishCarListViewController.xib */; };
 		34E6EC4A1FE65BB3001D014C /* ChooseAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E6EC481FE65BB3001D014C /* ChooseAreaViewController.m */; };
 		34E6EC4B1FE65BB3001D014C /* ChooseAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E6EC491FE65BB3001D014C /* ChooseAreaViewController.xib */; };
+		34E6EC4F1FE66EA8001D014C /* MyPublishJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E6EC4D1FE66EA8001D014C /* MyPublishJobViewController.m */; };
+		34E6EC501FE66EA8001D014C /* MyPublishJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E6EC4E1FE66EA8001D014C /* MyPublishJobViewController.xib */; };
+		34E6EC541FE66F31001D014C /* MyConnectJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E6EC521FE66F31001D014C /* MyConnectJobViewController.m */; };
+		34E6EC551FE66F31001D014C /* MyConnectJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E6EC531FE66F31001D014C /* MyConnectJobViewController.xib */; };
 		34EEB0A01FDED9E500BB4AE7 /* PublishEmployViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEB09E1FDED9E500BB4AE7 /* PublishEmployViewController.m */; };
 		34EEB0A11FDED9E500BB4AE7 /* PublishEmployViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34EEB09F1FDED9E500BB4AE7 /* PublishEmployViewController.xib */; };
 		34EEB0A81FDEDA8F00BB4AE7 /* UserCenterNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEB0A71FDEDA8F00BB4AE7 /* UserCenterNetWork.m */; };
@@ -317,6 +321,12 @@
 		34E6EC471FE65BB3001D014C /* ChooseAreaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseAreaViewController.h; sourceTree = "<group>"; };
 		34E6EC481FE65BB3001D014C /* ChooseAreaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseAreaViewController.m; sourceTree = "<group>"; };
 		34E6EC491FE65BB3001D014C /* ChooseAreaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseAreaViewController.xib; sourceTree = "<group>"; };
+		34E6EC4C1FE66EA8001D014C /* MyPublishJobViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPublishJobViewController.h; sourceTree = "<group>"; };
+		34E6EC4D1FE66EA8001D014C /* MyPublishJobViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPublishJobViewController.m; sourceTree = "<group>"; };
+		34E6EC4E1FE66EA8001D014C /* MyPublishJobViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPublishJobViewController.xib; sourceTree = "<group>"; };
+		34E6EC511FE66F31001D014C /* MyConnectJobViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyConnectJobViewController.h; sourceTree = "<group>"; };
+		34E6EC521FE66F31001D014C /* MyConnectJobViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyConnectJobViewController.m; sourceTree = "<group>"; };
+		34E6EC531FE66F31001D014C /* MyConnectJobViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyConnectJobViewController.xib; sourceTree = "<group>"; };
 		34EEB09D1FDED9E500BB4AE7 /* PublishEmployViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishEmployViewController.h; sourceTree = "<group>"; };
 		34EEB09E1FDED9E500BB4AE7 /* PublishEmployViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishEmployViewController.m; sourceTree = "<group>"; };
 		34EEB09F1FDED9E500BB4AE7 /* PublishEmployViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublishEmployViewController.xib; sourceTree = "<group>"; };
@@ -546,6 +556,12 @@
 				34E6EC401FE644A9001D014C /* MyPublishCarListViewController.h */,
 				34E6EC411FE644A9001D014C /* MyPublishCarListViewController.m */,
 				34E6EC421FE644A9001D014C /* MyPublishCarListViewController.xib */,
+				34E6EC4C1FE66EA8001D014C /* MyPublishJobViewController.h */,
+				34E6EC4D1FE66EA8001D014C /* MyPublishJobViewController.m */,
+				34E6EC4E1FE66EA8001D014C /* MyPublishJobViewController.xib */,
+				34E6EC511FE66F31001D014C /* MyConnectJobViewController.h */,
+				34E6EC521FE66F31001D014C /* MyConnectJobViewController.m */,
+				34E6EC531FE66F31001D014C /* MyConnectJobViewController.xib */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -962,6 +978,7 @@
 				34E435AC1FCAA62200E46160 /* RechargeRecordListViewController.xib in Resources */,
 				34E6EC011FE51F9E001D014C /* carOptions.json in Resources */,
 				344E81C11FB9DAEF0061DAB1 /* RegisterViewController.xib in Resources */,
+				34E6EC551FE66F31001D014C /* MyConnectJobViewController.xib in Resources */,
 				34E6EC3F1FE63A78001D014C /* CarDetailViewController.xib in Resources */,
 				34C231801FE17E3A00381F1B /* read_me.txt in Resources */,
 				34C12FCD1FCC5C540022A668 /* RechargeViewController.xib in Resources */,
@@ -989,6 +1006,7 @@
 				34DD20BA1FB40D800080E9C0 /* BuyCarTableViewCell.xib in Resources */,
 				34288B281FA76741004C98E9 /* EmployViewController.xib in Resources */,
 				34E6EC331FE62C68001D014C /* MJRefresh.bundle in Resources */,
+				34E6EC501FE66EA8001D014C /* MyPublishJobViewController.xib in Resources */,
 				34288B141FA76529004C98E9 /* SellCarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1078,6 +1096,7 @@
 				34E6EC341FE62C68001D014C /* MJRefreshBaseView.m in Sources */,
 				34288B341FA7693E004C98E9 /* BasicTabbarViewController.m in Sources */,
 				340B809A1FB84D7B009421F0 /* BasicViewController.m in Sources */,
+				34E6EC4F1FE66EA8001D014C /* MyPublishJobViewController.m in Sources */,
 				34C231881FE17E3A00381F1B /* UMSocialUIManager.m in Sources */,
 				34E435B51FCAADD200E46160 /* MyConnectViewController.m in Sources */,
 				34288B201FA7659C004C98E9 /* BuyCarViewController.m in Sources */,
@@ -1103,6 +1122,7 @@
 				34E6EC1A1FE57A5B001D014C /* SellCarNetWork.m in Sources */,
 				34E6EC201FE624BD001D014C /* EmployModel.m in Sources */,
 				340210441FA6E13300193AF8 /* main.m in Sources */,
+				34E6EC541FE66F31001D014C /* MyConnectJobViewController.m in Sources */,
 				34E6EC101FE55998001D014C /* ChooseImageViewController.m in Sources */,
 				34E435BD1FCAB2AD00E46160 /* SettingViewController.m in Sources */,
 				34E6EC351FE62C68001D014C /* MJRefreshConst.m in Sources */,

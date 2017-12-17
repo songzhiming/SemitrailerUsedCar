@@ -19,6 +19,18 @@
 + (void)myPublishCarList:(void (^)(YMBaseRequest *request))success
                  failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 
+// 已联系的车主
++ (void)myOrderCarList:(void (^)(YMBaseRequest *request))success
+               failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
+// 已联系雇主
++ (void)myOrderJobList:(void (^)(YMBaseRequest *request))success
+               failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
+// 我发布的职位
++ (void)myPublishJobList:(void (^)(YMBaseRequest *request))success
+                 failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
 
 
 @end
