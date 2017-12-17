@@ -32,5 +32,6 @@
 - (void)onclickDoneButton
 {
     self.callBackImage(@[@"http://f.hiphotos.baidu.com/image/pic/item/5bafa40f4bfbfbed5e3bf76c72f0f736afc31f47.jpg",@"http://b.hiphotos.baidu.com/image/pic/item/c9fcc3cec3fdfc03434927abde3f8794a4c226f4.jpg"]);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

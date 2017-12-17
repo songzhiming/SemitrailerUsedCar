@@ -18,8 +18,6 @@
 @property (nonatomic,strong) NSArray *datasource;
 @property (strong, nonatomic) IBOutlet UIView *footerView;
 @property (nonatomic,strong) NSMutableArray *contentArray;// 文案数组
-@property (nonatomic,strong) NSArray *imageArray;// 图片数组
-@property (nonatomic,strong) 
 @end
 
 @implementation SellCarViewController
@@ -27,7 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupViews];
-    self.imageArray = [NSArray array];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleTextField:) name:UITextFieldTextDidEndEditingNotification object:nil];
     // Do any additional setup after loading the view from its nib.
 }
@@ -63,23 +60,55 @@
 }
 
 - (IBAction)onclickSubmitButton:(UIButton *)sender {
-    NSLog(@"self0-0-0---%@",self.contentArray);
-    NSLog(@"self0-0-0---%@",self.imageArray);
     BOOL isComplete = YES;
-    for (NSString *str in self.contentArray) {
-        if ([str isEqualToString:@""]) {
+    for (id obj in self.contentArray) {
+        if (obj && [obj isKindOfClass:[NSString class]] && [obj isEqualToString:@""]) {
             isComplete = NO;
         }
     }
-    if (self.imageArray.count == 0 || isComplete == NO) {//没图片 或者信息不全
-        [self showMessage:@"请填写完整信息"];
+    for (NSInteger i = 1; i < 7; i++) {
+        id obj = self.contentArray[i];
+        if (![obj isKindOfClass:[CarConfigureModel class]]) {
+            isComplete = NO;
+        }
+    }
+    id obj = self.contentArray[8];
+    if (![obj isKindOfClass:[NSArray class]]) {
+        isComplete = NO;
+    }
+    if (isComplete == NO) {
+        [self showMessage:@"信息不全,请填写信息"];
         return;
+    }
+    CarConfigureModel *brand = self.contentArray[1];
+    CarConfigureModel *price = self.contentArray[2];
+    CarConfigureModel *age = self.contentArray[3];
+    CarConfigureModel *emission = self.contentArray[4];
+    CarConfigureModel *mileage = self.contentArray[5];
+    CarConfigureModel *horsepower = self.contentArray[6];
+    NSString *imageUrl = @"";
+    NSArray *imageArr = (NSArray *)obj;
+    for (NSString *url in imageArr) {
+        if ([imageUrl isEqualToString:@""]) {
+            imageUrl = [NSString stringWithFormat:@"%@",url];
+        }else{
+            imageUrl = [NSString stringWithFormat:@"%@,%@",imageUrl,url];
+        }
     }
     NSDictionary *dic = @{@"created_by":[UserInfo userinfo].id,
                           @"name":self.contentArray[0],
-                          @"brand":@"",
+                          @"brand":brand.value,
+                          @"price":price.value,
+                          @"age":age.value,
+                          @"emission":emission.value,
+                          @"mileage":mileage.value,
+                          @"horsepower":horsepower.value,
+                          @"brief":self.contentArray[7],
+                          @"contact":self.contentArray[9],
+                          @"mobile":self.contentArray[10],
+                          @"pictures":imageUrl
                           };
-    [SellCarNetWork publishCar:nil success:^(YMBaseRequest *request) {
+    [SellCarNetWork publishCar:dic success:^(YMBaseRequest *request) {
         
     } failure:^(YMBaseRequest *request, NSError *error) {
         
@@ -98,33 +127,28 @@
     SellCarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SellCarTableViewCell"];
     cell.nameLabel.text = self.datasource[indexPath.row];
     cell.textField.tag = indexPath.row;
-    cell.desLabel.text = self.contentArray[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     if (indexPath.row == 0) {
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textField.hidden = NO;
         cell.desLabel.hidden = YES;
-    }else if (indexPath.row == 1){
+    }else if (indexPath.row == 1 ||
+              indexPath.row == 2 ||
+              indexPath.row == 3 ||
+              indexPath.row == 4 ||
+              indexPath.row == 5 ||
+              indexPath.row == 6 ){
         cell.textField.hidden = YES;
         cell.desLabel.hidden = NO;
-    }else if (indexPath.row == 2){
-        cell.textField.hidden = YES;
-        cell.desLabel.hidden = NO;
-    }else if (indexPath.row == 3){
-        cell.textField.hidden = YES;
-        cell.desLabel.hidden = NO;
-    }else if (indexPath.row == 4){
-        cell.textField.hidden = YES;
-        cell.desLabel.hidden = NO;
-    }else if (indexPath.row == 5){
-        cell.textField.hidden = YES;
-        cell.desLabel.hidden = NO;
-    }else if (indexPath.row == 6){
-        cell.textField.hidden = YES;
-        cell.desLabel.hidden = NO;
+        id obj = self.contentArray[indexPath.row];
+        if (obj && [obj isKindOfClass:[CarConfigureModel class]]) {
+            CarConfigureModel *model = (CarConfigureModel *)obj;
+            cell.desLabel.text = model.name;
+        }
     }else if (indexPath.row == 7){
         cell.textField.hidden = YES;
         cell.desLabel.hidden = NO;
+        cell.desLabel.text = self.contentArray[indexPath.row];
     }else if (indexPath.row == 8){
         cell.textField.hidden = YES;
         cell.desLabel.hidden = NO;
@@ -160,6 +184,11 @@
                 vc.providesPresentationContextTransitionStyle = YES;
                 vc.definesPresentationContext = YES;
                 [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+                __weak SellCarViewController *weakSelf = self;
+                vc.callBackCarConfigureModel = ^(CarConfigureModel *model) {
+                    [weakSelf.contentArray replaceObjectAtIndex:indexPath.row withObject:model];
+                    [weakSelf.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                };
                 [MainWindow.rootViewController presentViewController:vc animated:YES completion:nil];
             }
             break;
@@ -171,6 +200,11 @@
                 vc.providesPresentationContextTransitionStyle = YES;
                 vc.definesPresentationContext = YES;
                 [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+                __weak SellCarViewController *weakSelf = self;
+                vc.callBackCarConfigureModel = ^(CarConfigureModel *model) {
+                    [weakSelf.contentArray replaceObjectAtIndex:indexPath.row withObject:model];
+                    [weakSelf.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                };
                 [MainWindow.rootViewController presentViewController:vc animated:YES completion:nil];
             }
             break;
@@ -182,6 +216,11 @@
                 vc.providesPresentationContextTransitionStyle = YES;
                 vc.definesPresentationContext = YES;
                 [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+                __weak SellCarViewController *weakSelf = self;
+                vc.callBackCarConfigureModel = ^(CarConfigureModel *model) {
+                    [weakSelf.contentArray replaceObjectAtIndex:indexPath.row withObject:model];
+                    [weakSelf.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                };
                 [MainWindow.rootViewController presentViewController:vc animated:YES completion:nil];
             }
             break;
@@ -193,6 +232,11 @@
                 vc.providesPresentationContextTransitionStyle = YES;
                 vc.definesPresentationContext = YES;
                 [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+                __weak SellCarViewController *weakSelf = self;
+                vc.callBackCarConfigureModel = ^(CarConfigureModel *model) {
+                    [weakSelf.contentArray replaceObjectAtIndex:indexPath.row withObject:model];
+                    [weakSelf.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                };
                 [MainWindow.rootViewController presentViewController:vc animated:YES completion:nil];
             }
             break;
@@ -204,6 +248,11 @@
                 vc.providesPresentationContextTransitionStyle = YES;
                 vc.definesPresentationContext = YES;
                 [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+                __weak SellCarViewController *weakSelf = self;
+                vc.callBackCarConfigureModel = ^(CarConfigureModel *model) {
+                    [weakSelf.contentArray replaceObjectAtIndex:indexPath.row withObject:model];
+                    [weakSelf.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                };
                 [MainWindow.rootViewController presentViewController:vc animated:YES completion:nil];
             }
             break;
@@ -215,6 +264,11 @@
                vc.providesPresentationContextTransitionStyle = YES;
                vc.definesPresentationContext = YES;
                [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+               __weak SellCarViewController *weakSelf = self;
+               vc.callBackCarConfigureModel = ^(CarConfigureModel *model) {
+                   [weakSelf.contentArray replaceObjectAtIndex:indexPath.row withObject:model];
+                   [weakSelf.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+               };
                [MainWindow.rootViewController presentViewController:vc animated:YES completion:nil];
             }
             break;
@@ -236,8 +290,7 @@
                 ChooseImageViewController *vc = [[ChooseImageViewController alloc]init];
                 __weak SellCarViewController *weakSelf = self;
                 vc.callBackImage = ^(NSArray *arr) {
-                    [weakSelf.contentArray replaceObjectAtIndex:indexPath.row withObject:@"YES"];
-                    weakSelf.imageArray = arr;
+                    [weakSelf.contentArray replaceObjectAtIndex:indexPath.row withObject:arr];
                 };
                 [self.navigationController pushViewController:vc animated:YES];
             }

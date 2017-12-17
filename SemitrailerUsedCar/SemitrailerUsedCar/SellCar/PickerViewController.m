@@ -11,15 +11,17 @@
 
 @interface PickerViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
-
+@property (nonatomic,strong) CarConfigureModel *model;
 @end
 
 @implementation PickerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"选照片";
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
+    self.model = self.datasource[0];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -36,6 +38,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)onclickSureButton:(UIButton *)sender {
+    self.callBackCarConfigureModel(self.model);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -62,7 +65,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component __TVOS_PROHIBITED
 {
-    
+    self.model = self.datasource[row];
 }
 
 @end

@@ -9,8 +9,11 @@
 #import "BasicViewController.h"
 #import "CarConfigureModel.h"
 
+typedef void (^callBackCarConfigureModel) (CarConfigureModel *);
+
 @interface PickerViewController : BasicViewController
 
 @property (nonatomic,strong) NSArray *datasource;
+@property (nonatomic,copy) callBackCarConfigureModel callBackCarConfigureModel;
 
 @end
