@@ -17,7 +17,7 @@
 @property (nonatomic,strong) NSArray *datasource;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
+@property (nonatomic,strong) NSDictionary *userInfoDic;
 @end
 
 @implementation UserCenterViewController
@@ -52,11 +52,9 @@
 - (void)getUserInfo
 {
     [UserCenterNetWork getUserInfo:@{@"uid":[UserInfo userinfo].id} success:^(YMBaseRequest *request) {
-        NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithDictionary:request.responseObject[@"data"]];
-        dic[@"invite_code"] = [UserInfo userinfo].invite_code;
-        [[UserInfo userinfo]saveUserInfoWithDict:dic];
-        self.nameLabel.text = [UserInfo userinfo].mobile;
-        [self.avatarImageView yy_setImageWithURL:[NSURL URLWithString:[UserInfo userinfo].avatar] placeholder:[UIImage imageNamed:@"defaultUserIcon"] options:YYWebImageOptionSetImageWithFadeAnimation completion:nil];
+        self.userInfoDic = [[NSMutableDictionary alloc]initWithDictionary:request.responseObject[@"data"]];
+        self.nameLabel.text = self.userInfoDic[@"mobile"];
+        [self.avatarImageView yy_setImageWithURL:[NSURL URLWithString:self.userInfoDic[@"avatar"]] placeholder:[UIImage imageNamed:@"defaultUserIcon"] options:YYWebImageOptionSetImageWithFadeAnimation completion:nil];
         [self.tableview reloadData];
     } failure:^(YMBaseRequest *request, NSError *error) {
         
@@ -111,18 +109,20 @@
     cell.nameLabel.text = dic[@"name"];
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {//积分
-            cell.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)[UserInfo userinfo].amount];
+            cell.numberLabel.text = [NSString stringWithFormat:@"%@",self.userInfoDic[@"amount"]];
         }else if (indexPath.row == 2){
-            cell.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)[UserInfo userinfo].order_car];
+            cell.numberLabel.text = [NSString stringWithFormat:@"%@",self.userInfoDic[@"order_car"]];
+        }else if (indexPath.row == 3){
+            cell.numberLabel.text = [NSString stringWithFormat:@"%@",self.userInfoDic[@"publish_car"]];
         }
     }else if (indexPath.section == 1){
         if (indexPath.row == 0) {
-            cell.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)[UserInfo userinfo].publish_job];
+            cell.numberLabel.text = [NSString stringWithFormat:@"%@",self.userInfoDic[@"publish_job"]];
         }else{
-            cell.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)[UserInfo userinfo].order_job];
+            cell.numberLabel.text = [NSString stringWithFormat:@"%@",self.userInfoDic[@"order_job"]];
         }
     }else{
-        cell.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)[UserInfo userinfo].invite_count];
+        cell.numberLabel.text = [NSString stringWithFormat:@"%@",self.userInfoDic[@"invite_count"]];
     }
     return cell;
 }

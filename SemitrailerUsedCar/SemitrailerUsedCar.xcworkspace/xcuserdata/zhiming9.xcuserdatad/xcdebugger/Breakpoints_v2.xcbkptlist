@@ -20,11 +20,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/UserCenter/MyPublishCarListViewController.m"
-            timestampString = "535192162.495354"
+            timestampString = "535194183.285174"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
+            landmarkName = "-getCarList"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SemitrailerUsedCar/UserCenter/MyPublishCarListViewController.m"
+            timestampString = "535194183.285574"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "-getCarList"
             landmarkType = "7">
          </BreakpointContent>
