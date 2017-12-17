@@ -25,9 +25,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupViews];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleTextField:) name:UITextFieldTextDidEndEditingNotification object:nil];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleTextField:) name:UITextFieldTextDidEndEditingNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
 
 - (void)setupViews
 {
@@ -83,6 +96,7 @@
         cell.textField.hidden = YES;
         cell.desLabel.hidden = NO;
     }else if (indexPath.row == 3){
+        cell.desLabel.text = self.contentArray[indexPath.row];
         cell.textField.hidden = YES;
         cell.desLabel.hidden = NO;
     }else if (indexPath.row == 4){
@@ -112,7 +126,7 @@
         case 1:
         {
             PickerViewController *vc = [[PickerViewController alloc]init];
-            vc.datasource = [[CarConfigureManager sharedInstance] brand];
+            vc.datasource = [[CarConfigureManager sharedInstance] price];
             vc.view.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
             vc.providesPresentationContextTransitionStyle = YES;
             vc.definesPresentationContext = YES;

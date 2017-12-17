@@ -19,5 +19,8 @@
 + (void)getEmployAreaList:(NSDictionary *)params
                   success:(void (^)(YMBaseRequest *request))success
                   failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
-
+// 发布职位
++ (void)publishJob:(NSDictionary *)params
+           success:(void (^)(YMBaseRequest *request))success
+           failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 @end

@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InviteUserViewController">
             <connections>
+                <outlet property="inviteCodeLabel" destination="pky-s4-pfk" id="1ZZ-mg-YBH"/>
+                <outlet property="titleLabel" destination="rNp-EG-Xnl" id="M9t-Hh-ioo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,6 +34,17 @@
                     <color key="textColor" red="0.058823529411764705" green="0.66274509803921566" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTo-0E-eAn">
+                    <rect key="frame" x="0.0" y="20" width="30" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="pZh-5h-0e3"/>
+                        <constraint firstAttribute="width" constant="30" id="swj-9D-yUE"/>
+                    </constraints>
+                    <state key="normal" image="backIcon_white"/>
+                    <connections>
+                        <action selector="onclickBackButton:" destination="-1" eventType="touchUpInside" id="ff4-Jr-2ru"/>
+                    </connections>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享链接给好友&gt;好友" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcc-x1-v3f">
                     <rect key="frame" x="114" y="282" width="147.5" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -44,8 +57,9 @@
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pky-s4-pfk">
-                    <rect key="frame" x="166.5" y="426" width="42" height="50"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pky-s4-pfk">
+                    <rect key="frame" x="25" y="426" width="325" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="YnO-fQ-edT"/>
                     </constraints>
@@ -70,6 +84,9 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onclickInviteButton:" destination="-1" eventType="touchUpInside" id="uGl-gK-DOK"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.96862745098039216" green="0.98039215686274506" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,19 +96,23 @@
                 <constraint firstAttribute="trailing" secondItem="8nL-S4-ymy" secondAttribute="trailing" constant="25" id="EXV-0J-N4j"/>
                 <constraint firstItem="8nL-S4-ymy" firstAttribute="top" secondItem="pky-s4-pfk" secondAttribute="bottom" constant="22" id="FeK-cm-eNY"/>
                 <constraint firstAttribute="trailing" secondItem="FeQ-WU-8jI" secondAttribute="trailing" id="Ien-Ls-72u"/>
-                <constraint firstItem="pky-s4-pfk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Muu-3l-v5a"/>
+                <constraint firstItem="pky-s4-pfk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="VgX-m7-t9M"/>
+                <constraint firstItem="wTo-0E-eAn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Y5F-Wi-w2c"/>
                 <constraint firstItem="aAk-4V-9NA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="api-0I-GsL"/>
                 <constraint firstItem="Vcc-x1-v3f" firstAttribute="top" secondItem="FeQ-WU-8jI" secondAttribute="bottom" id="cIc-Sb-OCE"/>
                 <constraint firstItem="rNp-EG-Xnl" firstAttribute="top" secondItem="FeQ-WU-8jI" secondAttribute="bottom" constant="-63" id="jLH-iH-Fp9"/>
+                <constraint firstAttribute="trailing" secondItem="pky-s4-pfk" secondAttribute="trailing" constant="25" id="jca-1j-VXX"/>
                 <constraint firstItem="aAk-4V-9NA" firstAttribute="top" secondItem="Vcc-x1-v3f" secondAttribute="bottom" constant="10" id="jxr-Xu-suz"/>
                 <constraint firstItem="FeQ-WU-8jI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="q3x-Y9-aRy"/>
                 <constraint firstAttribute="bottom" secondItem="8nL-S4-ymy" secondAttribute="bottom" constant="119" id="qbk-dj-sJV"/>
                 <constraint firstItem="8nL-S4-ymy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="r7y-JO-98a"/>
+                <constraint firstItem="wTo-0E-eAn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wtJ-bG-Z1G"/>
                 <constraint firstItem="FeQ-WU-8jI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zyb-uQ-U0j"/>
             </constraints>
         </view>
     </objects>
     <resources>
+        <image name="backIcon_white" width="11" height="19"/>
         <image name="inviteBg" width="375" height="282"/>
     </resources>
 </document>

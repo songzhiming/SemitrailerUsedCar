@@ -111,6 +111,8 @@
 		34E6EC3F1FE63A78001D014C /* CarDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E6EC3D1FE63A78001D014C /* CarDetailViewController.xib */; };
 		34E6EC431FE644A9001D014C /* MyPublishCarListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E6EC411FE644A9001D014C /* MyPublishCarListViewController.m */; };
 		34E6EC441FE644A9001D014C /* MyPublishCarListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E6EC421FE644A9001D014C /* MyPublishCarListViewController.xib */; };
+		34E6EC4A1FE65BB3001D014C /* ChooseAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E6EC481FE65BB3001D014C /* ChooseAreaViewController.m */; };
+		34E6EC4B1FE65BB3001D014C /* ChooseAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E6EC491FE65BB3001D014C /* ChooseAreaViewController.xib */; };
 		34EEB0A01FDED9E500BB4AE7 /* PublishEmployViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEB09E1FDED9E500BB4AE7 /* PublishEmployViewController.m */; };
 		34EEB0A11FDED9E500BB4AE7 /* PublishEmployViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34EEB09F1FDED9E500BB4AE7 /* PublishEmployViewController.xib */; };
 		34EEB0A81FDEDA8F00BB4AE7 /* UserCenterNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEB0A71FDEDA8F00BB4AE7 /* UserCenterNetWork.m */; };
@@ -312,6 +314,9 @@
 		34E6EC401FE644A9001D014C /* MyPublishCarListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPublishCarListViewController.h; sourceTree = "<group>"; };
 		34E6EC411FE644A9001D014C /* MyPublishCarListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPublishCarListViewController.m; sourceTree = "<group>"; };
 		34E6EC421FE644A9001D014C /* MyPublishCarListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPublishCarListViewController.xib; sourceTree = "<group>"; };
+		34E6EC471FE65BB3001D014C /* ChooseAreaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseAreaViewController.h; sourceTree = "<group>"; };
+		34E6EC481FE65BB3001D014C /* ChooseAreaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseAreaViewController.m; sourceTree = "<group>"; };
+		34E6EC491FE65BB3001D014C /* ChooseAreaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseAreaViewController.xib; sourceTree = "<group>"; };
 		34EEB09D1FDED9E500BB4AE7 /* PublishEmployViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishEmployViewController.h; sourceTree = "<group>"; };
 		34EEB09E1FDED9E500BB4AE7 /* PublishEmployViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishEmployViewController.m; sourceTree = "<group>"; };
 		34EEB09F1FDED9E500BB4AE7 /* PublishEmployViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublishEmployViewController.xib; sourceTree = "<group>"; };
@@ -508,6 +513,9 @@
 				34EEB09F1FDED9E500BB4AE7 /* PublishEmployViewController.xib */,
 				34E6EC1E1FE624BD001D014C /* EmployModel.h */,
 				34E6EC1F1FE624BD001D014C /* EmployModel.m */,
+				34E6EC471FE65BB3001D014C /* ChooseAreaViewController.h */,
+				34E6EC481FE65BB3001D014C /* ChooseAreaViewController.m */,
+				34E6EC491FE65BB3001D014C /* ChooseAreaViewController.xib */,
 			);
 			path = Employ;
 			sourceTree = "<group>";
@@ -947,6 +955,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E6EC4B1FE65BB3001D014C /* ChooseAreaViewController.xib in Resources */,
 				34E6EC091FE52C7F001D014C /* InputInfomationViewController.xib in Resources */,
 				34E6EC441FE644A9001D014C /* MyPublishCarListViewController.xib in Resources */,
 				34C2317D1FE17E3A00381F1B /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
@@ -1086,6 +1095,7 @@
 				34E6EC361FE62C68001D014C /* MJRefreshFooterView.m in Sources */,
 				34E6EC081FE52C7F001D014C /* InputInfomationViewController.m in Sources */,
 				344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */,
+				34E6EC4A1FE65BB3001D014C /* ChooseAreaViewController.m in Sources */,
 				34E435A61FCAA3C800E46160 /* BasicWebViewController.m in Sources */,
 				34E6EC381FE62C68001D014C /* UIScrollView+MJExtension.m in Sources */,
 				344E81CA1FB9DB280061DAB1 /* ConfirmPwViewController.m in Sources */,

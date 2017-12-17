@@ -53,4 +53,11 @@
     }];
 }
 
++ (void)publishJob:(NSDictionary *)params
+           success:(void (^)(YMBaseRequest *request))success
+           failure:(void (^)(YMBaseRequest *request, NSError *error))failure
+{
+    
+}
+
 @end
