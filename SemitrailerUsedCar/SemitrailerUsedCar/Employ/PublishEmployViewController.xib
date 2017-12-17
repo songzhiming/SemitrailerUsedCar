@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublishEmployViewController">
             <connections>
+                <outlet property="footerView" destination="NTJ-aS-TMI" id="8w1-Gw-vGu"/>
+                <outlet property="tableView" destination="6nk-Xe-3gF" id="8hN-cI-0md"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +20,54 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6nk-Xe-3gF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qse-0I-67A"/>
+                        <outlet property="delegate" destination="-1" id="ShU-Xl-lWb"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6nk-Xe-3gF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HmW-VH-soR"/>
+                <constraint firstItem="6nk-Xe-3gF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Yhf-fn-6b0"/>
+                <constraint firstAttribute="trailing" secondItem="6nk-Xe-3gF" secondAttribute="trailing" id="l8F-zz-D32"/>
+                <constraint firstAttribute="bottom" secondItem="6nk-Xe-3gF" secondAttribute="bottom" id="tNU-G5-eAT"/>
+            </constraints>
+        </view>
+        <view contentMode="scaleToFill" id="NTJ-aS-TMI">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42G-Mm-Ze7">
+                    <rect key="frame" x="25" y="617" width="325" height="50"/>
+                    <color key="backgroundColor" red="0.058823529409999999" green="0.6705882353" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="k6O-5V-UOK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="提交">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onclickSubmitButton:" destination="-1" eventType="touchUpInside" id="RHG-fg-czh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745100000003" green="0.98039215690000003" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="42G-Mm-Ze7" firstAttribute="leading" secondItem="NTJ-aS-TMI" secondAttribute="leading" constant="25" id="Msz-34-7ch"/>
+                <constraint firstAttribute="bottom" secondItem="42G-Mm-Ze7" secondAttribute="bottom" id="Uog-ge-4CR"/>
+                <constraint firstAttribute="trailing" secondItem="42G-Mm-Ze7" secondAttribute="trailing" constant="25" id="qp1-pf-PM8"/>
+            </constraints>
         </view>
     </objects>
 </document>

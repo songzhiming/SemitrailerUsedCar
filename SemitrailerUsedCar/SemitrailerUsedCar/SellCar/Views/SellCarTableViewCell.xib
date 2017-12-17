@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgm-qR-7Qo">
-                        <rect key="frame" x="281" y="22" width="9" height="0.0"/>
+                        <rect key="frame" x="281" y="0.0" width="9" height="43.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -48,14 +48,15 @@
                     <constraint firstItem="q8c-eR-9lI" firstAttribute="leading" secondItem="Ysa-lc-bEC" secondAttribute="trailing" id="1dj-EU-brU"/>
                     <constraint firstItem="q8c-eR-9lI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7hk-St-fbn"/>
                     <constraint firstItem="4Vq-ba-ba2" firstAttribute="leading" secondItem="q8c-eR-9lI" secondAttribute="trailing" constant="8" id="7pq-1w-6gI"/>
+                    <constraint firstAttribute="bottom" secondItem="cgm-qR-7Qo" secondAttribute="bottom" id="AJt-Hw-t32"/>
                     <constraint firstItem="4Vq-ba-ba2" firstAttribute="leading" secondItem="cgm-qR-7Qo" secondAttribute="trailing" constant="8" id="Dh3-WJ-6X8"/>
                     <constraint firstItem="Ysa-lc-bEC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="DnP-SH-DGv"/>
                     <constraint firstAttribute="trailing" secondItem="4Vq-ba-ba2" secondAttribute="trailing" constant="16" id="cOx-tu-3Zq"/>
-                    <constraint firstItem="cgm-qR-7Qo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dcS-kb-dKt"/>
                     <constraint firstItem="4Vq-ba-ba2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iMb-D8-kkM"/>
                     <constraint firstItem="cgm-qR-7Qo" firstAttribute="leading" secondItem="Ysa-lc-bEC" secondAttribute="trailing" id="kQP-fZ-aGm"/>
                     <constraint firstItem="Ysa-lc-bEC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wqw-vw-4nM"/>
                     <constraint firstAttribute="bottom" secondItem="q8c-eR-9lI" secondAttribute="bottom" id="ypk-Kc-21t"/>
+                    <constraint firstItem="cgm-qR-7Qo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zAR-Vh-eSE"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

@@ -12,6 +12,7 @@
 #import "BasicNavigationViewController.h"
 #import "EmployNetWork.h"
 #import "EmployModel.h"
+#import "PublishEmployViewController.h"
 
 @interface EmployViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -62,13 +63,8 @@
 
 #pragma mark actions
 - (void)onclickReleaseButton:(UIButton *)sender {
-    if ([UserInfo isLogin]) {//
-        
-    }else{
-        LoginViewController *vc = [[LoginViewController alloc]init];
-        BasicNavigationViewController *nav = [[BasicNavigationViewController alloc]initWithRootViewController:vc];
-        [self presentViewController:nav animated:YES completion:nil];
-    }
+    PublishEmployViewController *vc = [[PublishEmployViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark UITableViewDelegate && UITableViewDataSource
