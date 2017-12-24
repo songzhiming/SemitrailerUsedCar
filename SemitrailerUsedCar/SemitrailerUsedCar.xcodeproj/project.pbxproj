@@ -28,6 +28,11 @@
 		34288B311FA76884004C98E9 /* BasicNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B301FA76884004C98E9 /* BasicNavigationViewController.m */; };
 		34288B341FA7693E004C98E9 /* BasicTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B331FA7693E004C98E9 /* BasicTabbarViewController.m */; };
 		34288B421FA77147004C98E9 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 34288B3B1FA77049004C98E9 /* UIColor+Extension.m */; };
+		342A88D81FEFB5DE00FABDD6 /* InputNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88D61FEFB5DE00FABDD6 /* InputNumberViewController.m */; };
+		342A88D91FEFB5DE00FABDD6 /* InputNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342A88D71FEFB5DE00FABDD6 /* InputNumberViewController.xib */; };
+		342A88DD1FF002F800FABDD6 /* EmployAreaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88DB1FF002F800FABDD6 /* EmployAreaTableViewCell.m */; };
+		342A88DE1FF002F800FABDD6 /* EmployAreaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342A88DC1FF002F800FABDD6 /* EmployAreaTableViewCell.xib */; };
+		342A88E21FF0043400FABDD6 /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88E11FF0043400FABDD6 /* AreaModel.m */; };
 		343BB0001FD5A6D000C744B7 /* EmployNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */; };
 		344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E81B91FB9DA5C0061DAB1 /* LoginViewController.m */; };
 		344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344E81BA1FB9DA5C0061DAB1 /* LoginViewController.xib */; };
@@ -183,6 +188,14 @@
 		34288B331FA7693E004C98E9 /* BasicTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicTabbarViewController.m; sourceTree = "<group>"; };
 		34288B3A1FA77049004C98E9 /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		34288B3B1FA77049004C98E9 /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		342A88D51FEFB5DE00FABDD6 /* InputNumberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputNumberViewController.h; sourceTree = "<group>"; };
+		342A88D61FEFB5DE00FABDD6 /* InputNumberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputNumberViewController.m; sourceTree = "<group>"; };
+		342A88D71FEFB5DE00FABDD6 /* InputNumberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputNumberViewController.xib; sourceTree = "<group>"; };
+		342A88DA1FF002F800FABDD6 /* EmployAreaTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployAreaTableViewCell.h; sourceTree = "<group>"; };
+		342A88DB1FF002F800FABDD6 /* EmployAreaTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployAreaTableViewCell.m; sourceTree = "<group>"; };
+		342A88DC1FF002F800FABDD6 /* EmployAreaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployAreaTableViewCell.xib; sourceTree = "<group>"; };
+		342A88E01FF0043400FABDD6 /* AreaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AreaModel.h; sourceTree = "<group>"; };
+		342A88E11FF0043400FABDD6 /* AreaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AreaModel.m; sourceTree = "<group>"; };
 		343BAFFE1FD5A6D000C744B7 /* EmployNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployNetWork.h; sourceTree = "<group>"; };
 		343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployNetWork.m; sourceTree = "<group>"; };
 		344E81B81FB9DA5C0061DAB1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -501,6 +514,9 @@
 				34E6EC121FE569B7001D014C /* PickerViewController.h */,
 				34E6EC131FE569B7001D014C /* PickerViewController.m */,
 				34E6EC141FE569B7001D014C /* PickerViewController.xib */,
+				342A88D51FEFB5DE00FABDD6 /* InputNumberViewController.h */,
+				342A88D61FEFB5DE00FABDD6 /* InputNumberViewController.m */,
+				342A88D71FEFB5DE00FABDD6 /* InputNumberViewController.xib */,
 			);
 			path = SellCar;
 			sourceTree = "<group>";
@@ -525,6 +541,7 @@
 		34288B231FA765BB004C98E9 /* Employ */ = {
 			isa = PBXGroup;
 			children = (
+				342A88DF1FF0041D00FABDD6 /* Model */,
 				343BAFFA1FD5A67D00C744B7 /* NetWork */,
 				345354C71FA98693005AC3E3 /* View */,
 				34288B241FA76741004C98E9 /* EmployViewController.h */,
@@ -590,6 +607,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		342A88DF1FF0041D00FABDD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				342A88E01FF0043400FABDD6 /* AreaModel.h */,
+				342A88E11FF0043400FABDD6 /* AreaModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		343BAFFA1FD5A67D00C744B7 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +677,9 @@
 				345354C81FA986B7005AC3E3 /* EmployTableViewCell.h */,
 				345354C91FA986B7005AC3E3 /* EmployTableViewCell.m */,
 				345354CA1FA986B7005AC3E3 /* EmployTableViewCell.xib */,
+				342A88DA1FF002F800FABDD6 /* EmployAreaTableViewCell.h */,
+				342A88DB1FF002F800FABDD6 /* EmployAreaTableViewCell.m */,
+				342A88DC1FF002F800FABDD6 /* EmployAreaTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -984,6 +1013,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342A88D91FEFB5DE00FABDD6 /* InputNumberViewController.xib in Resources */,
 				34E6EC4B1FE65BB3001D014C /* ChooseAreaViewController.xib in Resources */,
 				34E6EC091FE52C7F001D014C /* InputInfomationViewController.xib in Resources */,
 				34E6EC441FE644A9001D014C /* MyPublishCarListViewController.xib in Resources */,
@@ -1006,6 +1036,7 @@
 				34E6EC111FE55998001D014C /* ChooseImageViewController.xib in Resources */,
 				34E435B61FCAADD200E46160 /* MyConnectViewController.xib in Resources */,
 				34E435BB1FCAAFD200E46160 /* SettingViewController.xib in Resources */,
+				342A88DE1FF002F800FABDD6 /* EmployAreaTableViewCell.xib in Resources */,
 				34C231811FE17E3A00381F1B /* README.txt in Resources */,
 				344E81C61FB9DB090061DAB1 /* ForgetPwViewController.xib in Resources */,
 				34C2318C1FE17E3A00381F1B /* YMShareItemCollectionViewCell.xib in Resources */,
@@ -1117,6 +1148,7 @@
 				343BB0001FD5A6D000C744B7 /* EmployNetWork.m in Sources */,
 				34C2318E1FE17E3A00381F1B /* YMShareService.m in Sources */,
 				34E6EC3E1FE63A78001D014C /* CarDetailViewController.m in Sources */,
+				342A88D81FEFB5DE00FABDD6 /* InputNumberViewController.m in Sources */,
 				34E6EC1D1FE621C0001D014C /* CarModel.m in Sources */,
 				34E6EC3A1FE62C68001D014C /* UIView+MJExtension.m in Sources */,
 				34C231891FE17E3A00381F1B /* YMShareActionSheetView.m in Sources */,
@@ -1141,9 +1173,11 @@
 				34E6EC351FE62C68001D014C /* MJRefreshConst.m in Sources */,
 				34C12FCC1FCC5C540022A668 /* RechargeViewController.m in Sources */,
 				34E6EC041FE520A6001D014C /* CarConfigureManager.m in Sources */,
+				342A88E21FF0043400FABDD6 /* AreaModel.m in Sources */,
 				34C2318A1FE17E3A00381F1B /* YMShareConst.m in Sources */,
 				34288B421FA77147004C98E9 /* UIColor+Extension.m in Sources */,
 				34288B2D1FA767D3004C98E9 /* UserCenterViewController.m in Sources */,
+				342A88DD1FF002F800FABDD6 /* EmployAreaTableViewCell.m in Sources */,
 				34E6EBFB1FE51206001D014C /* BuyCarNetWork.m in Sources */,
 				34EEB0A01FDED9E500BB4AE7 /* PublishEmployViewController.m in Sources */,
 				34C2318B1FE17E3A00381F1B /* YMShareItemCollectionViewCell.m in Sources */,

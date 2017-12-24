@@ -38,7 +38,7 @@
 {
     YMBaseRequest *request = [[YMBaseRequest alloc]init];
     request.requestUrl = @"job-area-options";
-    request.requestArgument = @{@"parent_id":@"0"};
+    request.requestArgument = params;
     request.requestMethod = YMRequestMethodPOST;
     [request startWithCompletionBlockWithSuccess:^(__kindof YMBaseRequest * _Nonnull request) {
         if ([request.responseObject[@"code"] intValue] == 10000) {//成功

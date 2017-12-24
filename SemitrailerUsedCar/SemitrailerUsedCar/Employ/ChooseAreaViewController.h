@@ -10,4 +10,6 @@
 
 @interface ChooseAreaViewController : BasicViewController
 
+@property (nonatomic,assign) NSInteger parent_id;
+
 @end

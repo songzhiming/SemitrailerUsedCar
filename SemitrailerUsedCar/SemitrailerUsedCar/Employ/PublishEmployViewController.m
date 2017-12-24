@@ -8,9 +8,10 @@
 
 #import "PublishEmployViewController.h"
 #import "SellCarTableViewCell.h"
-#import "PickerViewController.h"
 #import "CarConfigureManager.h"
 #import "InputInfomationViewController.h"
+#import "InputNumberViewController.h"
+#import "ChooseAreaViewController.h"
 
 @interface PublishEmployViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -87,11 +88,6 @@
     }else if (indexPath.row == 1){
         cell.textField.hidden = YES;
         cell.desLabel.hidden = NO;
-        id obj = self.contentArray[indexPath.row];
-        if (obj && [obj isKindOfClass:[CarConfigureModel class]]) {
-            CarConfigureModel *model = (CarConfigureModel *)obj;
-            cell.desLabel.text = model.name;
-        }
     }else if (indexPath.row == 2){
         cell.textField.hidden = YES;
         cell.desLabel.hidden = NO;
@@ -125,22 +121,23 @@
             break;
         case 1:
         {
-            PickerViewController *vc = [[PickerViewController alloc]init];
-            vc.datasource = [[CarConfigureManager sharedInstance] price];
+            InputNumberViewController *vc = [[InputNumberViewController alloc]init];
             vc.view.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
             vc.providesPresentationContextTransitionStyle = YES;
             vc.definesPresentationContext = YES;
             [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
-            __weak PublishEmployViewController *weakSelf = self;
-            vc.callBackCarConfigureModel = ^(CarConfigureModel *model) {
-                [weakSelf.contentArray replaceObjectAtIndex:indexPath.row withObject:model];
-                [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            vc.callBackPrice = ^(NSInteger lowPrice, NSInteger highPrice) {
+                NSLog(@"price---");
             };
             [self presentViewController:vc animated:YES completion:nil];
         }
             break;
         case 2:
              {
+                 ChooseAreaViewController *vc = [[ChooseAreaViewController alloc]init];
+                 vc.title = @"选择省";
+                 vc.parent_id = 0;
+                 [self.navigationController pushViewController:vc animated:YES];
                  NSLog(@"点击地址");
              }
             break;
