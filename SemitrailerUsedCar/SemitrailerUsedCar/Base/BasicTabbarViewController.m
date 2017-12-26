@@ -56,11 +56,9 @@
     if([nav.childViewControllers.lastObject isKindOfClass:[SellCarViewController class]] ||
        [nav.childViewControllers.lastObject isKindOfClass:[UserCenterViewController class]]){
         if(![UserInfo isLogin]){
-            if (![UserInfo isLogin]) {
-                LoginViewController *vc = [[LoginViewController alloc]init];
-                BasicNavigationViewController *nav = [[BasicNavigationViewController alloc]initWithRootViewController:vc];
-                [self presentViewController:nav animated:YES completion:nil];
-            }
+            LoginViewController *vc = [[LoginViewController alloc]init];
+            BasicNavigationViewController *nav = [[BasicNavigationViewController alloc]initWithRootViewController:vc];
+            [self presentViewController:nav animated:YES completion:nil];
             return NO;
         }
     }

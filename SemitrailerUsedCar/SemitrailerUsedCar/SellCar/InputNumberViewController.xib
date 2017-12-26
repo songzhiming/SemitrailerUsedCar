@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputNumberViewController">
             <connections>
+                <outlet property="desLabel" destination="r3w-iV-Wl3" id="J0Q-Qv-VQB"/>
                 <outlet property="doneButton" destination="Jwf-23-pjS" id="kqq-qY-PNd"/>
                 <outlet property="highestPriceLabel" destination="dE9-bg-21u" id="Jbn-wk-3T3"/>
                 <outlet property="inputView" destination="rND-rJ-yL5" id="6ec-yF-Zvq"/>
@@ -25,7 +26,9 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPd-ni-M8y">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="onclickCancelButton:" destination="-1" eventType="touchUpInside" id="DBa-te-p2y"/>
                     </connections>

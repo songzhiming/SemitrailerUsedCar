@@ -10,6 +10,7 @@
 #import "EmployNetWork.h"
 #import "EmployAreaTableViewCell.h"
 #import "AreaModel.h"
+#import "PublishEmployViewController.h"
 
 @interface ChooseAreaViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -22,6 +23,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (self.areaType == AreaTypeProvince) {
+        self.title = @"选择省";
+    }else if (self.areaType == AreaTypeCity){
+        self.title = @"选择市";
+    }else{
+        self.title = @"选择区";
+    }
     self.datasource = [[NSMutableArray alloc]init];
     [self.tableView registerNib:[UINib nibWithNibName:@"EmployAreaTableViewCell" bundle:nil] forCellReuseIdentifier:@"EmployAreaTableViewCell"];
     [self getAreaList];
@@ -67,11 +75,29 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    ChooseAreaViewController *vc = [[ChooseAreaViewController alloc]init];
-    AreaModel *model = self.datasource[indexPath.row];
-    vc.title = model.name;
-    vc.parent_id = model.id;
-    [self.navigationController pushViewController:vc animated:YES];
+
+    if (self.areaType == AreaTypeDistrict) {
+        PublishEmployViewController *vc = (PublishEmployViewController *)self.navigationController.viewControllers[1];
+        vc.provinceModel = self.provinceModel;
+        vc.cityModel = self.cityModel;
+        vc.districtModel = self.datasource[indexPath.row];
+        [vc.tableView reloadData];
+        [self.navigationController popToViewController:vc animated:YES];
+    }else{
+        ChooseAreaViewController *vc = [[ChooseAreaViewController alloc]init];
+        AreaModel *model = self.datasource[indexPath.row];
+        vc.title = model.name;
+        vc.parent_id = model.id;
+        if (self.areaType == AreaTypeProvince) {
+            vc.areaType = AreaTypeCity;
+            vc.provinceModel = model;
+        }else{
+            vc.areaType = AreaTypeDistrict;
+            vc.provinceModel = self.provinceModel;
+            vc.cityModel = model;
+        }
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end

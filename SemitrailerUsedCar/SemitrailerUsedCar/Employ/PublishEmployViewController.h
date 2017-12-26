@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BasicViewController.h"
+#import "AreaModel.h"
 
 @interface PublishEmployViewController : BasicViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic,strong) AreaModel *provinceModel;
+@property (nonatomic,strong) AreaModel *cityModel;
+@property (nonatomic,strong) AreaModel *districtModel;
 
 @end

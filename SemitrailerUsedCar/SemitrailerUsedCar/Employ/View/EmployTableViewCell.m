@@ -27,6 +27,8 @@
 {
     _model = model;
     self.titleLabel.text = model.title;
+    self.moneyLabel.text = [NSString stringWithFormat:@"%@~%@",model.salary_low,model.salary_high];
+    self.describeLabel.text = [NSString stringWithFormat:@"%@  %@  |  %@~%@年",model.province_name,model.city_name,model.work_age_low,model.work_age_high];
 }
 
 @end

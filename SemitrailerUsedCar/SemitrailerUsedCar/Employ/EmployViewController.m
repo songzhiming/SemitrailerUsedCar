@@ -63,6 +63,12 @@
 
 #pragma mark actions
 - (void)onclickReleaseButton:(UIButton *)sender {
+    if(![UserInfo isLogin]){
+        LoginViewController *vc = [[LoginViewController alloc]init];
+        BasicNavigationViewController *nav = [[BasicNavigationViewController alloc]initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+        return;
+    }
     PublishEmployViewController *vc = [[PublishEmployViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -76,6 +82,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     EmployTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EmployTableViewCell"];
+    cell.model = self.datasource[indexPath.row];
     return cell;
 }
 

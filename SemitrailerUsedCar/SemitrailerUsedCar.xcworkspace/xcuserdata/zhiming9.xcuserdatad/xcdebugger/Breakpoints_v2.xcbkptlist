@@ -36,7 +36,7 @@
                   moduleName = "SemitrailerUsedCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhiming9/WorkSpace/Diary/SemitrailerUsedCar/SemitrailerUsedCar/SemitrailerUsedCar/Login/Controller/ConfirmPwViewController.m"
-                  timestampString = "535824195.767696"
+                  timestampString = "535957086.158049"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "46"
@@ -51,7 +51,7 @@
                   moduleName = "SemitrailerUsedCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhiming9/WorkSpace/Diary/SemitrailerUsedCar/SemitrailerUsedCar/SemitrailerUsedCar/Login/Controller/ConfirmPwViewController.m"
-                  timestampString = "535824195.770493"
+                  timestampString = "535957086.160322"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "46"
@@ -100,39 +100,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/Employ/NetWork/EmployNetWork.m"
-            timestampString = "535824195.684397"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "+getEmployAreaList:success:failure:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SemitrailerUsedCar/Employ/NetWork/EmployNetWork.m"
-            timestampString = "535824195.684495"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "+getEmployAreaList:success:failure:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SemitrailerUsedCar/Employ/NetWork/EmployNetWork.m"
-            timestampString = "535824195.684577"
+            timestampString = "535957085.958871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -147,13 +115,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SemitrailerUsedCar/Employ/PublishEmployViewController.m"
-            timestampString = "535825066.523483"
+            filePath = "SemitrailerUsedCar/Employ/NetWork/EmployNetWork.m"
+            timestampString = "535957085.958957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "+publishJob:success:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SemitrailerUsedCar/Employ/NetWork/EmployNetWork.m"
+            timestampString = "535957085.959026"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "+publishJob:success:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *highestPriceLabel;
 @property (weak, nonatomic) IBOutlet UIView *inputView;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
+@property (weak, nonatomic) IBOutlet UILabel *desLabel;
 
 @end
 
@@ -26,7 +27,15 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChanged:) name:UITextFieldTextDidChangeNotification object:nil];
-    
+    if (self.inputType == InputTypePrice) {
+        self.lowestPriceLabel.placeholder = @"请输入价格";
+        self.highestPriceLabel.placeholder = @"请输入价格";
+        self.desLabel.text = @"最低价格不得 》最高价格";
+    }else if (self.inputType == InputTypeWorkAge){
+        self.lowestPriceLabel.placeholder = @"请输入工作年限";
+        self.highestPriceLabel.placeholder = @"请输入工作年限";
+        self.desLabel.text = @"最低工作年限不得 》最高工作年限";
+    }
     [self.lowestPriceLabel becomeFirstResponder];
     // Do any additional setup after loading the view from its nib.
 }

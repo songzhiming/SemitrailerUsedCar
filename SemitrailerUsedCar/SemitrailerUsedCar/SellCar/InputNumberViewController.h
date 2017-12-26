@@ -9,9 +9,15 @@
 #import "BasicViewController.h"
 
 typedef void (^callBackPrice) (NSInteger lowPrice,NSInteger highPrice);
+typedef enum : NSUInteger {
+    InputTypePrice,
+    InputTypeWorkAge,
+} InputType;
 
 @interface InputNumberViewController : BasicViewController
 
 @property (nonatomic,copy) callBackPrice callBackPrice;
+
+@property (nonatomic,assign) InputType inputType;
 
 @end
