@@ -36,6 +36,11 @@
                 success:(void (^)(YMBaseRequest *request))success
                 failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 
+// 获取积分是否够
++ (void)getPriceTip:(NSDictionary *)params
+            success:(void (^)(YMBaseRequest *request))success
+            failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
 
 
 @end

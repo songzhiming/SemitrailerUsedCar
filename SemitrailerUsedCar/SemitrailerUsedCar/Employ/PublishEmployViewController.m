@@ -13,6 +13,9 @@
 #import "InputNumberViewController.h"
 #import "ChooseAreaViewController.h"
 #import "EmployNetWork.h"
+#import "UserCenterNetWork.h"
+#import "CheckPriceTipModel.h"
+#import "RechargeViewController.h"
 
 @interface PublishEmployViewController ()
 
@@ -23,6 +26,8 @@
 @property (nonatomic,assign) NSInteger highPrice;
 @property (nonatomic,assign) NSInteger lowWorkAge;
 @property (nonatomic,assign) NSInteger highWorkAge;
+
+@property (nonatomic,strong) CheckPriceTipModel *checkPriceTipModel;
 
 @end
 
@@ -35,6 +40,7 @@
     self.highPrice = -1;
     self.lowWorkAge = -1;
     self.highWorkAge = -1;
+    [self getPriceTip];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -51,6 +57,17 @@
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
+- (void)getPriceTip
+{
+    NSDictionary *dic = @{@"uid":[UserInfo userinfo].id,
+                          @"type":@(3)
+                          };
+    [UserCenterNetWork getPriceTip:dic success:^(YMBaseRequest *request) {
+        self.checkPriceTipModel = [CheckPriceTipModel yy_modelWithJSON:request.responseObject[@"data"]];
+    } failure:^(YMBaseRequest *request, NSError *error) {
+        
+    }];
+}
 
 - (void)setupViews
 {
@@ -69,7 +86,6 @@
 }
 
 - (IBAction)onclickSubmitButton:(UIButton *)sender {
-    NSLog(@"contentArray--%@",self.contentArray);
     BOOL isComplete = YES;
     for (NSInteger i = 4; i < self.contentArray.count; i++) {
         id obj = self.contentArray[i];
@@ -91,20 +107,21 @@
         [self showMessage:@"信息不全,请填写信息"];
         return;
     }
-//    idint职位id action为2时需要
-//    actionint动作1.职位发布 2.职位修改
-//    titlestring职位名称
-//    salary_lowint薪资下限
-//    salary_highint薪资上限
-//    work_age_lowint工作年限下限
-//    work_age_highint工作年限上限
-//    provinceint工作地点-省
-//    cityint工作地点-市
-//    countyint工作地点-区县
-//    briefstring职位介绍
-//    contactstring联系人
-//    mobilenumber联系人电话
-//    created_byint用户id
+    if (self.checkPriceTipModel.can) {//积分够
+        NSString *message = [NSString stringWithFormat:@"本次发表将消耗%ld积分,目前账号余额为%ld积分",self.checkPriceTipModel.price,self.checkPriceTipModel.amount];
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"发表", nil];
+        alertView.tag = 1000;
+        [alertView show];
+    }else{
+        NSString *message = [NSString stringWithFormat:@"本次发表将消耗%ld积分,目前账号余额为%ld积分",self.checkPriceTipModel.price,self.checkPriceTipModel.amount];
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"充值", nil];
+        alertView.tag = 1001;
+        [alertView show];
+    }
+}
+
+- (void)publishJob
+{
     NSDictionary *dic = @{@"action":@"1",
                           @"title":self.contentArray[0],
                           @"salary_low":@(self.lowPrice),
@@ -120,10 +137,23 @@
                           @"created_by":[UserInfo userinfo].id
                           };
     [EmployNetWork publishJob:dic success:^(YMBaseRequest *request) {
-         [self showMessage:@"发布成功"];
+        [self showMessage:@"发布成功"];
     } failure:^(YMBaseRequest *request, NSError *error) {
         [self showMessage:error.localizedDescription];
     }];
+}
+
+#pragma mark UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 1000) {
+        if (buttonIndex == 1) {//发表  扣积分
+            [self publishJob];
+        }
+    }else if (alertView.tag == 1001){//充值
+        RechargeViewController *vc = [[RechargeViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

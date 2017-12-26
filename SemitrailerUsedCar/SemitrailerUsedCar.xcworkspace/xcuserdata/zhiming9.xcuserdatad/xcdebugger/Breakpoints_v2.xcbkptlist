@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SemitrailerUsedCar/Employ/NetWork/EmployNetWork.m"
-            timestampString = "535992081.980856"
+            filePath = "SemitrailerUsedCar/Employ/PublishEmployViewController.m"
+            timestampString = "535994795.885985"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "+getJobInfo:success:failure:"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "-publishJob"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,125 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SemitrailerUsedCar/BuyCar/NetWork/BuyCarNetWork.m"
-            timestampString = "535992081.981215"
+            filePath = "SemitrailerUsedCar/Employ/PublishEmployViewController.m"
+            timestampString = "535994795.886322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "+getCarOrder:success:failure:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SemitrailerUsedCar/BuyCar/NetWork/BuyCarNetWork.m"
-            timestampString = "535992081.981451"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "+getCarOrder:success:failure:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SemitrailerUsedCar/BuyCar/NetWork/BuyCarNetWork.m"
-            timestampString = "535992081.981517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "+getCarOrder:success:failure:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[BuyCarNetWork getCarOrder:success:failure:]"
-                  moduleName = "SemitrailerUsedCar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiming9/WorkSpace/Diary/SemitrailerUsedCar/SemitrailerUsedCar/SemitrailerUsedCar/BuyCar/NetWork/BuyCarNetWork.m"
-                  timestampString = "535992082.080747"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "269">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__45+[BuyCarNetWork getCarOrder:success:failure:]_block_invoke"
-                  moduleName = "SemitrailerUsedCar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhiming9/WorkSpace/Diary/SemitrailerUsedCar/SemitrailerUsedCar/SemitrailerUsedCar/BuyCar/NetWork/BuyCarNetWork.m"
-                  timestampString = "535992082.082924"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "61">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SemitrailerUsedCar/BuyCar/CarDetailViewController.m"
-            timestampString = "535992141.384415"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "-connectCarOwner"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SemitrailerUsedCar/BuyCar/CarDetailViewController.m"
-            timestampString = "535992148.1455"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "-getCheckPriceTip"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SemitrailerUsedCar/BuyCar/CarDetailViewController.m"
-            timestampString = "535992162.679715"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-getCheckPriceTip"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "-publishJob"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -13,11 +13,15 @@
 #import "PickerViewController.h"
 #import "CarConfigureManager.h"
 #import "SellCarNetWork.h"
+#import "UserCenterNetWork.h"
+#import "CheckPriceTipModel.h"
+#import "RechargeViewController.h"
 @interface SellCarViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (nonatomic,strong) NSArray *datasource;
 @property (strong, nonatomic) IBOutlet UIView *footerView;
 @property (nonatomic,strong) NSMutableArray *contentArray;// 文案数组
+@property (nonatomic,strong) CheckPriceTipModel *checkPriceTipModel;
 @end
 
 @implementation SellCarViewController
@@ -25,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupViews];
+    [self getPriceTip];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -64,6 +69,19 @@
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+- (void)getPriceTip
+{
+    NSDictionary *dic = @{@"uid":[UserInfo userinfo].id,
+                          @"type":@(1)
+                          };
+    [UserCenterNetWork getPriceTip:dic success:^(YMBaseRequest *request) {
+        self.checkPriceTipModel = [CheckPriceTipModel yy_modelWithJSON:request.responseObject[@"data"]];
+    } failure:^(YMBaseRequest *request, NSError *error) {
+        
+    }];
+}
+
 #pragma mark UITextFieldTextDidEndEditingNotification
 - (void)handleTextField:(NSNotification *)notification
 {
@@ -92,6 +110,21 @@
         [self showMessage:@"信息不全,请填写信息"];
         return;
     }
+    if (self.checkPriceTipModel.can) {//积分够
+        NSString *message = [NSString stringWithFormat:@"本次发表将消耗%ld积分,目前账号余额为%ld积分",self.checkPriceTipModel.price,self.checkPriceTipModel.amount];
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"发表", nil];
+        alertView.tag = 1000;
+        [alertView show];
+    }else{
+        NSString *message = [NSString stringWithFormat:@"本次发表将消耗%ld积分,目前账号余额为%ld积分",self.checkPriceTipModel.price,self.checkPriceTipModel.amount];
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"充值", nil];
+        alertView.tag = 1001;
+        [alertView show];
+    }
+}
+
+- (void)sellCar
+{
     CarConfigureModel *brand = self.contentArray[1];
     CarConfigureModel *price = self.contentArray[2];
     CarConfigureModel *age = self.contentArray[3];
@@ -99,6 +132,7 @@
     CarConfigureModel *mileage = self.contentArray[5];
     CarConfigureModel *horsepower = self.contentArray[6];
     NSString *imageUrl = @"";
+    id obj = self.contentArray[8];
     NSArray *imageArr = (NSArray *)obj;
     for (NSString *url in imageArr) {
         if ([imageUrl isEqualToString:@""]) {
@@ -132,6 +166,18 @@
     }];
 }
 
+#pragma mark UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 1000) {
+        if (buttonIndex == 1) {//发表  扣积分
+            [self sellCar];
+        }
+    }else if (alertView.tag == 1001){//充值
+        RechargeViewController *vc = [[RechargeViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
 
 #pragma mark UITableViewDelegate && UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -161,6 +207,8 @@
         if (obj && [obj isKindOfClass:[CarConfigureModel class]]) {
             CarConfigureModel *model = (CarConfigureModel *)obj;
             cell.desLabel.text = model.name;
+        }else{
+            cell.desLabel.text = @"";
         }
     }else if (indexPath.row == 7){
         cell.textField.hidden = YES;
