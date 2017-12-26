@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarDetailViewController">
             <connections>
+                <outlet property="tableView" destination="TE2-TQ-J4z" id="xzr-ZJ-13z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +20,55 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TE2-TQ-J4z">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TE2-TQ-J4z">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="616"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qor-em-qG7"/>
+                        <outlet property="delegate" destination="-1" id="XWH-FK-VhV"/>
+                    </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beV-n9-CfM">
+                    <rect key="frame" x="0.0" y="25" width="58" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="4Ee-X9-Eph"/>
+                        <constraint firstAttribute="width" constant="58" id="yls-MG-Xak"/>
+                    </constraints>
+                    <state key="normal" image="carInfoBackIcon"/>
+                    <connections>
+                        <action selector="onclickBackButton:" destination="-1" eventType="touchUpInside" id="SFs-Jy-9fF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epd-Md-73M">
+                    <rect key="frame" x="0.0" y="616" width="375" height="51"/>
+                    <color key="backgroundColor" red="0.058823529411764705" green="0.6705882352941176" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="fe7-2a-V7u"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="联系车主">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onclickConnectButton:" destination="-1" eventType="touchUpInside" id="bbF-P0-wiy"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="epd-Md-73M" secondAttribute="trailing" id="1Jk-eQ-YLE"/>
+                <constraint firstItem="beV-n9-CfM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="DCr-4Z-SCA"/>
+                <constraint firstItem="epd-Md-73M" firstAttribute="top" secondItem="TE2-TQ-J4z" secondAttribute="bottom" id="GPf-My-FIQ"/>
                 <constraint firstItem="TE2-TQ-J4z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="K9a-A8-IE5"/>
                 <constraint firstAttribute="trailing" secondItem="TE2-TQ-J4z" secondAttribute="trailing" id="LiD-5T-1da"/>
                 <constraint firstItem="TE2-TQ-J4z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Q4A-dX-Jk1"/>
-                <constraint firstAttribute="bottom" secondItem="TE2-TQ-J4z" secondAttribute="bottom" id="hi7-72-VUj"/>
+                <constraint firstAttribute="bottom" secondItem="epd-Md-73M" secondAttribute="bottom" id="YJg-b8-oL0"/>
+                <constraint firstItem="beV-n9-CfM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f8R-An-TuQ"/>
+                <constraint firstItem="epd-Md-73M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jas-OY-Tmx"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="carInfoBackIcon" width="21" height="21"/>
+    </resources>
 </document>

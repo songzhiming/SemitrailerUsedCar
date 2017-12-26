@@ -26,4 +26,9 @@
             success:(void (^)(YMBaseRequest *request))success
             failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 
+// 获取车辆详情
++ (void)getCarInfo:(NSDictionary *)params
+           success:(void (^)(YMBaseRequest *request))success
+           failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
 @end

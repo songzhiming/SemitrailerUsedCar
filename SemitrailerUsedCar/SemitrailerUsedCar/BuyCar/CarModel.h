@@ -29,4 +29,7 @@
 @property (nonatomic,copy) NSString *horsepower;
 @property (nonatomic,copy) NSString *price;
 @property (nonatomic,copy) NSString *cover;
+@property (nonatomic,copy) NSString *brief;
+@property (nonatomic,copy) NSString *created_at;
+@property (nonatomic,strong) NSArray *pictures;
 @end

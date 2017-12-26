@@ -108,6 +108,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     CarDetailViewController *vc = [[CarDetailViewController alloc]init];
+    CarModel *model = self.datasource[indexPath.row];
+    vc.carId = model.id;
     [self.navigationController pushViewController:vc animated:YES];
 }
 @end

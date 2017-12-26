@@ -35,6 +35,12 @@
 		342A88E21FF0043400FABDD6 /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88E11FF0043400FABDD6 /* AreaModel.m */; };
 		342A88E81FF20F3300FABDD6 /* EmployInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88E61FF20F3300FABDD6 /* EmployInfoViewController.m */; };
 		342A88E91FF20F3300FABDD6 /* EmployInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342A88E71FF20F3300FABDD6 /* EmployInfoViewController.xib */; };
+		342A88ED1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88EB1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.m */; };
+		342A88EE1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342A88EC1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.xib */; };
+		342A88F21FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88F01FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.m */; };
+		342A88F31FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342A88F11FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.xib */; };
+		342A88F71FF227F900FABDD6 /* CarDetailInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88F51FF227F900FABDD6 /* CarDetailInfoTableViewCell.m */; };
+		342A88F81FF227F900FABDD6 /* CarDetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342A88F61FF227F900FABDD6 /* CarDetailInfoTableViewCell.xib */; };
 		343BB0001FD5A6D000C744B7 /* EmployNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */; };
 		344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E81B91FB9DA5C0061DAB1 /* LoginViewController.m */; };
 		344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344E81BA1FB9DA5C0061DAB1 /* LoginViewController.xib */; };
@@ -201,6 +207,15 @@
 		342A88E51FF20F3300FABDD6 /* EmployInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployInfoViewController.h; sourceTree = "<group>"; };
 		342A88E61FF20F3300FABDD6 /* EmployInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployInfoViewController.m; sourceTree = "<group>"; };
 		342A88E71FF20F3300FABDD6 /* EmployInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployInfoViewController.xib; sourceTree = "<group>"; };
+		342A88EA1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarDetailCarouselTableViewCell.h; sourceTree = "<group>"; };
+		342A88EB1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarDetailCarouselTableViewCell.m; sourceTree = "<group>"; };
+		342A88EC1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailCarouselTableViewCell.xib; sourceTree = "<group>"; };
+		342A88EF1FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarDetailCarouselCollectionViewCell.h; sourceTree = "<group>"; };
+		342A88F01FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarDetailCarouselCollectionViewCell.m; sourceTree = "<group>"; };
+		342A88F11FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailCarouselCollectionViewCell.xib; sourceTree = "<group>"; };
+		342A88F41FF227F900FABDD6 /* CarDetailInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarDetailInfoTableViewCell.h; sourceTree = "<group>"; };
+		342A88F51FF227F900FABDD6 /* CarDetailInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarDetailInfoTableViewCell.m; sourceTree = "<group>"; };
+		342A88F61FF227F900FABDD6 /* CarDetailInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailInfoTableViewCell.xib; sourceTree = "<group>"; };
 		343BAFFE1FD5A6D000C744B7 /* EmployNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployNetWork.h; sourceTree = "<group>"; };
 		343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployNetWork.m; sourceTree = "<group>"; };
 		344E81B81FB9DA5C0061DAB1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -698,6 +713,15 @@
 				34DD20B61FB40D800080E9C0 /* BuyCarTableViewCell.h */,
 				34DD20B71FB40D800080E9C0 /* BuyCarTableViewCell.m */,
 				34DD20B81FB40D800080E9C0 /* BuyCarTableViewCell.xib */,
+				342A88EA1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.h */,
+				342A88EB1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.m */,
+				342A88EC1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.xib */,
+				342A88EF1FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.h */,
+				342A88F01FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.m */,
+				342A88F11FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.xib */,
+				342A88F41FF227F900FABDD6 /* CarDetailInfoTableViewCell.h */,
+				342A88F51FF227F900FABDD6 /* CarDetailInfoTableViewCell.m */,
+				342A88F61FF227F900FABDD6 /* CarDetailInfoTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1040,6 +1064,7 @@
 				34C12FD21FCC69990022A668 /* InviteUserViewController.xib in Resources */,
 				340B80941FB84410009421F0 /* UserCenterTableViewCell.xib in Resources */,
 				34288B211FA7659C004C98E9 /* BuyCarViewController.xib in Resources */,
+				342A88F81FF227F900FABDD6 /* CarDetailInfoTableViewCell.xib in Resources */,
 				34288B2E1FA767D3004C98E9 /* UserCenterViewController.xib in Resources */,
 				344E81CB1FB9DB280061DAB1 /* ConfirmPwViewController.xib in Resources */,
 				34E6EC111FE55998001D014C /* ChooseImageViewController.xib in Resources */,
@@ -1055,10 +1080,12 @@
 				345822281FB0BAAF00A00E8F /* SellCarTableViewCell.xib in Resources */,
 				34E435B11FCAA83900E46160 /* RechargeRecordListTableViewCell.xib in Resources */,
 				34C2318D1FE17E3A00381F1B /* YMShareResources.bundle in Resources */,
+				342A88F31FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.xib in Resources */,
 				344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */,
 				34DD20BA1FB40D800080E9C0 /* BuyCarTableViewCell.xib in Resources */,
 				34288B281FA76741004C98E9 /* EmployViewController.xib in Resources */,
 				34E6EC331FE62C68001D014C /* MJRefresh.bundle in Resources */,
+				342A88EE1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.xib in Resources */,
 				34E6EC501FE66EA8001D014C /* MyPublishJobViewController.xib in Resources */,
 				34288B141FA76529004C98E9 /* SellCarViewController.xib in Resources */,
 			);
@@ -1145,6 +1172,7 @@
 				346231841FD28EA60020D44D /* UserInfo.m in Sources */,
 				34E435B01FCAA83900E46160 /* RechargeRecordListTableViewCell.m in Sources */,
 				34C12FD11FCC69990022A668 /* InviteUserViewController.m in Sources */,
+				342A88ED1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.m in Sources */,
 				34C231851FE17E3A00381F1B /* UMShareMenuItem.m in Sources */,
 				34E6EC341FE62C68001D014C /* MJRefreshBaseView.m in Sources */,
 				34288B341FA7693E004C98E9 /* BasicTabbarViewController.m in Sources */,
@@ -1165,6 +1193,7 @@
 				34288B271FA76741004C98E9 /* EmployViewController.m in Sources */,
 				34DD20B91FB40D800080E9C0 /* BuyCarTableViewCell.m in Sources */,
 				34E6EC151FE569B7001D014C /* PickerViewController.m in Sources */,
+				342A88F71FF227F900FABDD6 /* CarDetailInfoTableViewCell.m in Sources */,
 				34E6EC361FE62C68001D014C /* MJRefreshFooterView.m in Sources */,
 				34E6EC081FE52C7F001D014C /* InputInfomationViewController.m in Sources */,
 				344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */,
@@ -1200,6 +1229,7 @@
 				34E6EC431FE644A9001D014C /* MyPublishCarListViewController.m in Sources */,
 				34E6EC391FE62C68001D014C /* UIScrollView+MJRefresh.m in Sources */,
 				344E81C01FB9DAEF0061DAB1 /* RegisterViewController.m in Sources */,
+				342A88F21FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.m in Sources */,
 				345354CB1FA986B7005AC3E3 /* EmployTableViewCell.m in Sources */,
 				34288B131FA76529004C98E9 /* SellCarViewController.m in Sources */,
 				340210361FA6E13300193AF8 /* AppDelegate.m in Sources */,

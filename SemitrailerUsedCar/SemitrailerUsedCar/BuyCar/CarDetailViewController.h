@@ -7,7 +7,10 @@
 //
 
 #import "BasicViewController.h"
+#import "CarModel.h"
 
 @interface CarDetailViewController : BasicViewController
+
+@property (nonatomic,copy) NSString *carId;
 
 @end
