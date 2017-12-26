@@ -96,7 +96,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     EmployInfoViewController *vc = [[EmployInfoViewController alloc]init];
-    vc.model = self.datasource[indexPath.row];
+    EmployModel *model = self.datasource[indexPath.row];
+    vc.jobId = model.id;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

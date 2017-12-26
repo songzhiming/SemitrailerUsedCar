@@ -11,6 +11,7 @@
 
 @interface EmployInfoViewController : BasicViewController
 
-@property (nonatomic,strong) EmployModel *model;
+
+@property (nonatomic,copy) NSString *jobId;
 
 @end

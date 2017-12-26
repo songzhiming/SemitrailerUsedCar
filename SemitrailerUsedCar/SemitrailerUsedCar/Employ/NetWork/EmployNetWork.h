@@ -23,4 +23,9 @@
 + (void)publishJob:(NSDictionary *)params
            success:(void (^)(YMBaseRequest *request))success
            failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
+// 获取职位详情
++ (void)getJobInfo:(NSDictionary *)params
+           success:(void (^)(YMBaseRequest *request))success
+           failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 @end

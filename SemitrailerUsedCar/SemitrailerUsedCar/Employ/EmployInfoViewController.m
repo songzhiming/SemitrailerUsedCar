@@ -7,6 +7,7 @@
 //
 
 #import "EmployInfoViewController.h"
+#import "EmployNetWork.h"
 
 @interface EmployInfoViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -15,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *workAgeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *desLabel;
 
+@property (nonatomic,strong) EmployModel *model;
+
 @end
 
 @implementation EmployInfoViewController
@@ -22,13 +25,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"招聘详情";
-    [self setUpViews];
+    [self getJobInfo];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)getJobInfo
+{
+    NSDictionary *dic = @{@"id":self.jobId,
+                          @"action":@"1"
+                          };
+    [EmployNetWork getJobInfo:dic success:^(YMBaseRequest *request) {
+        self.model = [EmployModel yy_modelWithJSON:request.responseObject[@"data"]];
+        [self setUpViews];
+    } failure:^(YMBaseRequest *request, NSError *error) {
+        [self showMessage:error.localizedDescription];
+    }];
 }
 
 - (void)setUpViews
@@ -39,15 +55,9 @@
     self.desLabel.text = self.model.brief;
     self.workAgeLabel.text = [NSString stringWithFormat:@"%@~%@年",self.model.work_age_low,self.model.work_age_high];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)onclickConnectButton:(UIButton *)sender {
+    
+    
 }
-*/
 
 @end
