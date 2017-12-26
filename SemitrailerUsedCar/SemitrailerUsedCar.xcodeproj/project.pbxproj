@@ -41,6 +41,7 @@
 		342A88F31FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342A88F11FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.xib */; };
 		342A88F71FF227F900FABDD6 /* CarDetailInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88F51FF227F900FABDD6 /* CarDetailInfoTableViewCell.m */; };
 		342A88F81FF227F900FABDD6 /* CarDetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342A88F61FF227F900FABDD6 /* CarDetailInfoTableViewCell.xib */; };
+		342A88FB1FF285D900FABDD6 /* CheckPriceTipModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88FA1FF285D900FABDD6 /* CheckPriceTipModel.m */; };
 		343BB0001FD5A6D000C744B7 /* EmployNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */; };
 		344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E81B91FB9DA5C0061DAB1 /* LoginViewController.m */; };
 		344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344E81BA1FB9DA5C0061DAB1 /* LoginViewController.xib */; };
@@ -216,6 +217,8 @@
 		342A88F41FF227F900FABDD6 /* CarDetailInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarDetailInfoTableViewCell.h; sourceTree = "<group>"; };
 		342A88F51FF227F900FABDD6 /* CarDetailInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarDetailInfoTableViewCell.m; sourceTree = "<group>"; };
 		342A88F61FF227F900FABDD6 /* CarDetailInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailInfoTableViewCell.xib; sourceTree = "<group>"; };
+		342A88F91FF285D900FABDD6 /* CheckPriceTipModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckPriceTipModel.h; sourceTree = "<group>"; };
+		342A88FA1FF285D900FABDD6 /* CheckPriceTipModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckPriceTipModel.m; sourceTree = "<group>"; };
 		343BAFFE1FD5A6D000C744B7 /* EmployNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployNetWork.h; sourceTree = "<group>"; };
 		343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployNetWork.m; sourceTree = "<group>"; };
 		344E81B81FB9DA5C0061DAB1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -492,6 +495,8 @@
 			children = (
 				340D821A1FE6A16B00DD3D48 /* RechargeModel.h */,
 				340D821B1FE6A16B00DD3D48 /* RechargeModel.m */,
+				342A88F91FF285D900FABDD6 /* CheckPriceTipModel.h */,
+				342A88FA1FF285D900FABDD6 /* CheckPriceTipModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1196,6 +1201,7 @@
 				342A88F71FF227F900FABDD6 /* CarDetailInfoTableViewCell.m in Sources */,
 				34E6EC361FE62C68001D014C /* MJRefreshFooterView.m in Sources */,
 				34E6EC081FE52C7F001D014C /* InputInfomationViewController.m in Sources */,
+				342A88FB1FF285D900FABDD6 /* CheckPriceTipModel.m in Sources */,
 				344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */,
 				34E6EC4A1FE65BB3001D014C /* ChooseAreaViewController.m in Sources */,
 				34E435A61FCAA3C800E46160 /* BasicWebViewController.m in Sources */,

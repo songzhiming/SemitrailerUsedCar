@@ -64,4 +64,33 @@
     }];
 }
 
+// 车辆 查看车主联系信息
++ (void)getCarOrder:(NSDictionary *)params
+            success:(void (^)(YMBaseRequest *request))success
+            failure:(void (^)(YMBaseRequest *request, NSError *error))failure
+{
+    YMBaseRequest *request = [[YMBaseRequest alloc]init];
+    request.requestUrl = @"car-order";
+    request.requestArgument = params;
+    request.requestMethod = YMRequestMethodPOST;
+    [request startWithCompletionBlockWithSuccess:^(__kindof YMBaseRequest * _Nonnull request) {
+        if ([request.responseObject[@"code"] intValue] == 10000) {//成功
+            success(request);
+        }else{
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey:request.responseObject[@"msg"]};
+            NSError *error = [[NSError alloc]initWithDomain:@"" code:[request.responseObject[@"code"] intValue] userInfo:userInfo];
+            failure(request,error);
+        }
+    } failure:^(__kindof YMBaseRequest * _Nonnull request) {
+        failure(request,request.error);
+    }];
+}
+
+// 联系车主打电话 扣积分
++ (void)connectCarOwner:(NSDictionary *)params
+                success:(void (^)(YMBaseRequest *request))success
+                failure:(void (^)(YMBaseRequest *request, NSError *error))failure
+{
+    [[self class]getCarOrder:params success:success failure:failure];
+}
 @end

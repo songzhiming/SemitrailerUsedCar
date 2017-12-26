@@ -31,4 +31,15 @@
            success:(void (^)(YMBaseRequest *request))success
            failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 
+// 车辆 查看车主联系信息
++ (void)getCarOrder:(NSDictionary *)params
+            success:(void (^)(YMBaseRequest *request))success
+            failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
+// 联系车主打电话 扣积分
++ (void)connectCarOwner:(NSDictionary *)params
+                success:(void (^)(YMBaseRequest *request))success
+                failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
+
 @end
