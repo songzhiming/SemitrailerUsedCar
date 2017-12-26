@@ -20,6 +20,7 @@
 //"city": "1",
 //"province_name": "北京",
 //"city_name": "北京"
+//brief
 
 @property (nonatomic,copy) NSString *id;
 @property (nonatomic,copy) NSString *title;
@@ -31,5 +32,6 @@
 @property (nonatomic,copy) NSString *city;
 @property (nonatomic,copy) NSString *province_name;
 @property (nonatomic,copy) NSString *city_name;
+@property (nonatomic,copy) NSString *brief;
 
 @end

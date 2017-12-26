@@ -13,6 +13,7 @@
 #import "EmployNetWork.h"
 #import "EmployModel.h"
 #import "PublishEmployViewController.h"
+#import "EmployInfoViewController.h"
 
 @interface EmployViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -89,6 +90,14 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 80;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    EmployInfoViewController *vc = [[EmployInfoViewController alloc]init];
+    vc.model = self.datasource[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

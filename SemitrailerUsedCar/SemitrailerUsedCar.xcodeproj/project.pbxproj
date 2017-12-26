@@ -33,6 +33,8 @@
 		342A88DD1FF002F800FABDD6 /* EmployAreaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88DB1FF002F800FABDD6 /* EmployAreaTableViewCell.m */; };
 		342A88DE1FF002F800FABDD6 /* EmployAreaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342A88DC1FF002F800FABDD6 /* EmployAreaTableViewCell.xib */; };
 		342A88E21FF0043400FABDD6 /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88E11FF0043400FABDD6 /* AreaModel.m */; };
+		342A88E81FF20F3300FABDD6 /* EmployInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342A88E61FF20F3300FABDD6 /* EmployInfoViewController.m */; };
+		342A88E91FF20F3300FABDD6 /* EmployInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342A88E71FF20F3300FABDD6 /* EmployInfoViewController.xib */; };
 		343BB0001FD5A6D000C744B7 /* EmployNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */; };
 		344E81BB1FB9DA5C0061DAB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E81B91FB9DA5C0061DAB1 /* LoginViewController.m */; };
 		344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344E81BA1FB9DA5C0061DAB1 /* LoginViewController.xib */; };
@@ -196,6 +198,9 @@
 		342A88DC1FF002F800FABDD6 /* EmployAreaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployAreaTableViewCell.xib; sourceTree = "<group>"; };
 		342A88E01FF0043400FABDD6 /* AreaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AreaModel.h; sourceTree = "<group>"; };
 		342A88E11FF0043400FABDD6 /* AreaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AreaModel.m; sourceTree = "<group>"; };
+		342A88E51FF20F3300FABDD6 /* EmployInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployInfoViewController.h; sourceTree = "<group>"; };
+		342A88E61FF20F3300FABDD6 /* EmployInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployInfoViewController.m; sourceTree = "<group>"; };
+		342A88E71FF20F3300FABDD6 /* EmployInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployInfoViewController.xib; sourceTree = "<group>"; };
 		343BAFFE1FD5A6D000C744B7 /* EmployNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployNetWork.h; sourceTree = "<group>"; };
 		343BAFFF1FD5A6D000C744B7 /* EmployNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployNetWork.m; sourceTree = "<group>"; };
 		344E81B81FB9DA5C0061DAB1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -555,6 +560,9 @@
 				34E6EC471FE65BB3001D014C /* ChooseAreaViewController.h */,
 				34E6EC481FE65BB3001D014C /* ChooseAreaViewController.m */,
 				34E6EC491FE65BB3001D014C /* ChooseAreaViewController.xib */,
+				342A88E51FF20F3300FABDD6 /* EmployInfoViewController.h */,
+				342A88E61FF20F3300FABDD6 /* EmployInfoViewController.m */,
+				342A88E71FF20F3300FABDD6 /* EmployInfoViewController.xib */,
 			);
 			path = Employ;
 			sourceTree = "<group>";
@@ -1019,6 +1027,7 @@
 				34E6EC441FE644A9001D014C /* MyPublishCarListViewController.xib in Resources */,
 				34C2317D1FE17E3A00381F1B /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				34E435AC1FCAA62200E46160 /* RechargeRecordListViewController.xib in Resources */,
+				342A88E91FF20F3300FABDD6 /* EmployInfoViewController.xib in Resources */,
 				34E6EC011FE51F9E001D014C /* carOptions.json in Resources */,
 				344E81C11FB9DAEF0061DAB1 /* RegisterViewController.xib in Resources */,
 				34E6EC551FE66F31001D014C /* MyConnectJobViewController.xib in Resources */,
@@ -1172,6 +1181,7 @@
 				34E435BD1FCAB2AD00E46160 /* SettingViewController.m in Sources */,
 				34E6EC351FE62C68001D014C /* MJRefreshConst.m in Sources */,
 				34C12FCC1FCC5C540022A668 /* RechargeViewController.m in Sources */,
+				342A88E81FF20F3300FABDD6 /* EmployInfoViewController.m in Sources */,
 				34E6EC041FE520A6001D014C /* CarConfigureManager.m in Sources */,
 				342A88E21FF0043400FABDD6 /* AreaModel.m in Sources */,
 				34C2318A1FE17E3A00381F1B /* YMShareConst.m in Sources */,

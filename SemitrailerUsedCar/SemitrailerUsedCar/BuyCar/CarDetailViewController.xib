@@ -18,7 +18,19 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TE2-TQ-J4z">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TE2-TQ-J4z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="K9a-A8-IE5"/>
+                <constraint firstAttribute="trailing" secondItem="TE2-TQ-J4z" secondAttribute="trailing" id="LiD-5T-1da"/>
+                <constraint firstItem="TE2-TQ-J4z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Q4A-dX-Jk1"/>
+                <constraint firstAttribute="bottom" secondItem="TE2-TQ-J4z" secondAttribute="bottom" id="hi7-72-VUj"/>
+            </constraints>
         </view>
     </objects>
 </document>
