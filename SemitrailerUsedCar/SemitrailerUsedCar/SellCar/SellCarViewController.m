@@ -98,8 +98,10 @@
     }
     for (NSInteger i = 1; i < 7; i++) {
         id obj = self.contentArray[i];
-        if (![obj isKindOfClass:[CarConfigureModel class]]) {
-            isComplete = NO;
+        if (i != 2) {
+            if (![obj isKindOfClass:[CarConfigureModel class]]) {
+                isComplete = NO;
+            }
         }
     }
     id obj = self.contentArray[8];
@@ -126,7 +128,6 @@
 - (void)sellCar
 {
     CarConfigureModel *brand = self.contentArray[1];
-    CarConfigureModel *price = self.contentArray[2];
     CarConfigureModel *age = self.contentArray[3];
     CarConfigureModel *emission = self.contentArray[4];
     CarConfigureModel *mileage = self.contentArray[5];
@@ -144,7 +145,7 @@
     NSDictionary *dic = @{@"created_by":[UserInfo userinfo].id,
                           @"name":self.contentArray[0],
                           @"brand":brand.value,
-                          @"price":price.value,
+                          @"price":self.contentArray[2],
                           @"age":age.value,
                           @"emission":emission.value,
                           @"mileage":mileage.value,
@@ -194,9 +195,14 @@
     if (indexPath.row == 0) {
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textField.hidden = NO;
+        cell.textField.text = self.contentArray[indexPath.row];
+        cell.desLabel.hidden = YES;
+    }else if (indexPath.row == 2){
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.textField.hidden = NO;
+        cell.textField.text = self.contentArray[indexPath.row];
         cell.desLabel.hidden = YES;
     }else if (indexPath.row == 1 ||
-              indexPath.row == 2 ||
               indexPath.row == 3 ||
               indexPath.row == 4 ||
               indexPath.row == 5 ||
@@ -221,10 +227,12 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textField.hidden = NO;
         cell.desLabel.hidden = YES;
+        cell.textField.text = self.contentArray[indexPath.row];
     }else if (indexPath.row == 10){
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textField.hidden = NO;
         cell.desLabel.hidden = YES;
+        cell.textField.text = self.contentArray[indexPath.row];
     }
     return cell;
 }
@@ -258,20 +266,6 @@
             }
             break;
         case 2:
-            {
-                PickerViewController *vc = [[PickerViewController alloc]init];
-                vc.datasource = [[CarConfigureManager sharedInstance] price];
-                vc.view.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
-                vc.providesPresentationContextTransitionStyle = YES;
-                vc.definesPresentationContext = YES;
-                [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
-                __weak SellCarViewController *weakSelf = self;
-                vc.callBackCarConfigureModel = ^(CarConfigureModel *model) {
-                    [weakSelf.contentArray replaceObjectAtIndex:indexPath.row withObject:model];
-                    [weakSelf.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-                };
-                [MainWindow.rootViewController presentViewController:vc animated:YES completion:nil];
-            }
             break;
         case 3:
             {

@@ -28,4 +28,9 @@
 + (void)getJobInfo:(NSDictionary *)params
            success:(void (^)(YMBaseRequest *request))success
            failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
+// 职位 查看联系人信息
++ (void)getJobOrder:(NSDictionary *)params
+            success:(void (^)(YMBaseRequest *request))success
+            failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 @end
