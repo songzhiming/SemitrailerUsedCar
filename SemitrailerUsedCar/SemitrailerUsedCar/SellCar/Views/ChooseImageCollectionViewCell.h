@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ChooseImageCollectionViewCellBlock)(void);
+
 @interface ChooseImageCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+@property (nonatomic,copy) ChooseImageCollectionViewCellBlock block;
 
 @end

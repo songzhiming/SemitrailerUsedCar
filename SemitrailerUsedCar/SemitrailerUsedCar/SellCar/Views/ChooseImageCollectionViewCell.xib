@@ -19,21 +19,38 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3vH-QD-YUz">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="124"/>
+                        <rect key="frame" x="0.0" y="8" width="169" height="116"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UD2-Fy-FBr">
+                        <rect key="frame" x="158" y="0.0" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="ZUf-C9-JeY"/>
+                            <constraint firstAttribute="width" constant="22" id="adx-ea-8qY"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="chooseImage_deleteIcon"/>
+                        <connections>
+                            <action selector="onclickDeleteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="lpF-XE-4pJ"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="UD2-Fy-FBr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SIj-MO-gkw"/>
                 <constraint firstAttribute="bottom" secondItem="3vH-QD-YUz" secondAttribute="bottom" id="YZK-AK-M4u"/>
-                <constraint firstAttribute="trailing" secondItem="3vH-QD-YUz" secondAttribute="trailing" id="bCQ-da-z4J"/>
+                <constraint firstAttribute="trailing" secondItem="3vH-QD-YUz" secondAttribute="trailing" constant="11" id="bCQ-da-z4J"/>
                 <constraint firstItem="3vH-QD-YUz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="e8a-HM-rOZ"/>
-                <constraint firstItem="3vH-QD-YUz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mhw-Qv-rLV"/>
+                <constraint firstItem="3vH-QD-YUz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="mhw-Qv-rLV"/>
+                <constraint firstAttribute="trailing" secondItem="UD2-Fy-FBr" secondAttribute="trailing" id="oGw-qK-wgm"/>
             </constraints>
             <size key="customSize" width="180" height="124"/>
             <connections>
+                <outlet property="deleteButton" destination="UD2-Fy-FBr" id="Lkk-Ji-91l"/>
                 <outlet property="iconImageView" destination="3vH-QD-YUz" id="5QL-ko-wsV"/>
             </connections>
             <point key="canvasLocation" x="99" y="91"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="chooseImage_deleteIcon" width="21" height="21"/>
+    </resources>
 </document>

@@ -12,7 +12,7 @@
 #import "UIImage+Small.h"
 #import "SellCarNetWork.h"
 
-@interface ChooseImageViewController ()<UIActionSheetDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UINavigationControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+@interface ChooseImageViewController ()<UIActionSheetDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionview;
 @property (nonatomic,strong) NSMutableArray *datasource;
 
@@ -46,7 +46,7 @@
 
 - (void)onclickDoneButton
 {
-    self.callBackImage(@[@"http://f.hiphotos.baidu.com/image/pic/item/5bafa40f4bfbfbed5e3bf76c72f0f736afc31f47.jpg",@"http://b.hiphotos.baidu.com/image/pic/item/c9fcc3cec3fdfc03434927abde3f8794a4c226f4.jpg"]);
+    self.callBackImage(self.datasource);
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -60,8 +60,15 @@
     ChooseImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ChooseImageCollectionViewCell" forIndexPath:indexPath];
     if (self.datasource.count != indexPath.row) {
         [cell.iconImageView yy_setImageWithURL:[NSURL URLWithString:self.datasource[indexPath.row]] placeholder:nil];
+        cell.deleteButton.hidden = NO;
+        __weak typeof(self) weakself = self;
+        cell.block = ^{
+            [weakself.datasource removeObjectAtIndex:indexPath.row];
+            [weakself.collectionview reloadData];
+        };
     }else{
         cell.iconImageView.image = [UIImage imageNamed:@"chooseImage_addIcon"];
+        cell.deleteButton.hidden = YES;
     }
     return cell;
 }

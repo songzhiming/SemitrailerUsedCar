@@ -14,5 +14,10 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)onclickDeleteButton:(UIButton *)sender {
+    if (self.block) {
+        self.block();
+    }
+}
 
 @end

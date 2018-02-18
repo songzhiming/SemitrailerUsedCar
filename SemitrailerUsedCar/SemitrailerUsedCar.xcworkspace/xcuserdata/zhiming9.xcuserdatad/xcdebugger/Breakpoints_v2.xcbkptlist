@@ -132,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/SellCar/ChooseImageViewController.m"
-            timestampString = "540621041.5028009"
+            timestampString = "540622282.3752429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "-uploadImage:"
             landmarkType = "7">
             <Locations>
@@ -148,11 +148,11 @@
                   moduleName = "SemitrailerUsedCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhiming9/WorkSpace/Diary/SemitrailerUsedCar/SemitrailerUsedCar/SemitrailerUsedCar/SellCar/ChooseImageViewController.m"
-                  timestampString = "540621041.662804"
+                  timestampString = "540622336.664923"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
                   offsetFromSymbolStart = "64">
                </Location>
                <Location
@@ -163,11 +163,11 @@
                   moduleName = "SemitrailerUsedCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhiming9/WorkSpace/Diary/SemitrailerUsedCar/SemitrailerUsedCar/SemitrailerUsedCar/SellCar/ChooseImageViewController.m"
-                  timestampString = "540621041.665841"
+                  timestampString = "540622336.667706"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
                   offsetFromSymbolStart = "19">
                </Location>
             </Locations>
@@ -180,7 +180,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/SellCar/NetWork/SellCarNetWork.m"
-            timestampString = "540621041.5033441"
+            timestampString = "540622282.3756731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -196,7 +196,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/SellCar/NetWork/SellCarNetWork.m"
-            timestampString = "540621041.503422"
+            timestampString = "540622282.375769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -212,12 +212,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SemitrailerUsedCar/SellCar/ChooseImageViewController.m"
-            timestampString = "540621041.503489"
+            timestampString = "540622282.375837"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "-uploadImage:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SemitrailerUsedCar/SellCar/ChooseImageViewController.m"
+            timestampString = "540622334.828427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-onclickDoneButton"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
