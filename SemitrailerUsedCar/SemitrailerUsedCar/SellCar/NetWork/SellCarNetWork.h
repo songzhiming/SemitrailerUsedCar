@@ -15,4 +15,9 @@
            success:(void (^)(YMBaseRequest *request))success
            failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
 
+// 上传图片
++ (void)uploadImage:(UIImage *)image
+            success:(void (^)(YMBaseRequest *request))success
+            failure:(void (^)(YMBaseRequest *request, NSError *error))failure;
+
 @end

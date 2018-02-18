@@ -19,6 +19,7 @@
 #import "UserInfo.h"
 #import "UIColor+Extension.h"
 #import <YYModel.h>
+#import <AFNetworking.h>
 #define kScreenW  [UIScreen mainScreen].bounds.size.width
 #define kScreenH [UIScreen mainScreen].bounds.size.height
 #define MainWindow      [[[UIApplication sharedApplication] delegate] window]

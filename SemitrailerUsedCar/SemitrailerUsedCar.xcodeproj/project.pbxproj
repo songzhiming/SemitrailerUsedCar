@@ -83,6 +83,10 @@
 		34C2318C1FE17E3A00381F1B /* YMShareItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C231731FE17E3900381F1B /* YMShareItemCollectionViewCell.xib */; };
 		34C2318D1FE17E3A00381F1B /* YMShareResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 34C231741FE17E3900381F1B /* YMShareResources.bundle */; };
 		34C2318E1FE17E3A00381F1B /* YMShareService.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C231761FE17E3900381F1B /* YMShareService.m */; };
+		34C7C06D203930AE0025998B /* ChooseImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C7C06B203930AE0025998B /* ChooseImageCollectionViewCell.m */; };
+		34C7C06E203930AE0025998B /* ChooseImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C7C06C203930AE0025998B /* ChooseImageCollectionViewCell.xib */; };
+		34C7C071203934940025998B /* CommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C7C06F203934940025998B /* CommonTool.m */; };
+		34C7C0742039354B0025998B /* UIImage+Small.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C7C0722039354B0025998B /* UIImage+Small.m */; };
 		34DD20B91FB40D800080E9C0 /* BuyCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DD20B71FB40D800080E9C0 /* BuyCarTableViewCell.m */; };
 		34DD20BA1FB40D800080E9C0 /* BuyCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34DD20B81FB40D800080E9C0 /* BuyCarTableViewCell.xib */; };
 		34E435A61FCAA3C800E46160 /* BasicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E435A41FCAA3C800E46160 /* BasicWebViewController.m */; };
@@ -286,6 +290,13 @@
 		34C231741FE17E3900381F1B /* YMShareResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YMShareResources.bundle; sourceTree = "<group>"; };
 		34C231751FE17E3900381F1B /* YMShareService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMShareService.h; sourceTree = "<group>"; };
 		34C231761FE17E3900381F1B /* YMShareService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMShareService.m; sourceTree = "<group>"; };
+		34C7C06A203930AE0025998B /* ChooseImageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseImageCollectionViewCell.h; sourceTree = "<group>"; };
+		34C7C06B203930AE0025998B /* ChooseImageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseImageCollectionViewCell.m; sourceTree = "<group>"; };
+		34C7C06C203930AE0025998B /* ChooseImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		34C7C06F203934940025998B /* CommonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTool.m; sourceTree = "<group>"; };
+		34C7C070203934940025998B /* CommonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTool.h; sourceTree = "<group>"; };
+		34C7C0722039354B0025998B /* UIImage+Small.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Small.m"; sourceTree = "<group>"; };
+		34C7C0732039354B0025998B /* UIImage+Small.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Small.h"; sourceTree = "<group>"; };
 		34DD20B61FB40D800080E9C0 /* BuyCarTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuyCarTableViewCell.h; sourceTree = "<group>"; };
 		34DD20B71FB40D800080E9C0 /* BuyCarTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyCarTableViewCell.m; sourceTree = "<group>"; };
 		34DD20B81FB40D800080E9C0 /* BuyCarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyCarTableViewCell.xib; sourceTree = "<group>"; };
@@ -504,6 +515,10 @@
 		34288B091FA763FA004C98E9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				34C7C0732039354B0025998B /* UIImage+Small.h */,
+				34C7C0722039354B0025998B /* UIImage+Small.m */,
+				34C7C070203934940025998B /* CommonTool.h */,
+				34C7C06F203934940025998B /* CommonTool.m */,
 				34E6EC0A1FE52EE6001D014C /* LPlaceholderTextView.h */,
 				34E6EC0B1FE52EE6001D014C /* LPlaceholderTextView.m */,
 				340B809B1FB84E35009421F0 /* LogTool.h */,
@@ -737,6 +752,9 @@
 				345822241FB0BAAF00A00E8F /* SellCarTableViewCell.h */,
 				345822251FB0BAAF00A00E8F /* SellCarTableViewCell.m */,
 				345822261FB0BAAF00A00E8F /* SellCarTableViewCell.xib */,
+				34C7C06A203930AE0025998B /* ChooseImageCollectionViewCell.h */,
+				34C7C06B203930AE0025998B /* ChooseImageCollectionViewCell.m */,
+				34C7C06C203930AE0025998B /* ChooseImageCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1061,6 +1079,7 @@
 				344E81C11FB9DAEF0061DAB1 /* RegisterViewController.xib in Resources */,
 				34E6EC551FE66F31001D014C /* MyConnectJobViewController.xib in Resources */,
 				34E6EC3F1FE63A78001D014C /* CarDetailViewController.xib in Resources */,
+				34C7C06E203930AE0025998B /* ChooseImageCollectionViewCell.xib in Resources */,
 				34C231801FE17E3A00381F1B /* read_me.txt in Resources */,
 				34C12FCD1FCC5C540022A668 /* RechargeViewController.xib in Resources */,
 				345354CC1FA986B7005AC3E3 /* EmployTableViewCell.xib in Resources */,
@@ -1176,6 +1195,7 @@
 				34E6EC371FE62C68001D014C /* MJRefreshHeaderView.m in Sources */,
 				346231841FD28EA60020D44D /* UserInfo.m in Sources */,
 				34E435B01FCAA83900E46160 /* RechargeRecordListTableViewCell.m in Sources */,
+				34C7C06D203930AE0025998B /* ChooseImageCollectionViewCell.m in Sources */,
 				34C12FD11FCC69990022A668 /* InviteUserViewController.m in Sources */,
 				342A88ED1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.m in Sources */,
 				34C231851FE17E3A00381F1B /* UMShareMenuItem.m in Sources */,
@@ -1213,6 +1233,7 @@
 				340210441FA6E13300193AF8 /* main.m in Sources */,
 				34E6EC541FE66F31001D014C /* MyConnectJobViewController.m in Sources */,
 				34E6EC101FE55998001D014C /* ChooseImageViewController.m in Sources */,
+				34C7C0742039354B0025998B /* UIImage+Small.m in Sources */,
 				34E435BD1FCAB2AD00E46160 /* SettingViewController.m in Sources */,
 				34E6EC351FE62C68001D014C /* MJRefreshConst.m in Sources */,
 				34C12FCC1FCC5C540022A668 /* RechargeViewController.m in Sources */,
@@ -1228,6 +1249,7 @@
 				34C2318B1FE17E3A00381F1B /* YMShareItemCollectionViewCell.m in Sources */,
 				34E6EC0C1FE52EE7001D014C /* LPlaceholderTextView.m in Sources */,
 				340B80931FB84410009421F0 /* UserCenterTableViewCell.m in Sources */,
+				34C7C071203934940025998B /* CommonTool.m in Sources */,
 				34EEB0A81FDEDA8F00BB4AE7 /* UserCenterNetWork.m in Sources */,
 				34C231861FE17E3A00381F1B /* UMShareMenuSelectionView.m in Sources */,
 				34C231871FE17E3A00381F1B /* UMSocialShareScrollView.m in Sources */,
