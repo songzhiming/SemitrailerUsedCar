@@ -148,7 +148,7 @@
                   moduleName = "SemitrailerUsedCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhiming9/WorkSpace/Diary/SemitrailerUsedCar/SemitrailerUsedCar/SemitrailerUsedCar/SellCar/ChooseImageViewController.m"
-                  timestampString = "540622336.664923"
+                  timestampString = "540878167.798887"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "130"
@@ -163,7 +163,7 @@
                   moduleName = "SemitrailerUsedCar"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhiming9/WorkSpace/Diary/SemitrailerUsedCar/SemitrailerUsedCar/SemitrailerUsedCar/SellCar/ChooseImageViewController.m"
-                  timestampString = "540622336.667706"
+                  timestampString = "540878167.801941"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "130"
@@ -234,6 +234,38 @@
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "-onclickDoneButton"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SemitrailerUsedCar/UserCenter/MyPublishJobViewController.m"
+            timestampString = "540875733.4017071"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-getEmployList"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SemitrailerUsedCar/UserCenter/MyPublishJobViewController.m"
+            timestampString = "540875733.405095"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-getEmployList"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -12,6 +12,7 @@
 #import "CarModel.h"
 #import "MJRefresh.h"
 #import "CarDetailViewController.h"
+#import "ChooseCarOptionsViewController.h"
 @interface BuyCarViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIView *searchView;
@@ -79,7 +80,67 @@
     }];
 }
 
+// 点击品牌按钮
+- (IBAction)onclickFirstButton:(UIButton *)sender {
+    ChooseCarOptionsViewController *vc = [[ChooseCarOptionsViewController alloc]init];
+    vc.chooseCarOptionsType = ChooseCarOptionsTypeBrand;
+    vc.providesPresentationContextTransitionStyle = YES;
+    vc.definesPresentationContext = YES;
+    [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    __weak typeof(self) weakself = self;
+    vc.view.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+// 点击车龄按钮
+- (IBAction)onclickSecondButton:(UIButton *)sender {
+    ChooseCarOptionsViewController *vc = [[ChooseCarOptionsViewController alloc]init];
+    vc.chooseCarOptionsType = ChooseCarOptionsTypeAge;
+    vc.providesPresentationContextTransitionStyle = YES;
+    vc.definesPresentationContext = YES;
+    [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    __weak typeof(self) weakself = self;
+    vc.view.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+// 点击价格按钮
+- (IBAction)onclickThirdButton:(UIButton *)sender {
+    ChooseCarOptionsViewController *vc = [[ChooseCarOptionsViewController alloc]init];
+    vc.chooseCarOptionsType = ChooseCarOptionsTypePrice;
+    vc.providesPresentationContextTransitionStyle = YES;
+    vc.definesPresentationContext = YES;
+    [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    __weak typeof(self) weakself = self;
+    vc.view.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
+// 点击里程按钮
+- (IBAction)onclickFourthButton:(UIButton *)sender {
+    ChooseCarOptionsViewController *vc = [[ChooseCarOptionsViewController alloc]init];
+    vc.chooseCarOptionsType = ChooseCarOptionsTypeMileage;
+    vc.providesPresentationContextTransitionStyle = YES;
+    vc.definesPresentationContext = YES;
+    [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    __weak typeof(self) weakself = self;
+    vc.view.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+// 点击马力按钮
+- (IBAction)onclickFiveButton:(UIButton *)sender {
+    ChooseCarOptionsViewController *vc = [[ChooseCarOptionsViewController alloc]init];
+    vc.chooseCarOptionsType = ChooseCarOptionsTypeHorsepower;
+    vc.providesPresentationContextTransitionStyle = YES;
+    vc.definesPresentationContext = YES;
+    [vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    __weak typeof(self) weakself = self;
+    vc.view.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

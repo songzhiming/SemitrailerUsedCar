@@ -59,6 +59,10 @@
 		3462317D1FD25D690020D44D /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 3462317C1FD25D690020D44D /* MBProgressHUD+Add.m */; };
 		346231811FD25E710020D44D /* LoginNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 346231801FD25E710020D44D /* LoginNetWork.m */; };
 		346231841FD28EA60020D44D /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 346231821FD28EA50020D44D /* UserInfo.m */; };
+		349A78A7203D1FBE0061843C /* ChooseCarOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349A78A5203D1FBE0061843C /* ChooseCarOptionsViewController.m */; };
+		349A78A8203D1FBE0061843C /* ChooseCarOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 349A78A6203D1FBE0061843C /* ChooseCarOptionsViewController.xib */; };
+		349A78AC203D20ED0061843C /* CarOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 349A78AA203D20ED0061843C /* CarOptionTableViewCell.m */; };
+		349A78AD203D20ED0061843C /* CarOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 349A78AB203D20ED0061843C /* CarOptionTableViewCell.xib */; };
 		34C12FCC1FCC5C540022A668 /* RechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C12FCA1FCC5C540022A668 /* RechargeViewController.m */; };
 		34C12FCD1FCC5C540022A668 /* RechargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C12FCB1FCC5C540022A668 /* RechargeViewController.xib */; };
 		34C12FD11FCC69990022A668 /* InviteUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C12FCF1FCC69990022A668 /* InviteUserViewController.m */; };
@@ -250,6 +254,12 @@
 		346231801FD25E710020D44D /* LoginNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginNetWork.m; sourceTree = "<group>"; };
 		346231821FD28EA50020D44D /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		346231831FD28EA60020D44D /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		349A78A4203D1FBE0061843C /* ChooseCarOptionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseCarOptionsViewController.h; sourceTree = "<group>"; };
+		349A78A5203D1FBE0061843C /* ChooseCarOptionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseCarOptionsViewController.m; sourceTree = "<group>"; };
+		349A78A6203D1FBE0061843C /* ChooseCarOptionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseCarOptionsViewController.xib; sourceTree = "<group>"; };
+		349A78A9203D20ED0061843C /* CarOptionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarOptionTableViewCell.h; sourceTree = "<group>"; };
+		349A78AA203D20ED0061843C /* CarOptionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarOptionTableViewCell.m; sourceTree = "<group>"; };
+		349A78AB203D20ED0061843C /* CarOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarOptionTableViewCell.xib; sourceTree = "<group>"; };
 		34C12FC91FCC5C540022A668 /* RechargeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeViewController.h; sourceTree = "<group>"; };
 		34C12FCA1FCC5C540022A668 /* RechargeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeViewController.m; sourceTree = "<group>"; };
 		34C12FCB1FCC5C540022A668 /* RechargeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RechargeViewController.xib; sourceTree = "<group>"; };
@@ -574,6 +584,9 @@
 				34E6EC3B1FE63A78001D014C /* CarDetailViewController.h */,
 				34E6EC3C1FE63A78001D014C /* CarDetailViewController.m */,
 				34E6EC3D1FE63A78001D014C /* CarDetailViewController.xib */,
+				349A78A4203D1FBE0061843C /* ChooseCarOptionsViewController.h */,
+				349A78A5203D1FBE0061843C /* ChooseCarOptionsViewController.m */,
+				349A78A6203D1FBE0061843C /* ChooseCarOptionsViewController.xib */,
 			);
 			path = BuyCar;
 			sourceTree = "<group>";
@@ -742,6 +755,9 @@
 				342A88F41FF227F900FABDD6 /* CarDetailInfoTableViewCell.h */,
 				342A88F51FF227F900FABDD6 /* CarDetailInfoTableViewCell.m */,
 				342A88F61FF227F900FABDD6 /* CarDetailInfoTableViewCell.xib */,
+				349A78A9203D20ED0061843C /* CarOptionTableViewCell.h */,
+				349A78AA203D20ED0061843C /* CarOptionTableViewCell.m */,
+				349A78AB203D20ED0061843C /* CarOptionTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1105,11 +1121,13 @@
 				34E435B11FCAA83900E46160 /* RechargeRecordListTableViewCell.xib in Resources */,
 				34C2318D1FE17E3A00381F1B /* YMShareResources.bundle in Resources */,
 				342A88F31FF223A900FABDD6 /* CarDetailCarouselCollectionViewCell.xib in Resources */,
+				349A78A8203D1FBE0061843C /* ChooseCarOptionsViewController.xib in Resources */,
 				344E81BC1FB9DA5C0061DAB1 /* LoginViewController.xib in Resources */,
 				34DD20BA1FB40D800080E9C0 /* BuyCarTableViewCell.xib in Resources */,
 				34288B281FA76741004C98E9 /* EmployViewController.xib in Resources */,
 				34E6EC331FE62C68001D014C /* MJRefresh.bundle in Resources */,
 				342A88EE1FF222E200FABDD6 /* CarDetailCarouselTableViewCell.xib in Resources */,
+				349A78AD203D20ED0061843C /* CarOptionTableViewCell.xib in Resources */,
 				34E6EC501FE66EA8001D014C /* MyPublishJobViewController.xib in Resources */,
 				34288B141FA76529004C98E9 /* SellCarViewController.xib in Resources */,
 			);
@@ -1192,6 +1210,7 @@
 			files = (
 				346231811FD25E710020D44D /* LoginNetWork.m in Sources */,
 				3462317A1FD251310020D44D /* URLDefine.h in Sources */,
+				349A78A7203D1FBE0061843C /* ChooseCarOptionsViewController.m in Sources */,
 				34E6EC371FE62C68001D014C /* MJRefreshHeaderView.m in Sources */,
 				346231841FD28EA60020D44D /* UserInfo.m in Sources */,
 				34E435B01FCAA83900E46160 /* RechargeRecordListTableViewCell.m in Sources */,
@@ -1215,6 +1234,7 @@
 				34E6EC3A1FE62C68001D014C /* UIView+MJExtension.m in Sources */,
 				34C231891FE17E3A00381F1B /* YMShareActionSheetView.m in Sources */,
 				345822271FB0BAAF00A00E8F /* SellCarTableViewCell.m in Sources */,
+				349A78AC203D20ED0061843C /* CarOptionTableViewCell.m in Sources */,
 				34288B271FA76741004C98E9 /* EmployViewController.m in Sources */,
 				34DD20B91FB40D800080E9C0 /* BuyCarTableViewCell.m in Sources */,
 				34E6EC151FE569B7001D014C /* PickerViewController.m in Sources */,
