@@ -1478,8 +1478,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marsdong.semitrailer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1b13ce0d-5452-4bc4-b69f-82bcfc0115dd";
-				PROVISIONING_PROFILE_SPECIFIER = semitrailer_distribution;
+				PROVISIONING_PROFILE = "58040a10-0218-4577-99f0-8afa18017c6d";
+				PROVISIONING_PROFILE_SPECIFIER = semitrailer_adhoc;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
